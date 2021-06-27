@@ -18,6 +18,7 @@ app.use(cors());
 
 // Mount Routes
 app.use('/api/posts', require('./routes/posts'));
+app.use('/api/auth', require('./routes/auth'));
 
 // Set react as static folder
 // app.use(express.static('client/build'));
