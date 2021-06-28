@@ -8,7 +8,7 @@ import React from 'react';
 
 function Button({ children, type, onClick }) {
     return (
-        <button className={`${type}-btn`} onClick={onClick}>
+        <button className={`btn btn-outline-pink`} onClick={onClick}>
             { children }
         </button>
     )
