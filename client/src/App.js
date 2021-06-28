@@ -4,16 +4,19 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './main.scss';
 import { store } from './store';
+import { loginCheck, getUser } from './actions/auth';
 
 import Home from './components/pages/Home';
-import Home from './components/pages/Posts';
+import Posts from './components/pages/Posts';
+import PrivateRoute from './components/elements/PrivateRoute';
 
-useEffect(() => {
-  store.dispatch(loginCheck());
-  store.dispatch(getUser());
-}, [])
 
 function App() {
+  useEffect(() => {
+    store.dispatch(loginCheck());
+    store.dispatch(getUser());
+  }, [])
+
   return (
     <Router>
         <Switch>
