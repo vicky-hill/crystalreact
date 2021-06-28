@@ -1,0 +1,60 @@
+/* HTML ==========================================================================
+   <div class="alert alert-primary">
+        A simple primary alert!
+        <button class="alert-close" onClick="dissmissAlert">
+            <span>&times;</span>
+        </button>
+    </div>
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    function dismissAlert(e) {
+        const alertBox = e.target.parentElement.parentElement;
+        alertBox.classList.add('alert-dismiss');
+    }
+
+================================================================================ */
+
+.alert {
+    position: relative;
+    padding: 1.2rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+}
+
+.alert-primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border: #b8daff 1px solid;
+}
+
+.alert-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1.2rem 2rem;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.alert-dismiss {
+    display: none;
+}
+
+.alert-close:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.alert-close:focus, .alert-close:active {
+    outline: none;
+}
