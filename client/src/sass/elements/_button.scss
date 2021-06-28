@@ -1,0 +1,88 @@
+/* ===================================
+   Standard button
+==================================== */
+
+.btn {
+    background-color: $primary;
+    font-family: Lato;
+    color: white;
+    margin: 2px;
+    font-size: 1.6rem;
+    padding: 6px 17px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid transparent;
+    line-height: inherit;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn:focus, .btn:active {
+    box-shadow:  0 0 0 3px mix(white, $primary, 55%);
+    background-color: mix(black, $primary, 15%);
+}
+
+.btn:hover {
+    background-color: mix(black, $primary, 15%);
+}
+
+.btn:disabled {
+    background-color: mix(white, $primary, 45%);
+    cursor: auto;
+}
+
+/* ===================================
+   Adjusted color
+==================================== */
+
+.btn-pink {
+    background-color: $pink;
+}
+
+.btn-pink:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $pink, 55%);
+    background-color:  mix(black, $pink, 15%);
+}
+
+.btn-pink:hover {
+    background-color: mix(black, $pink, 15%);
+}
+
+.btn-pink:disabled {
+    background-color: mix(white, $pink, 45%);
+    cursor: auto;
+}
+
+
+
+/* ===================================
+   Outline button
+==================================== */
+
+.btn-outline-pink {
+    background-color: transparent;
+    color: $pink;
+    border: 1px solid $pink;
+}
+
+.btn-outline-pink:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $pink, 55%);
+    background-color: $pink;
+    color: #fff;
+}
+
+.btn-outline-pink:hover {
+    background-color:  $pink;
+    color: #fff;
+}
+
+.btn-outline-pink:disabled {
+    background-color: mix(white, $pink, 45%);
+    cursor: auto;
+    color: #fff;
+}
+
+
+// Round Button 
+.btn-round {
+    border-radius: 2.8rem;
+}
