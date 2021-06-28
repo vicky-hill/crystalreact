@@ -1,9 +1,7 @@
 /* ===================================
    Standard button
 ==================================== */
-
 .btn {
-    background-color: $primary;
     font-family: Lato;
     color: white;
     margin: 2px;
@@ -16,24 +14,32 @@
     transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.btn:focus, .btn:active {
-    box-shadow:  0 0 0 3px mix(white, $primary, 55%);
+
+
+/* ===================================
+   Add color
+==================================== */
+
+// Primary
+.btn-primary {
+    background-color: $primary;
+}
+
+.btn-primary:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
+    background-color:  mix(black, $primary, 15%);
+}
+
+.btn-primary:hover {
     background-color: mix(black, $primary, 15%);
 }
 
-.btn:hover {
-    background-color: mix(black, $primary, 15%);
-}
-
-.btn:disabled {
+.btn-primary:disabled {
     background-color: mix(white, $primary, 45%);
     cursor: auto;
 }
 
-/* ===================================
-   Adjusted color
-==================================== */
-
+// Pink
 .btn-pink {
     background-color: $pink;
 }

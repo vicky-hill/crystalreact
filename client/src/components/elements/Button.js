@@ -2,20 +2,18 @@ import React from 'react';
 
 /* Props
 =================================================== */
-// type: String | transparent, regular
+// variant: String | primary, secondary, outline-primary, outline-secondary
 
 
 
-function Button({ children, type, onClick }) {
+function Button({ children, variant, onClick }) {
     return (
-        <button className={`${type}-btn`} onClick={onClick}>
+        <button className={`btn btn-${variant}`} onClick={onClick}>
             { children }
         </button>
     )
 }
 
-Button.defaultProps = {    
-    type: "regular"
-}
+
 
 export default Button;
