@@ -5,6 +5,7 @@
     font-family: Lato;
     color: white;
     margin: 2px;
+    margin-bottom: $default-margin;
     font-size: 1.6rem;
     padding: 4px 17px;
     border-radius: 4px;
@@ -13,8 +14,6 @@
     line-height: inherit;
     transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-
-
 
 
 

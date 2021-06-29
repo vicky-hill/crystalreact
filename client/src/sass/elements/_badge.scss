@@ -1,0 +1,69 @@
+// Basic
+    // Heading Badge
+    // Button Badge
+    // Pill Badge
+
+
+/* ================================================================================
+   Heading Badge
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <h1>Heading<span className="badge">New</span></h1>
+
+================================================================================ */
+
+.badge {
+    position: relative;
+    display: inline-block;
+    top: -2px;
+    font-size: 70%;
+    background-color: #007bff;
+    color: #fff;
+    padding: .25em .8em;
+    padding-bottom: .3em; 
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 4px;
+    margin-left: 4px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, 
+        border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* ================================================================================
+   Button Badge
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <button className="btn">
+        Notification <span className="badge badge-light">7</span>
+    </button>
+
+================================================================================ */
+
+.badge-light {
+    background-color: #F8F9FA;
+    color: #212629;
+}
+
+/* ================================================================================
+   Pill Badge
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <h2>Heading<span className="badge badge-pill">New</span></h2>
+
+================================================================================ */
+
+.badge-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
+
