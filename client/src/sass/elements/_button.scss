@@ -6,13 +6,15 @@
     color: white;
     margin: 2px;
     font-size: 1.6rem;
-    padding: 6px 17px;
+    padding: 4px 17px;
     border-radius: 4px;
     text-align: center;
     border: 1px solid transparent;
     line-height: inherit;
     transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+
 
 
 
@@ -83,6 +85,30 @@
 
 .btn-outline-pink:disabled {
     background-color: mix(white, $pink, 45%);
+    cursor: auto;
+    color: #fff;
+}
+
+// Teal
+.btn-outline-pink {
+    background-color: transparent;
+    color: $teal;
+    border: 1px solid $teal;
+}
+
+.btn-outline-pink:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $teal, 55%);
+    background-color: $teal;
+    color: #fff;
+}
+
+.btn-outline-pink:hover {
+    background-color:  $teal;
+    color: #fff;
+}
+
+.btn-outline-pink:disabled {
+    background-color: mix(white, $teal, 45%);
     cursor: auto;
     color: #fff;
 }

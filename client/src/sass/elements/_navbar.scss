@@ -1,0 +1,82 @@
+/* HTML =====================================================================
+    
+    <nav class="navbar">
+        
+        <img src="" class="navbar-logo" loading="lazy"></img>
+        <a class="navbar-brand" href="#">CSS Magic</a>
+
+        <div class="navbar-nav">
+            <ul class="nav-list">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Elements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Styles</a>
+                </li>
+
+            </ul>
+            <form>
+                <input type="search" placeholder="Search" class="input" />
+                <button class="btn btn-primary ml-4" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+=========================================================================== */
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-right: 1.6rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: inherit;
+    white-space: nowrap;
+    color: rgba(58, 218, 218, 0.9);
+}
+
+.navbar-logo {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 2rem;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.nav-link {
+    padding: 0.4rem 0.8rem;
+    color: rgba(0,0,0,.5);
+}
+
+.nav-link:hover {
+    color: rgba(0,0,0,.7);
+}
+
+.active a {
+    color: rgba(0,0,0, 0.9);
+}
