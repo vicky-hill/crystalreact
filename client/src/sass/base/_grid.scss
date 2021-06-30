@@ -159,7 +159,7 @@ margin-left: 91.6666666667%;
 ==================================== */
 
 
-@media only screen and (max-width: $breakpoint-md){
+@media only screen and (max-width: 700px){
 
 
     // @tablet rows 
@@ -184,7 +184,7 @@ margin-left: 91.6666666667%;
    @tablet
 ==================================== */
 
-@media only screen and (max-width: $breakpoint-md){
+@media only screen and (max-width: 700px){
     
     .row {
         --gap-vertical: 7rem;
@@ -210,7 +210,7 @@ margin-left: 91.6666666667%;
    @phone
 ==================================== */
 
-@media only screen and (max-width: $breakpoint-sm){
+@media only screen and (max-width: 400px){
     
     .col {
         flex: 1 0 100%;
