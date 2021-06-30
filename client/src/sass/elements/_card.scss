@@ -80,7 +80,7 @@
 ================================================================================ */
 
 .card-link {
-    color: #18bc9c;
+    color: $primary;
     text-decoration: none;
     background-color: transparent;
 }
@@ -90,7 +90,7 @@
 }
 
 .card-link:hover {
-    color: #0f7864;
+    color: mix(black, $primary, 20%);
 }
 
 

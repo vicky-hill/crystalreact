@@ -32,11 +32,11 @@ a.btn {
 
 .btn-primary:focus {
     box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
-    background-color:  mix(black, $primary, 15%);
+    background-color:  mix(black, $primary, 10%);
 }
 
 .btn-primary:hover {
-    background-color: mix(black, $primary, 15%);
+    background-color: mix(black, $primary, 10%);
 }
 
 .btn-primary:disabled {
@@ -51,11 +51,11 @@ a.btn {
 
 .btn-pink:focus {
     box-shadow:  0 0 0 .3rem mix(white, $pink, 55%);
-    background-color:  mix(black, $pink, 15%);
+    background-color:  mix(black, $pink, 10%);
 }
 
 .btn-pink:hover {
-    background-color: mix(black, $pink, 15%);
+    background-color: mix(black, $pink, 10%);
 }
 
 .btn-pink:disabled {
@@ -116,6 +116,9 @@ a.btn {
     color: #fff;
 }
 
+/* ===================================
+   Round button
+==================================== */
 
 // Round Button 
 .btn-round {
