@@ -1,0 +1,149 @@
+/* ================================================================================
+   Card with Header
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="card">
+        <div class="card-header">
+            Header
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Card Title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div> 
+
+================================================================================ */
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+// Card border
+.card-border-shade {
+    border-color: #2c3e50;
+}
+
+// Card header
+.card-header {
+    padding: 12px 20px;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+// Card body
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 20px;
+}
+
+// Card title
+.card-title {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+// Add margin to card text, if it elements follow after it
+.card-text:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+
+/* ================================================================================
+   Card without Header
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="card">
+        <div class="card-body" >
+            <h4 class="card-title">Card Title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+            <a href="" class="card-link">Read More</a>
+            <a href="" class="card-link">Subscribe</a>
+        </div>
+    </div>
+
+================================================================================ */
+
+.card-link {
+    color: #18bc9c;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.card-link + .card-link {
+    margin-left: 2rem;
+}
+
+.card-link:hover {
+    color: #0f7864;
+}
+
+
+/* ================================================================================
+   Card with Image
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="card">
+        <div class="card-image" style={{backgroundImage: `url(${pink})`}}></div>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text</p>
+            <a href="#" class="btn">Go somewhere</a>
+        </div>
+    </div>
+
+================================================================================ */
+
+.card-image {
+    width: 100%;
+    height: 17rem;
+    background-size: cover;
+    background-position: top;
+}
+
+
+
+/* ================================================================================
+   Horizontal Card with Image
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="card card-horizontal">
+        <div class="card-image" style={{ backgroundImage: `url(${book})` }}></div>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text.</p>
+            <a href="#" class="btn">Go somewhere</a>
+        </div>
+    </div>
+
+================================================================================ */
+
+.card-horizontal {
+    flex-direction: row;
+    height: 23rem;
+}
+
+.card-horizontal .card-image {
+    height: 100%;
+    width: 40rem;
+    background-position: right;
+}
