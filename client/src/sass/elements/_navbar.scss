@@ -1,0 +1,163 @@
+/* HTML ===========================================================================
+
+    <div class="navbar">
+        <img src={logo} class="navbar-logo" alt=""/>
+
+        // Search bar
+        <form class="search">
+            <input type="text" class="search-input" placeholder="Search hotels" />
+            <button class="search-btn">
+                <i class="search-icon icon-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <div class="user-nav">
+
+            // First icon box
+            <div class="user-nav-iconbox">
+                <i class="user-nav-icon icon-bookmark"></i>
+                <span class="user-nav-notification">3</span>
+            </div>
+
+            // Second icon box
+            <div class="user-nav-iconbox">
+                <i class="user-nav-icon icon-chat"></i>
+                <span class="user-nav-notification">7</span>
+            </div>
+
+            // User info
+            <div class="user-nav-info">
+                <img src="" alt="" class="user-nav-photo"/>
+                <span class="user-nav-name">Jonas</span>
+            </div>
+        </div>
+    </div>
+
+================================================================================ */
+
+.navbar {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    background-color: #fff; 
+    border-bottom: #f4f2f2 1px solid;
+}
+
+// Navbar logo
+.navbar-logo {
+    height: 3.25rem;
+    margin-left: 2rem; 
+}
+
+// User nav
+.user-nav {
+    display: flex; 
+    align-items: center;
+    align-self: stretch;
+}
+
+// Select all direct children of user nav
+// Nav card & nav info
+.user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.user-nav > *:hover {
+    background-color: #f4f2f2;
+}
+
+
+// User icon box
+.user-nav-iconbox {
+    position: relative;
+}
+
+// User nav icon
+.user-nav-icon {
+    font-size: 2.25rem;
+    color: #999;
+
+}
+
+// User nav notification
+.user-nav-notification {
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 100px;
+    background-color: #eb2f64;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+// User photo
+.user-nav-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+
+// Search bar
+.search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Search input
+.search-input {
+    font-size: 1.4rem;
+    background-color: #f4f2f2;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.25rem;
+}
+
+// Input placeholder
+.search-input::placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+// Grow input on focus
+.search-input:focus {
+    outline: none;
+    width: 100%;
+    background-color: #f0eeee;
+}
+
+// Search magnifying glass button
+.search-btn {
+    border: none;
+}
+
+.search-btn:focus {
+    outline: none;
+}
+
+// Press down effect on search button
+.search-btn:active {
+    transform: translateY(2px);
+}
+
+// Magnifying glass icon
+.search-icon {
+    color: #999;
+    background-color: transparent;
+    font-size: 2rem;
+}
