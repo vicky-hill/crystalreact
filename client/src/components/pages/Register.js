@@ -7,7 +7,7 @@ import { setError } from 'actions/alerts';
 
 const Register = (props) => {
 
-	   // higher component
+    // higher component
     const { history } = props;
 
     // mapStateToProps
@@ -17,61 +17,61 @@ const Register = (props) => {
     const { register, getUser, setError } = props;
 
 
-	// Check if there's a user to load
+    // Check if there's a user to load
     useEffect(() => {
         getUser();
-    
+
     }, [getUser]);
 
-	// If authenticated, redirect to home
+    // If authenticated, redirect to home
     useEffect(() => {
         if (isAuthenticated) {
-          history.push('/');
+            history.push('/');
         }
     }, [isAuthenticated, history]);
 
-	// Form Data
+    // Form Data
     const [formData, setFormData] = useState({
         name: '',
         password: '',
         password2: ''
     });
 
-	const { name, password, password2 } = formData;
+    const { name, password, password2 } = formData;
 
-	// OnChange
+    // OnChange
     const onChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
-	// OnSubmit
+    // OnSubmit
     const onSubmit = async e => {
         e.preventDefault();
-        
-        if(name === '' || password === '' || password2 === '') {
+
+        if (name === '' || password === '' || password2 === '') {
             return setError('Please fill out all fields');
         }
 
-        if(password !== password2 ) {
+        if (password !== password2) {
             return setError('Passwords don\'t match');
         }
 
-        register(name, password);       
+        register(name, password);
         setFormData({ name: '', password: '', password2: '' })
     }
 
 
-	return (
-		<>
-		  <Heading>Create a new account</Heading>
-          { error && <p> { error } </p> }
-		    <form onSubmit={onSubmit}>
-		      <input name="name" placeholder="Username" value={name} onChange={onChange} />
-	        <input name="password" placeholder="Password" value={password} onChange={onChange} type='password'  />
-	        <input name="password2" placeholder="Confirm Password" value={password2}  onChange={onChange} type='password' />
-	        <button>Sign Up</button>
-	      </form>
-		</>
+    return (
+        <>
+            <Heading>Create a new account</Heading>
+            {error && <p> {error} </p>}
+            <form onSubmit={onSubmit}>
+                <input name="name" placeholder="Username" value={name} onChange={onChange} />
+                <input name="password" placeholder="Password" value={password} onChange={onChange} type='password' />
+                <input name="password2" placeholder="Confirm Password" value={password2} onChange={onChange} type='password' />
+                <button>Sign Up</button>
+            </form>
+        </>
     )
 }
 
