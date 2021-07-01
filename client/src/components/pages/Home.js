@@ -4,6 +4,7 @@ import Header from '../elements/Header';
 import Heading from '../elements/Heading';
 import Photos from '../elements/Photos';
 import Card from '../elements/Card';
+import Section from '../elements/Section';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
                 <Photos />
                 <Card />
             </div>
+            <Section />
         </>
     )
 }
