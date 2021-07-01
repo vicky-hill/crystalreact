@@ -5,6 +5,9 @@ import Heading from '../elements/Heading';
 import Photos from '../elements/Photos';
 import Card from '../elements/Card';
 import Section from '../elements/Section';
+import RotatingCard from '../elements/RotatingCard';
+import Testimonial from '../elements/Testimonial';
+import SolidGradient from '../elements/SolidGradient';
 
 
 const Home = () => {
@@ -12,12 +15,21 @@ const Home = () => {
         <>
             <BurgerNav />
             <Header />
+
             <div className="container">
                 <Heading />
                 <Photos />
                 <Card />
             </div>
+
             <Section />
+
+            <div className="container">
+                <RotatingCard />
+                <Testimonial />
+                <SolidGradient />
+            </div>
+
         </>
     )
 }
