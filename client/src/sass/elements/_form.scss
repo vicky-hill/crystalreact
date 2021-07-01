@@ -392,6 +392,24 @@ label.default-label {
         }
     })
 
+    React:
+
+    function realFileClick() {
+        const realFileBtn = document.getElementById('real-file');
+        realFileBtn.click();
+    }
+
+    function handleFile() {
+        const realFileBtn = document.getElementById('real-file');
+        const customText = document.getElementById('custom-text');
+
+        if (realFileBtn.value) {
+            customText.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+        } else {
+            customText.innerHTML = "No file chosen";
+        }
+    }
+
 ============================================================================================ */
 
 .file-label {
