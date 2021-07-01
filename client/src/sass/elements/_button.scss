@@ -1,0 +1,90 @@
+/* HTML ===========================================================================
+
+    <a href="" class="btn btn-white btn-animated">
+        Natours button
+    </a>
+
+================================================================================ */
+
+// Base btn
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);  
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px); 
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
+    outline: transparent;
+}
+
+.btn:focus {
+    outline: transparent;
+}
+
+// Color btn
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn-purple {
+    background-color: mediumpurple;
+    color: #fff;
+}
+
+.btn-purple::after {
+    background-color: mediumpurple;
+}
+
+// Hover ::after effect
+.btn::after {
+    content: ''; 
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+
+// When hovering the button, the ::after element will change
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+// btn animation
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
