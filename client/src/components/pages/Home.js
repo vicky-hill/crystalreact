@@ -8,9 +8,20 @@ import Section from '../elements/Section';
 import RotatingCard from '../elements/RotatingCard';
 import Testimonial from '../elements/Testimonial';
 import SolidGradient from '../elements/SolidGradient';
+import Form from '../elements/Form';
+import Navigation from '../elements/Navigation';
+import Modal from '../elements/Modal';
 
 
 const Home = () => {
+
+    function toggleModal() {
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        modal.classList.toggle('show');
+        modalContent.classList.toggle('show');
+    } 
+
     return (
         <>
             <BurgerNav />
@@ -28,6 +39,10 @@ const Home = () => {
                 <RotatingCard />
                 <Testimonial />
                 <SolidGradient />
+                <Form />
+                <Navigation />
+                <Modal />
+                <button className="btn btn-purple" onClick={toggleModal}>Open the model</button>
             </div>
 
         </>
