@@ -1,0 +1,15 @@
+/* HTML ===========================================================================
+
+    <h1 className="heading-gradient">This is Linguar</h1>
+
+================================================================================ */
+
+.heading-gradient {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    background-image: linear-gradient(to right bottom, rgba(255, 222, 113, 0.7), rgba(243, 197, 45, 0.89));
+}

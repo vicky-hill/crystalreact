@@ -1,0 +1,101 @@
+ 
+/* ================================================================================
+   Photo Composition
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="composition">
+        <img src="" alt="" class="composition-photo photo-1"/>
+        <img src="" alt="" class="composition-photo photo-2"/>
+        <img src="" alt="" class="composition-photo photo-3"/>
+    </div>
+
+================================================================================ */
+
+.composition {
+    position: relative;
+    height: 400px;
+}
+
+// When hovering composition, select all images that are not hovered
+.composition:hover .composition-photo:not(:hover) {
+    transform: scale(.95);
+}
+
+.composition-photo {
+    position: absolute;
+    width: 55%;
+    display: block;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+}
+
+// Zoom in hovered image and apply outline
+.composition-photo:hover {
+    outline: 1.5rem solid #ffde71;
+    transform: scale(1.05) translateY(-.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.photo-1 {
+    left: 0;
+    top: -2rem;
+    z-index: 10;
+}
+
+.photo-2 {
+    right: 0;
+    top: 2rem;
+    z-index: 10;
+}
+
+.photo-3 {
+    left: 20%;
+    top: 10rem;
+    z-index: 10;
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+    .composition-photo {
+        float: left;
+        position: relative;
+        width: 33.333333%;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); 
+        outline-offset: 1rem;
+    }
+
+    .photo-1 {
+        top: 1rem;
+        transform: scale(1.1);
+    }
+
+    .photo-2 {
+        top: -1rem ;
+        transform: scale(1.3);
+        z-index: 100;
+    }
+
+    .photo-3 {
+        top: 1rem;
+        left: 0;
+        transform: scale(1.2);
+    }
+
+    .composition:hover .composition-photo:not(:hover) {
+        transform: scale(1);
+    }
+
+    .composition-photo:hover {
+    outline: 1rem solid #ffde71;
+    transform: scale(1.35) translateY(-.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    }
+}
+
+
