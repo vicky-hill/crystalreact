@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Alert = ({ children, type }) => {
+const Alert = () => {
 
     function dismissAlert(e) {
         const alertBox = e.target.parentElement.parentElement;
@@ -9,17 +9,13 @@ const Alert = ({ children, type }) => {
     }
 
     return (
-        <div class={`alert alert-${type}`}>
-            { children }
+        <div class='alert alert-primary'>
+            A simple alert
             <button class="alert-close" onClick={dismissAlert}>
                 <span>&times;</span>
             </button>
         </div>
     )
-}
-
-Alert.defaultProps = {
-    type: 'primary'
 }
 
 export default Alert;

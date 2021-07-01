@@ -1,15 +1,11 @@
 import React from 'react';
 
-/* Props
-=================================================== */
-// variant: String | primary, secondary, outline-primary, outline-secondary
 
 
-
-function Button({ children, variant, onClick }) {
+const Button = () => {
     return (
-        <button className={`btn btn-${variant}`} onClick={onClick}>
-            { children }
+        <button className='btn btn-primary'>
+            Click here
         </button>
     )
 }
