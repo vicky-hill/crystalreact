@@ -50,7 +50,7 @@
 
 .form_awesome {
     width: 100%;
-    background:#C96EDC;
+    background: $teal;
     padding: 2rem;
     border-radius: 17px;
     box-shadow: 0 0 2rem 1px rgba(0, 0, 0, 0.1);
@@ -135,7 +135,7 @@ textarea.input_awesome {
     opacity: 0;
     transition: 0.3s;
     height: 5px;
-    background-color: #C96EDC;
+    background-color: $teal;
     top: 50%;
     transform: translateY(-50%);
 }

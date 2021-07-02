@@ -7,7 +7,7 @@
     background-color:  #fff;
     border: 2px solid #fafafa;
     font-size: 1.5rem;
-    color: #C96EDC;
+    color: $teal;
     line-height: 1;
     border-radius: 25px;
     transition: 0.3s;
@@ -17,4 +17,5 @@
 .btn_awesome:hover {
     background-color: transparent;
     color: #fff;
+    cursor: pointer;
 }
