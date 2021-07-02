@@ -1,0 +1,259 @@
+// Basic
+// Trillo
+
+/* =========================================================================
+   Basic
+========================================================================== */
+
+/* HTML =====================================================================
+    
+    <nav class="navbar">
+        
+        <img src="" class="navbar-logo" loading="lazy"></img>
+        <a class="navbar-brand" href="#">CSS Magic</a>
+
+        <div class="navbar-nav">
+            <ul class="nav-list">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Elements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Styles</a>
+                </li>
+
+            </ul>
+            <form>
+                <input type="search" placeholder="Search" />
+                <button class="btn ml-4" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+=========================================================================== */
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-right: 1.6rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: inherit;
+    white-space: nowrap;
+    color: rgba(202, 201, 201, 0.9);
+}
+
+.navbar-logo {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 2rem;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.nav-link {
+    padding: 0.4rem 0.8rem;
+    color: rgba(0,0,0,.5);
+}
+
+.nav-link:hover {
+    color: rgba(0,0,0,.7);
+}
+
+.active a {
+    color: rgba(0,0,0, 0.9);
+}
+
+
+/* ================================================================================
+   Trillo
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="navbar">
+        <img src={logo} class="navbar-logo" alt=""/>
+
+        // Search bar
+        <form class="search">
+            <input type="text" class="search-input" placeholder="Search hotels" />
+            <button class="search-btn">
+                <i class="search-icon icon-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <div class="user-nav">
+
+            // First icon box
+            <div class="user-nav-iconbox">
+                <i class="user-nav-icon icon-bookmark"></i>
+                <span class="user-nav-notification">3</span>
+            </div>
+
+            // Second icon box
+            <div class="user-nav-iconbox">
+                <i class="user-nav-icon icon-chat"></i>
+                <span class="user-nav-notification">7</span>
+            </div>
+
+            // User info
+            <div class="user-nav-info">
+                <img src="" alt="" class="user-nav-photo"/>
+                <span class="user-nav-name">Jonas</span>
+            </div>
+        </div>
+    </div>
+
+================================================================================ */
+
+.navbar {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    background-color: #fff; 
+    border-bottom: #f4f2f2 1px solid;
+}
+
+// Navbar logo
+.navbar-logo {
+    height: 3.25rem;
+    margin-left: 2rem; 
+}
+
+// User nav
+.user-nav {
+    display: flex; 
+    align-items: center;
+    align-self: stretch;
+}
+
+// Select all direct children of user nav
+// Nav card & nav info
+.user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.user-nav > *:hover {
+    background-color: #f4f2f2;
+}
+
+
+// User icon box
+.user-nav-iconbox {
+    position: relative;
+}
+
+// User nav icon
+.user-nav-icon {
+    font-size: 2.25rem;
+    color: #999;
+
+}
+
+// User nav notification
+.user-nav-notification {
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 100px;
+    background-color: #eb2f64;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+// User photo
+.user-nav-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+
+// Search bar
+.search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Search input
+.search-input {
+    font-size: 1.4rem;
+    background-color: #f4f2f2;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.25rem;
+}
+
+// Input placeholder
+.search-input::placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+// Grow input on focus
+.search-input:focus {
+    outline: none;
+    width: 100%;
+    background-color: #f0eeee;
+}
+
+// Search magnifying glass button
+.search-btn {
+    border: none;
+}
+
+.search-btn:focus {
+    outline: none;
+}
+
+// Press down effect on search button
+.search-btn:active {
+    transform: translateY(2px);
+}
+
+// Magnifying glass icon
+.search-icon {
+    color: #999;
+    background-color: transparent;
+    font-size: 2rem;
+}

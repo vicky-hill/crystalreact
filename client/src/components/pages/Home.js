@@ -1,9 +1,22 @@
 import React from 'react';
+import Navbar from '../elements/Navbar';
+
 
 
 const Home = () => {
     return (
-        <div></div>
+        <>
+            <div className="body">
+                <div className="container">
+                    <Navbar />
+
+                    <div className="content">
+                        {/* <Sidebar /> */}
+                        {/* <Main /> */}
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 
