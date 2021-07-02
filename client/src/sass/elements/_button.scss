@@ -1,0 +1,20 @@
+/* ===================================
+   Awesome Button
+==================================== */
+
+.btn_awesome {
+    padding: 1rem 2.1rem;
+    background-color:  #fff;
+    border: 2px solid #fafafa;
+    font-size: 1.5rem;
+    color: #C96EDC;
+    line-height: 1;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-family: Poppins;
+}
+
+.btn_awesome:hover {
+    background-color: transparent;
+    color: #fff;
+}

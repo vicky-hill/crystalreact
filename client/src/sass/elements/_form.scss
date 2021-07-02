@@ -1,0 +1,155 @@
+/* =================================================================================================
+   Awesome Form
+================================================================================================= */
+
+/* HTML ============================================================================================
+    
+    <form className="form_awesome">
+        <div className="input-container_awesome">
+            <input autoComplete="off" type="text" name="name" id="name" className="input_awesome" />
+            <label htmlFor="name">Name</label>
+            <span>Name</span>
+        </div>
+        <div className="input-container_awesome textarea_awesome">
+            <textarea name="message" className="input_awesome" />
+            <label htmlFor="message">Message</label>
+            <span>Message</span>
+        </div>
+        <input type="submit" value="Submit" className="btn_awesome" />
+    </form>
+
+============================================================================================== */
+
+/* JavaScript ===================================================================================
+
+    const inputs = document.querySelectorAll(".input_awesome");
+
+    function focusFunc(e) {
+        let parent = e.target.parentElement;
+        parent.classList.add('focus');
+    }
+
+    function blurFunc(e) {
+        let parent = e.target.parentElement;
+
+        if (e.target.value === "") {
+            parent.classList.remove('focus');
+        }
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener("focus", focusFunc);
+        input.addEventListener("blur", blurFunc);
+    })
+
+============================================================================================== */
+
+.input_awesome, .input-container_awesome label {
+    font-family: Poppins;
+}
+
+.form_awesome {
+    width: 100%;
+    background:#C96EDC;
+    padding: 2rem;
+    border-radius: 17px;
+    box-shadow: 0 0 2rem 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.input-container_awesome {
+    position: relative;
+    margin: 1.6rem 0;
+}
+
+.input_awesome {
+    width: 100%;
+    outline: none;
+    border: 2px solid #fafafa;
+    padding: 0.9rem 1.9rem;
+    border-radius: 2.5rem;
+    background: none;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+// Text area
+textarea.input_awesome {
+    padding: 1.3rem 1.9rem;
+    min-height: 15rem;
+    border-radius: 2.2rem;
+    resize: none;
+    overflow-y: auto;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+// Label
+.input-container_awesome label {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    padding: 0 0.6rem;
+    color:#fafafa;
+    font-size: 1.4rem;
+    font-weight: 400;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+// Text area label
+.input-container_awesome.textarea_awesome label {
+    top: 1.6rem;
+    transform: translateY(0);
+}
+
+
+.input-container_awesome.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 1.2rem;
+}
+
+.input-container_awesome span {
+    position: absolute;
+    top: 0;
+    left: 25px; 
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    padding: 0 0.6rem;
+    color: transparent;
+    pointer-events: none;
+    z-index: 500;
+}
+
+.input-container_awesome span::before,
+.input-container_awesome span::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    transition: 0.3s;
+    height: 5px;
+    background-color: #C96EDC;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-container_awesome span::before {
+    left: 50%;
+}
+
+.input-container_awesome span::after {
+    right: 50%;
+}
+
+.input-container_awesome.focus span::before,
+.input-container_awesome.focus span::after {
+    width: 50%;
+    opacity: 1;
+}
