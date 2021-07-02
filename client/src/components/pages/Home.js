@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../elements/Navbar';
-
+import Sidebar from '../elements/Sidebar';
+import Main from '../elements/Main';
 
 
 const Home = () => {
@@ -11,8 +12,8 @@ const Home = () => {
                     <Navbar />
 
                     <div className="content">
-                        {/* <Sidebar /> */}
-                        {/* <Main /> */}
+                        <Sidebar />
+                        <Main />
                     </div>
                 </div>
             </div>

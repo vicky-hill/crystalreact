@@ -1,0 +1,121 @@
+
+/* HTML ===========================================================================
+
+    <div class="sidebar">
+        <ul class="side-nav">
+
+            // First list item 
+            <li class="side-nav-item side-nav-item-active">
+                <a href="#" class="side-nav-link">
+                    <i class="side-nav-icon icon-home"></i>
+                    <span>Hotel</span>
+                </a>
+            </li>
+
+            // Second list item
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="side-nav-icon icon-aircraft-take-off"></i>
+                    <span>Flight</span>
+                </a>
+            </li>
+
+            // Third list item
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="side-nav-icon icon-key"></i>
+                    <span>Car rental</span>
+                </a>
+            </li>
+
+            // Fourth list item
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="side-nav-icon icon-map"></i>
+                    <span>Tours</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-legal">
+            &copy; 2021 by Trillo. All rights reserved.
+        </div>
+    </div>
+
+================================================================================ */
+
+// Sidebar with navigation placed in flexbox
+.sidebar {
+    background-color: #333;
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    padding-top: 3.5rem;
+}
+
+// Legal info in footer
+.sidebar-legal {
+    font-size: 1.2rem;
+    color: #ccc;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+// Navigation list item
+.side-nav-item {
+    position: relative;
+}
+
+// Remove margin bottom from las list item
+.side-nav-item:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+// Navigation item background effect
+.side-nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color:#eb2f64;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform .2s, 
+                width .4s cubic-bezier(1, 0, 0, 1) .1s, 
+                background-color .1s;
+}
+
+// Transform background effect on hover and on active
+.side-nav-item:hover::before,
+.side-nav-item-active::before {
+    transform: scaleY(1);
+    width: 100%;
+}
+
+// Light background effect on click
+.side-nav-item:active::before {
+    background-color: #ff3366;
+}
+
+// Navigation link
+.side-nav-link {
+    color: #faf9f9;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center; 
+    position: relative;
+    z-index: 1000;
+}
+
+// Navigation link icon
+.side-nav-icon {
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: currentColor;
+}

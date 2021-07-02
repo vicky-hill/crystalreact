@@ -1,0 +1,90 @@
+
+/* HTML ===========================================================================
+
+    <div class="overview">
+        <h1 class="overview-heading">Hotel Las Palmas</h1>
+        <div class="overview-stars">
+            <i class="overview-icon-star icon-star"></i>
+            <i class="overview-icon-star icon-star"></i>
+            <i class="overview-icon-star icon-star"></i>
+            <i class="overview-icon-star icon-star"></i>
+            <i class="overview-icon-star icon-star"></i>
+        </div>
+        <div class="overview-location">
+            <i class="overview-icon-location icon-location-pin"></i>
+            <button class="btn-inline">Albufeira, Portugal</button>
+        </div>
+        <div class="overview-rating">
+            <div class="overview-rating-average">8.6</div>
+            <div class="overview-rating-count">465 votes</div>
+        </div>
+    </div>
+
+================================================================================ */
+
+.overview {
+    display: flex;
+    align-items: center;
+    border-bottom: #f4f2f2 1px solid;
+}
+
+// Overview heading
+.overview-heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+    margin: 0;
+}
+
+// Overview stars
+.overview-stars {
+    margin-right: auto; 
+    display: flex;
+}
+
+// Overview star & location icons
+.overview-icon-star, 
+.overview-icon-location {
+    font-size: 1.75rem;
+    color: #eb2f64;
+}   
+
+// Overview location icon
+.overview-icon-location {
+    margin-right: .5rem;
+}
+
+// Overview location
+.overview-location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+// Overview rating
+.overview-rating {
+    background-color: #eb2f64; 
+    margin-left: 3rem;
+    color: white;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    display: flex; 
+    align-items: center; 
+    justify-content: unset;
+    flex-direction: column;
+}
+
+// Rating average
+.overview-rating-average {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+}
+
+// Rating count
+.overview-rating-count {
+    font-size: .8rem;
+    text-transform: uppercase;
+}

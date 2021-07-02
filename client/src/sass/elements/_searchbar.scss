@@ -1,0 +1,53 @@
+// Search bar
+.search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Search input
+.search-input {
+    font-size: 1.4rem;
+    background-color: #f4f2f2;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.25rem;
+}
+
+// Input placeholder
+.search-input::placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+// Grow input on focus
+.search-input:focus {
+    outline: none;
+    width: 100%;
+    background-color: #f0eeee;
+}
+
+// Search magnifying glass button
+.search-btn {
+    border: none;
+}
+
+.search-btn:focus {
+    outline: none;
+}
+
+// Press down effect on search button
+.search-btn:active {
+    transform: translateY(2px);
+}
+
+// Magnifying glass icon
+.search-icon {
+    color: #999;
+    background-color: transparent;
+    font-size: 2rem;
+}
