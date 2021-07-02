@@ -1,0 +1,44 @@
+/* ===================================
+   Proshop Button
+==================================== */
+
+/* ===================================
+   <button class="btn btn-secondary">
+        Secondary Button
+    </button>
+==================================== */
+
+.btn {
+    background-color: #1a1a1a;
+    font-family: 'Nunito Sans';
+    text-transform: uppercase;
+    color: white;
+    margin: 4px 1px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 17px;
+    border-radius: 0px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    letter-spacing: 1.2;
+}
+
+.btn:focus {
+    box-shadow:  0 0 0 .3rem rgba(26, 26, 26, 0.25);
+    background-color:  #1a1a1a;
+}
+
+.btn_prhoshop:hover {
+    background-color: #1a1a1a;
+}
+
+.btn:disabled {
+    background-color: #1a1a1a;
+    filter: opacity(70%);
+    cursor: auto;
+}
+
+.btn-round {
+    border-radius: 2.8rem;
+}
