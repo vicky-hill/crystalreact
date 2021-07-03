@@ -63,16 +63,16 @@
 ============================================================================================ */
 
 .valid-feedback {
-    color: #28A745;
+    color: #57CC9D;
 }
 
 .input.valid-feedback {
-    border-color: #28a745;
+    border-color: #57CC9D;
 }
 
 
 .input.valid-feedback:focus, .input.valid-feedback:active {
-    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+    box-shadow: 0 0 0 3px rgba(#57CC9D, 0.25);
 }
 
 .invalid-feedback {
