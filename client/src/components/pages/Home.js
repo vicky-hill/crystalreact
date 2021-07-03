@@ -6,6 +6,7 @@ import Badge from '../elements/Badge';
 import Card from '../elements/Card';
 import List from '../elements/List';
 import Form from '../elements/Form';
+import Collapse from '../elements/Collapse';
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
                 <Card />
                 <List />
                 <Form />
+                <Collapse />
             </div>
         </>
     )
