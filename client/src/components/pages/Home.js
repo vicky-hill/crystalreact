@@ -7,6 +7,7 @@ import Card from '../elements/Card';
 import List from '../elements/List';
 import Form from '../elements/Form';
 import Collapse from '../elements/Collapse';
+import Accordion from '../elements/Accordion';
 
 
 const Home = () => {
@@ -20,9 +21,10 @@ const Home = () => {
                 <Alert />
                 <Badge />
                 <Card />
+                <Collapse />
+                <Accordion />
                 <List />
                 <Form />
-                <Collapse />
             </div>
         </>
     )
