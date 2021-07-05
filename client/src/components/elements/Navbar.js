@@ -21,7 +21,7 @@ const Navbar = () => {
                 </ul>
                 <form>
                     <input type="search" placeholder="Search" class="input" />
-                    <button className="btn btn-outline-pink ml-2" type="submit">Search</button>
+                    <button className="btn btn-outline-pink ml-2 mb-0" type="submit">Search</button>
                 </form>
             </div>
         </nav>

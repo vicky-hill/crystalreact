@@ -4,9 +4,13 @@ import React from 'react';
 
 const Button = () => {
     return (
-        <button className='btn btn-primary'>
-            Click here
-        </button>
+        <div className="mb-10">
+
+            <button className='btn btn-primary'>
+                Click here
+            </button>
+            
+        </div>
     )
 }
 

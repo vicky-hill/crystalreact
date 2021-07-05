@@ -10,7 +10,8 @@ const Collapse = () => {
 
     return (
         <div className="row">
-            <div className="col-4">
+            <div className="col-4 mb-10">
+
                 <button className="btn btn-primary" onClick={collapse} > Open Collapse </button>
 
                 <div className="collapse" id="collapse">
@@ -20,6 +21,7 @@ const Collapse = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 

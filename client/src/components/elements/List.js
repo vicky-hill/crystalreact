@@ -4,10 +4,10 @@ const List = () => {
     return (
         <>
             <div className="row">
-                <div className="col-5">
+                <div className="col-6">
 
                     {/* Basic list */}
-                    <h4 className="mb-5">Basic List</h4>
+                    <h4 className="mb-10">Basic List</h4>
                     <ul className="list-group list-group-header">
                         <li className="list-group-item">Featured</li>
                         <li className="list-group-item">Cras justo odio</li>
@@ -28,9 +28,9 @@ const List = () => {
                 </div>
             </div>
 
-            <div className="row">
-                <div className="col">
-                    <ul className="list-group">
+            <div className="row mb-10">
+                <div className="col-6">
+                    <ul className="list-group list-group-header">
                         <li className="list-group-item">Featured </li>
                         <li className="list-group-item">Cras justo odio <span className="badge badge-pill">16</span> </li>
                         <li className="list-group-item">Dapibus ac facilisis in <span className="badge badge-pill">22</span></li>

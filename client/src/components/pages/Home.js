@@ -17,8 +17,8 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container">
-                <Button />
                 <Alert />
+                <Button />
                 <Badge />
                 <Card />
                 <Collapse />

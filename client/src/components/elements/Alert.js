@@ -9,11 +9,15 @@ const Alert = () => {
     }
 
     return (
-        <div class='alert alert-primary'>
-            A simple alert
-            <button class="alert-close" onClick={dismissAlert}>
-                <span>&times;</span>
-            </button>
+        <div className="mb-10">
+
+            <div class='alert alert-primary'>
+                A simple alert
+                <button class="alert-close" onClick={dismissAlert}>
+                    <span>&times;</span>
+                </button>
+            </div>
+            
         </div>
     )
 }

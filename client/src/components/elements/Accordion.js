@@ -27,7 +27,7 @@ const Accordion = () => {
 
     return (
         <div className="row">
-            <div className="col-5">
+            <div className="col-6">
                 <div className="accordion mb-10" onClick={collapse}>
                     <div className="accordion-item">
                         <p className="accordion-header">Item #1</p>
