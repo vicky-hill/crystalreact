@@ -8,6 +8,7 @@ import List from '../elements/List';
 import Form from '../elements/Form';
 import Collapse from '../elements/Collapse';
 import Accordion from '../elements/Accordion';
+import Toast from '../elements/Toast';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container">
+                <Toast />
                 <Alert />
                 <Button />
                 <Badge />
