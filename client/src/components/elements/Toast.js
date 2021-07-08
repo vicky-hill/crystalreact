@@ -4,19 +4,6 @@ import { deleteToast, addToast } from '../../actions/toasts';
 
 const Toast = ({ deleteToast, addToast, toasts }) => {
 
-    function showToast() {
-        const toast = document.getElementById('toast');
-        toast.classList.add('show');
-
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3000);
-    }
-
-    function hideToast() {
-        document.getElementById('toast').classList.remove('show');
-    }
-
     return (
         <>
             <div className="mb-3">
@@ -42,7 +29,7 @@ const Toast = ({ deleteToast, addToast, toasts }) => {
 
             {/* Live toast */}
 
-            <div className="toast-container" id="toast">
+            <div className="toast-container">
                 {
                     toasts.map(toast => (
                         <div class="toast">

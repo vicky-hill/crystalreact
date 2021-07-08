@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../elements/Button';
 import Alert from '../elements/Alert';
 import Navbar from '../elements/Navbar';
 import Badge from '../elements/Badge';
@@ -9,6 +8,7 @@ import Form from '../elements/Form';
 import Collapse from '../elements/Collapse';
 import Accordion from '../elements/Accordion';
 import Toast from '../elements/Toast';
+import Tabs from '../elements/Tabs';
 
 
 const Home = () => {
@@ -25,6 +25,7 @@ const Home = () => {
                 <Collapse />
                 <Accordion />
                 <List />
+                <Tabs />
                 <Form />
             </div>
         </>

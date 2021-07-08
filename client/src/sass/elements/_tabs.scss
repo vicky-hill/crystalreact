@@ -1,0 +1,107 @@
+/* HTML ===========================================================================
+
+    <div className="tabs" onClick={openTab}>
+        <div className="tabs-item active">Item 1</div>
+        <div className="tabs-item">Item 2</div>
+        <div className="tabs-item">Item 3</div>
+    </div>
+
+    <div className="tab-content">
+        <div className="tab-pane fade show active" id="first">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sapiente quidem quibusd</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sun.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
+        </div>
+        <div className="tab-pane fade" id="second">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sunt! Magnam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
+        </div>
+        <div className="tab-pane fade" id="third">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sunt! Magnam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
+            <p>Consectetur ducimus dolorem vitae corporis, magnam possimus</p>
+        </div>
+    </div>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    const openTab = (e) => {
+        const tabs = document.getElementsByClassName('tabs-item');
+        const tabContent = document.getElementsByClassName('tab-pane');
+
+        // Close all tabs that aren't the target
+        for (let i = 0; i < tabs.length; i++) {
+            if (tabs[i] !== e.target) {
+                tabs[i].classList.remove('active');
+                tabContent[i].classList.remove('show');
+                tabContent[i].classList.remove('active')
+            } else {
+                tabs[i].classList.add('active');
+                tabContent[i].classList.add('active');
+                setTimeout(() => { tabContent[i].classList.add('show');}, 150);
+            }
+        }
+    }
+
+
+================================================================================ */
+
+.tabs {
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.tabs-item.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tabs-item {
+    margin-bottom: -1px;
+    background: 0 0;
+    border: 1px solid transparent;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    display: block;
+    padding: .8rem 1.6rem;
+    color: $teal;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.tabs-item:not(.active):hover {
+    cursor: pointer;
+    border-color: #e9ecef #e9ecef #dee2e6;
+    isolation: isolate;
+}
+
+.tab-pane {
+    padding: 2rem;
+}
+
+.tab-content {
+    min-height: 18rem;
+}
+
+.tab-content {
+    > .tab-pane {
+      display: none;
+    }
+
+    > .active {
+      display: block;
+    }
+}
+
+.fade {
+    transition: opacity .15s linear;
+  
+    &:not(.show) {
+      opacity: 0;
+    }
+}
