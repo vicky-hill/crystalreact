@@ -3,19 +3,21 @@ import React from 'react';
 const Tabs = () => {
 
     const openTab = (e) => {
-        const tabs = document.getElementsByClassName('tabs-item');
-        const tabContent = document.getElementsByClassName('tab-pane');
-
-        // Close all tabs that aren't the target
-        for (let i = 0; i < tabs.length; i++) {
-            if (tabs[i] !== e.target) {
-                tabs[i].classList.remove('active');
-                tabContent[i].classList.remove('show');
-                tabContent[i].classList.remove('active')
-            } else {
-                tabs[i].classList.add('active');
-                tabContent[i].classList.add('active');
-                setTimeout(() => { tabContent[i].classList.add('show');}, 150);
+        if(e.target.classList.contains('tabs-item')) {
+            const tabs = document.getElementsByClassName('tabs-item');
+            const tabContent = document.getElementsByClassName('tab-pane');
+    
+            // Close all tabs that aren't the target
+            for (let i = 0; i < tabs.length; i++) {
+                if (tabs[i] !== e.target) {
+                    tabs[i].classList.remove('active');
+                    tabContent[i].classList.remove('show');
+                    tabContent[i].classList.remove('active')
+                } else {
+                    tabs[i].classList.add('active');
+                    tabContent[i].classList.add('active');
+                    setTimeout(() => { tabContent[i].classList.add('show');}, 150);
+                }
             }
         }
     }
