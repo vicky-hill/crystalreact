@@ -20,7 +20,6 @@ const Home = () => {
             <div className="container">
                 <Toast />
                 <Alert />
-                <Button />
                 <Badge />
                 <Card />
                 <Collapse />
