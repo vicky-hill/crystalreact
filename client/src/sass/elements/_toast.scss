@@ -11,10 +11,6 @@
     margin-bottom: 2rem;
 }
 
-.toast-container:not(.show) {
-    opacity: 0;
-}
-
 .toast {
     width: 35rem;
     max-width: 100%;
@@ -25,6 +21,7 @@
     border: 1px solid rgba(0,0,0,.1);
     box-shadow: 0 0.5rem 1rem rgba(220, 220, 220, 0.562);
     border-radius: 3px;
+    animation: toast-right-in 0.6s ease;
 }
 
 .toast small {
@@ -76,3 +73,13 @@
     word-wrap: break-word;
 }
 
+
+@keyframes toast-right-in {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

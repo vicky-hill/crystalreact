@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { deleteToast, addToast } from '../../actions/toasts';
 
-const Toast = () => {
+const Toast = ({ deleteToast, addToast, toasts }) => {
 
     function showToast() {
         const toast = document.getElementById('toast');
@@ -32,7 +34,7 @@ const Toast = () => {
             </div>
 
             <div className="mb-10">
-                <button className='btn btn-primary' onClick={showToast}>
+                <button className='btn btn-primary' onClick={() => addToast('My Toast', 'The message of the toast')}>
                     Show toast
                 </button>
             </div>
@@ -41,31 +43,29 @@ const Toast = () => {
             {/* Live toast */}
 
             <div className="toast-container" id="toast">
-                <div class="toast">
-                    <div class="toast-header">
-                        <div className="toast-img"></div>
-                        <strong className="toast-title">Toast</strong>
-                        <small>11 mins ago</small>
-                        <button className="toast-close" onClick={hideToast}><span>&times;</span></button>
+                {
+                    toasts.map(toast => (
+                        <div class="toast">
+                        <div class="toast-header">
+                            <div className="toast-img"></div>
+                            <strong className="toast-title">{ toast.title }</strong>
+                            <small>11 mins ago</small>
+                            <button className="toast-close" onClick={() => deleteToast(toast.id)}><span>&times;</span></button>
+                        </div>
+                        <div class="toast-body">
+                            { toast.message }
+                        </div>
                     </div>
-                    <div class="toast-body">
-                        Hello, world! This is a toast message.
-                    </div>
-                </div>
-                <div class="toast">
-                    <div class="toast-header">
-                        <div className="toast-img"></div>
-                        <strong className="toast-title">Toast</strong>
-                        <small>11 mins ago</small>
-                        <button className="toast-close" onClick={hideToast}><span>&times;</span></button>
-                    </div>
-                    <div class="toast-body">
-                        Hello, world! This is a toast message.
-                    </div>
-                </div>
+                    ))
+                }
             </div>
         </>
     )
 }
 
-export default Toast;
+const mapStateToProps = (state) => ({
+    toasts: state.toasts
+})
+
+
+export default connect(mapStateToProps, { deleteToast, addToast })(Toast);
