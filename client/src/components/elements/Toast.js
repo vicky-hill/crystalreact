@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToast, removeToast } from '../../actions/toasts';
+import { removeToast } from '../../actions/toasts';
 
 
-const Toast = ({ toasts, position, addToast, removeToast }) => {
+const Toast = ({ toasts, position, removeToast }) => {
 
     const generateIcon = (type) => {   
         switch(type) {
@@ -68,7 +68,6 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-    addToast,
     removeToast
 }
 
