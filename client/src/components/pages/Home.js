@@ -10,6 +10,7 @@ import Accordion from '../elements/Accordion';
 import Toast from '../elements/Toast';
 import Tabs from '../elements/Tabs';
 import Tooltip from '../elements/Tooltip';
+import Dropdown from '../elements/Dropdown';
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container">
+                <Dropdown />
                 <Toast />
                 <Alert />
                 <Badge />
