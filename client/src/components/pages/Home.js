@@ -9,6 +9,7 @@ import Collapse from '../elements/Collapse';
 import Accordion from '../elements/Accordion';
 import Toast from '../elements/Toast';
 import Tabs from '../elements/Tabs';
+import Tooltip from '../elements/Tooltip';
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
                 <List />
                 <Tabs />
                 <Form />
+                <Tooltip />
             </div>
         </>
     )

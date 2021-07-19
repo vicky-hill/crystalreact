@@ -64,6 +64,26 @@ a.btn {
 }
 
 
+// Secondary
+.btn-secondary {
+    background-color: $secondary;
+}
+
+.btn-secondary:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $secondary, 55%);
+    background-color:  mix(black, $secondary, 10%);
+}
+
+.btn-secondary:hover {
+    background-color: mix(black, $secondary, 10%);
+}
+
+.btn-secondary:disabled {
+    background-color: mix(white, $secondary, 45%);
+    cursor: auto;
+}
+
+
 
 /* ===================================
    Outline button
