@@ -1,0 +1,86 @@
+/* HTML ===========================================================================
+
+    <ul className="pagination" onClick={selectPage}>
+        <li className="page-item page-icon">
+            <a className="page-link" href="#">
+                <span>&laquo;</span>
+            </a>
+        </li>
+        <li className="page-item"><a className="page-link" href="#">1</a></li>
+        <li className="page-item"><a className="page-link" href="#">2</a></li>
+        <li className="page-item"><a className="page-link" href="#">3</a></li>
+        <li className="page-item page-icon">
+            <a className="page-link" href="#">
+                <span>&raquo;</span>
+            </a>
+        </li>
+    </ul>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    const selectPage = (e) => {
+        const pages = document.getElementsByClassName('page-item');
+        const clickedPage = e.target.parentElement;
+
+        // Deactivate all pages that aren't the target
+        for (let i = 0; i < pages.length; i++) {
+            if(!clickedPage.classList.contains('page-icon')) {
+                if (pages[i] !== clickedPage) {
+                    pages[i].classList.remove('active');
+                } else {
+                    pages[i].classList.add('active');
+                }
+            }
+        }
+    }
+
+================================================================================ */
+
+.pagination {
+    display: flex;
+}
+
+.page-item:last-child .page-link {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}   
+
+.page-item:first-child .page-link {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}   
+
+.page-item:not(:first-child) .page-link {
+    margin-left: -1px;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    border-color: $primary;
+    background-color: $primary;
+}
+
+.page-link {
+    position: relative;
+    padding: 6px 12px;
+    display: block;
+    color: $dark;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition:  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.page-link:hover {
+    z-index: 2;
+    background-color: #e9ecef;
+}
+
+.page-link:focus {
+    z-index: 3;
+    color: $primary;
+    background-color: #e9ecef;
+    box-shadow: 0 0 0 3px rgba($primary, .25);
+}

@@ -11,22 +11,23 @@ import Toast from '../elements/Toast';
 import Tabs from '../elements/Tabs';
 import Tooltip from '../elements/Tooltip';
 import Dropdown from '../elements/Dropdown';
+import Pagination from '../elements/Pagination';
 
 
 const Home = () => {
-
 
     return (
         <>
             <Navbar />
             <div className="container">
-                <Dropdown />
+                <Pagination />
                 <Toast />
                 <Alert />
                 <Badge />
                 <Card />
                 <Collapse />
                 <Accordion />
+                <Dropdown />
                 <List />
                 <Tabs />
                 <Form />
