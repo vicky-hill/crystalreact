@@ -98,7 +98,7 @@
     }
 }
 
-.fade {
+.tab-content.fade {
     transition: opacity .15s linear;
   
     &:not(.show) {

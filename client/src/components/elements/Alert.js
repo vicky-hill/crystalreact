@@ -9,7 +9,7 @@ const Alert = () => {
     }
 
     return (
-        <div className="mb-10">
+        <div className="mb-10 width-25">
 
             <div class='alert alert-primary'>
                 A simple alert

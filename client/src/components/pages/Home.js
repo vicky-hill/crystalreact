@@ -12,6 +12,7 @@ import Tabs from '../elements/Tabs';
 import Tooltip from '../elements/Tooltip';
 import Dropdown from '../elements/Dropdown';
 import Pagination from '../elements/Pagination';
+import Modal from '../elements/Modal';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container">
+                <Modal />
                 <Pagination />
                 <Toast />
                 <Alert />
