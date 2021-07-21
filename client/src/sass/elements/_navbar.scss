@@ -28,12 +28,15 @@
 =========================================================================== */
 
 .navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 13px 40px;
     background-color: #f8f9fa;
+    z-index: $z-navbar;
 }
 
 .navbar-brand {

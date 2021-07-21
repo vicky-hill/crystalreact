@@ -25,9 +25,9 @@
 }
 
 .alert-primary {
-    color: #004085;
-    background-color: #cce5ff;
-    border: #b8daff 1px solid;
+    color: mix(black, $primary, 25%);
+    background-color: mix(white, $primary, 85%);
+    border: mix(white, $primary, 45%) 1px solid;
 }
 
 .alert-close {

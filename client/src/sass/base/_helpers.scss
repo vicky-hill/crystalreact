@@ -75,7 +75,7 @@
 }
 
 .hide-mobile {
-    display: none;
+    display: none !important;
 }
 
 /* ===================================
@@ -98,10 +98,10 @@
 
 @media only screen and (min-width : 1400px) { 
     .hide-mobile {
-        display: block;
+        display: block !important;
       }
     
     .hide-desktop {
-        display: none;
+        display: none !important;
     }
 }

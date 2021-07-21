@@ -70,7 +70,7 @@
     border-top-right-radius: .4rem;
     display: block;
     padding: .8rem 1.6rem;
-    color: $teal;
+    color: mix(black, $primary, 10%);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 

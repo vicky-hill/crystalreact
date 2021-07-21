@@ -37,9 +37,9 @@
 
 
 .input:focus, .select:focus {
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 3px mix(white, $primary, 75%);
     outline: none;
-    border: 1px solid rgba(0, 123, 255, 0.486);
+    border: 1px solid mix(white, $primary, 25%);
 }
 
 .input-container label {
@@ -152,7 +152,7 @@ label.default-label {
     width: 100%;
     height: 100%;
     display: block;
-    background: #007bff;
+    background:  mix(black, $primary, 10%);
     border-radius:  50%;
     transform: scale(0);
     transition: transform 0.15s;
@@ -224,8 +224,8 @@ label.default-label {
     transition: transform 0.15s;
 } 
 .checkbox-input:checked + .checkbox-box {
-    background: #007bff;
-    border-color: #007bff;
+    background:  mix(black, $primary, 10%);
+    border-color:  mix(black, $primary, 10%);
 } 
 
 .checkbox-input:checked + .checkbox-box::after {
@@ -282,7 +282,7 @@ label.default-label {
 }
 
 .toggle-input:checked ~ .toggle-fill {
-    background: #007bff;
+    background:  mix(black, $primary, 10%);
 }
 
 .toggle-fill::after {
@@ -346,17 +346,17 @@ label.default-label {
     font-size: 1.4rem;
     font-family: inherit;
     color: #fff !important;
-    background: #007bff; 
+    background: $primary; 
     cursor: pointer;
     transition: background .1s;
 }
 
 .radio-group-label:not(:last-of-type) {
-    border-right: 1px solid #016fe6;
+    border-right: 1px solid $primary;
 }
 
 .radio-group-input:checked + .radio-group-label {
-    background: #0065d1; 
+    background:  mix(black, $primary, 10%); 
 }
 
 

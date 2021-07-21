@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    --header-height: 0;
+    --header-height: 9rem;
     margin: var(--header-height) 0 0 0;
     font-family: -apple-system, "Lato", Arial, sans-serif;
     font-size: 1.6rem;
@@ -62,4 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin-bottom: 1.2rem;
+}
+
+
+@media only screen and (max-width : 1400px) { 
+    body {
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+    }
 }

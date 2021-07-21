@@ -48,7 +48,7 @@ const Card = () => {
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-pink">Go somewhere</a>
+                            <a href="#" class="btn btn-outline-primary">Go somewhere</a>
                         </div>
                     </div>
 

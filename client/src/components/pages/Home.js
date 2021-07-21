@@ -17,7 +17,9 @@ import Breadcrumbs from '../elements/Breadcrumbs';
 import Progress from '../elements/Progress';
 import Button from '../elements/Button';
 import Spinner from '../elements/Spinner';
+import Sidenav from '../elements/Sidenav';
 import Sidebar from '../elements/Sidebar';
+
 
 
 const Home = () => {
@@ -25,8 +27,9 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="container">
+            <div className="container main">
                 <Sidebar />
+                <Sidenav />
                 <Button />
                 <Progress />
                 <Breadcrumbs />

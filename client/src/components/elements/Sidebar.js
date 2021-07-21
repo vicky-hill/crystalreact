@@ -1,45 +1,27 @@
 import React from 'react';
 
 const Sidebar = () => {
-
-    const openSidebar = () => {
-        document.getElementById('sidebar').classList.add('open')
-    }
-    
-    const closeSidebar = () => {
-        document.getElementById('sidebar').classList.remove('open');
-    }
-
     return (
-        <div className="mb-10">
-            <header>
-                <button className="sidebar-btn" onClick={openSidebar}><i class="fas fa-bars"></i></button>
-            </header>
-
-            <nav className="sidebar" id="sidebar">
-                <div className="sidebar-links">
-                    <a href="" className="sidebar-link">
-                        <i class="fas fa-th-large"></i>
-                        Dashboard
-                    </a>
-                    <a href="" className="sidebar-link">
-                        <i class="fas fa-folder"></i>
-                        Projects
-                    </a>
-                    <a href="" className="sidebar-link active">
-                        <i class="fas fa-lock"></i>
-                        Security
-                    </a>
-                    <a href="" className="sidebar-link">
-                        <i class="fas fa-user-alt"></i>
-                        Profile
-                    </a>
-                </div>
-                <div className="sidebar-overlay" onClick={closeSidebar}>
-
-                </div>
-            </nav>
-        </div>
+        <nav className="sidebar">
+            <a href="" className="sidebar-item">Sidenav</a>
+            <a href="" className="sidebar-item">Button</a>
+            <a href="" className="sidebar-item">Progress</a>
+            <a href="" className="sidebar-item">Breadcrumbs</a>
+            <a href="" className="sidebar-item">Modal</a>
+            <a href="" className="sidebar-item">Loader</a>
+            <a href="" className="sidebar-item">Pagination</a>
+            <a href="" className="sidebar-item">Toast</a>
+            <a href="" className="sidebar-item">Alert</a>
+            <a href="" className="sidebar-item">Badge</a>
+            <a href="" className="sidebar-item">Card</a>
+            <a href="" className="sidebar-item">Collapse</a>
+            <a href="" className="sidebar-item">Accordion</a>
+            <a href="" className="sidebar-item">Dropdown</a>
+            <a href="" className="sidebar-item">List</a>
+            <a href="" className="sidebar-item">Tabs</a>
+            <a href="" className="sidebar-item">Form</a>
+            <a href="" className="sidebar-item">Tooltip</a>
+        </nav>
     )
 }
 
