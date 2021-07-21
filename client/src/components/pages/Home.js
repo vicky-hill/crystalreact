@@ -14,6 +14,7 @@ import Dropdown from '../elements/Dropdown';
 import Pagination from '../elements/Pagination';
 import Modal from '../elements/Modal';
 import Breadcrumbs from '../elements/Breadcrumbs';
+import Progress from '../elements/Progress';
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container">
+                <Progress />
                 <Breadcrumbs />
                 <Modal />
                 <Pagination />
