@@ -1,10 +1,20 @@
 /* ===================================
    Standard button
 ==================================== */
+
+/* HTML ===========================================================================
+
+    <button class='btn btn-primary'>
+        Button
+    </button>
+
+================================================================================ */
+
 .btn {
+    position: relative;
     font-family: Lato;
     color: white;
-    margin: 2px;
+    margin: 4px;
     margin-bottom: $default-margin;
     font-size: 1.6rem;
     padding: 6px 12px;
@@ -93,6 +103,40 @@ a.btn {
    Outline button
 ==================================== */
 
+/* HTML ===========================================================================
+
+    <button class='btn btn-primary btn-outline-primary'>
+        Outline Button
+    </button>
+
+================================================================================ */
+
+
+// Primary
+.btn-outline-primary {
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+}
+
+.btn-outline-primary:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
+    background-color: $primary;
+    color: #fff;
+}
+
+.btn-outline-primary:hover {
+    background-color:  $primary;
+    color: #fff;
+}
+
+.btn-outline-primary:disabled {
+    background-color: mix(white, $primary, 45%);
+    cursor: auto;
+    color: #fff;
+}
+
+
 .btn-outline-pink {
     background-color: transparent;
     color: $pink;
@@ -116,33 +160,18 @@ a.btn {
     color: #fff;
 }
 
-// Teal
-.btn-outline-pink {
-    background-color: transparent;
-    color: $teal;
-    border: 1px solid $teal;
-}
-
-.btn-outline-pink:focus {
-    box-shadow:  0 0 0 .3rem mix(white, $teal, 55%);
-    background-color: $teal;
-    color: #fff;
-}
-
-.btn-outline-pink:hover {
-    background-color:  $teal;
-    color: #fff;
-}
-
-.btn-outline-pink:disabled {
-    background-color: mix(white, $teal, 45%);
-    cursor: auto;
-    color: #fff;
-}
 
 /* ===================================
    Round button
 ==================================== */
+
+/* HTML ===========================================================================
+
+    <button class='btn btn-primary btn-outline-primary btn-round'>
+        Round Button
+    </button>
+
+================================================================================ */
 
 // Round Button 
 .btn-round {
@@ -167,4 +196,55 @@ a.btn {
     line-height: 1;
     text-shadow: 0 1px 0 #fff;
     opacity: .5;
+}
+
+
+/* ===================================
+   Loading button
+==================================== */
+
+/* HTML ===========================================================================
+
+    <button class="btn btn-primary" id="loading-button" onClick={toggleSpinner}>
+        <span class="btn-text">Loading button</span>
+    </button>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    const toggleSpinner = () => {
+        document.getElementById('loading-button').classList.toggle('btn-loading');
+    }
+
+================================================================================ */
+
+.btn-loading .btn-text {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: button-loading-spinner .8s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
 }
