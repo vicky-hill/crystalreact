@@ -48,7 +48,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1000;
+    z-index: $z-dropdown-menu;
     display: none;
     min-width: 7rem;
     padding: 8px 0;

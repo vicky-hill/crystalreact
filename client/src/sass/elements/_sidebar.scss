@@ -1,0 +1,110 @@
+/* HTML ===========================================================================
+
+    <header>
+        <button class="sidebar-btn" onClick={openSidebar}>
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-links">
+            <a href="" class="sidebar-link">
+                <i class="fas fa-th-large"></i>
+                Dashboard
+            </a>
+            <a href="" class="sidebar-link">
+                <i class="fas fa-folder"></i>
+                Projects
+            </a>
+            <a href="" class="sidebar-link active">
+                <i class="fas fa-lock"></i>
+                Security
+            </a>
+            <a href="" class="sidebar-link">
+                <i class="fas fa-user-alt"></i>
+                Profile
+            </a>
+        </div>
+        <div class="sidebar-overlay" onClick={closeSidebar}>
+
+        </div>
+    </nav>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    const openSidebar = () => {
+        document.getElementById('sidebar').classList.add('open')
+    }
+    
+    const closeSidebar = () => {
+        document.getElementById('sidebar').classList.remove('open');
+    }
+
+================================================================================ */
+
+
+.sidebar-btn {
+    font-size: 3rem;
+    color: $dark;
+}   
+
+.sidebar-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-sidebar;
+    height: 100vh;
+    width: 25rem;
+    background: #fff;
+    transform: translateX(-25rem);
+    transition: transform 0.3s;
+}
+
+.sidebar.open .sidebar-links {
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 12px 15px;
+    transition: transform 0.2s;
+}
+
+.sidebar-link > i {
+    margin-right: 1.5rem;
+}
+
+.sidebar-link.active {
+    color: mix(black, $primary, 10%);
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background: #eeeeee;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: $z-sidebar-overlay;
+    visibility: hidden ;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.sidebar.open .sidebar-overlay {
+    visibility: visible ;
+    opacity: 1;
+}

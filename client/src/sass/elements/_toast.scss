@@ -19,7 +19,7 @@
 .toast-container {
     padding: 1.6rem;
     position: fixed;
-    z-index: 100;
+    z-index: $z-toast;
     bottom: 0;
     right: 0;
     transition: all 0.3s ease-in-out;
@@ -73,7 +73,7 @@
 }
 
 .toast-close {
-    z-index: 10;
+    z-index: $z-toast;
     margin-left: 8px;
     color: inherit;
     background-color: transparent;

@@ -62,7 +62,7 @@
 .modal {
     opacity: 0;
     position: fixed;
-    z-index: 1700;
+    z-index: $z-modal;
     left:0;
     top: 0;
     width: 100%;
@@ -86,7 +86,7 @@
     border-radius: 5px;
     transform:  translateY(-40px);
     transition: transform .3s ease-out;
-    z-index: 1800;
+    z-index: $z-modal-content;
 }
 
 

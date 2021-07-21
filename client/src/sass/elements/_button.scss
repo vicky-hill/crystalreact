@@ -186,7 +186,7 @@ a.btn {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: $z-button-close;
     padding: 1.2rem 2rem;
     color: inherit;
     background-color: transparent;
@@ -247,4 +247,31 @@ a.btn {
     to {
         transform: rotate(1turn);
     }
+}
+
+
+/* ================================================================================
+   Floating button
+================================================================================ */
+
+.btn-floating {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width:7rem;
+    height: 7rem;
+    background: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 3rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
+    transition: background .25s;
+}
+
+.btn-floating:active,
+.btn-floating:hover {
+    background: mix(black, $primary, 10%);
 }

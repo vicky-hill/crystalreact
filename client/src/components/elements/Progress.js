@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 const Progress = () => {
-    const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = useState(37);
 
     const updateProgress = (progress, value ) => {
         value = Math.round(value);
@@ -27,12 +27,12 @@ const Progress = () => {
             <button className="btn btn-primary" onClick={addFive}>Click to progress</button>
             
             <div className="progress" id="progress1">
-                <div className="progress-fill"></div>
-                <div className="progress-text">0 %</div>
+                <div className="progress-fill" style={{width:progress+'%'}}></div>
+                <div className="progress-text">{progress} %</div>
             </div>
 
             <div className="progress progress--small" id="progress2">
-                <div className="progress-fill"></div>
+                <div className="progress-fill" style={{width:progress+'%'}}></div>
             </div>
         </div>
     )

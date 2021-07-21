@@ -18,3 +18,23 @@ $light: #F8F9FA;
 $dark: #333B3F;
 $pink: #ED7FC4;
 $white: #fff;
+
+
+/* ===================================
+   z-index
+==================================== */
+
+$z-button-close: 1100;
+$z-pagination-hover: 1100;
+$z-pagination-active: 1200;
+
+$z-dropdown-menu: 2000;
+$z-toast: 2000;
+$z-tooltip: 2000;
+
+$z-sidebar: 3100;
+$z-sidebar-overlay: 3000;
+$z-modal: 3000;
+$z-modal-content: 3100;
+
+

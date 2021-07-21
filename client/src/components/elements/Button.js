@@ -27,6 +27,9 @@ const Button = () => {
                 Round Button
             </button>
             
+            <button className="btn-floating">
+            <i class="fas fa-plus"></i>
+            </button>
         </div>
     )
 }

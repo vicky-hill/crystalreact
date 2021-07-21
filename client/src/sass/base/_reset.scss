@@ -14,7 +14,8 @@ html {
 }
 
 body {
-    margin: 0;
+    --header-height: 0;
+    margin: var(--header-height) 0 0 0;
     font-family: -apple-system, "Lato", Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
