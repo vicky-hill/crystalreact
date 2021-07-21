@@ -19,6 +19,7 @@ import Button from '../elements/Button';
 import Spinner from '../elements/Spinner';
 import Sidenav from '../elements/Sidenav';
 import Sidebar from '../elements/Sidebar';
+import BottomNav from '../elements/BottomNav';
 
 
 
@@ -48,6 +49,7 @@ const Home = () => {
                 <Form />
                 <Tooltip />
             </div>
+            <BottomNav />
         </>
     )
 }

@@ -1,3 +1,16 @@
+/* HTML ===========================================================================
+
+    <div className="container main">
+        <nav class="sidebar">
+            <a href="" class="sidebar-link">Sidenav</a>
+            <a href="" class="sidebar-link">Button</a>
+            <a href="" class="sidebar-link">Progress</a>
+            <a href="" class="sidebar-link">Breadcrumbs</a>
+        </nav>
+    </div>
+
+================================================================================ */
+
 .main {
     margin-left: 25rem;
     padding-left: 5rem;
@@ -19,14 +32,14 @@
     justify-content: center;
 }
 
-.sidebar-item {
+.sidebar-link {
     display: inline-block;
     padding: 5px 35px;
     font-size: 0.9em;
     color: $dark;
 }
 
-.sidebar-item:hover {
+.sidebar-link:hover {
     color: $primary;
 }
 
