@@ -1,3 +1,11 @@
+/* HTML ===========================================================================
+
+    <button class="btn btn-secondary" data-tooltip="an even bigger example">
+        Tooltip on top
+    </button>
+
+================================================================================ */
+
 [data-tooltip] {
     position: relative;
     cursor: default;

@@ -13,6 +13,7 @@ import Tooltip from '../elements/Tooltip';
 import Dropdown from '../elements/Dropdown';
 import Pagination from '../elements/Pagination';
 import Modal from '../elements/Modal';
+import Breadcrumbs from '../elements/Breadcrumbs';
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container">
+                <Breadcrumbs />
                 <Modal />
                 <Pagination />
                 <Toast />

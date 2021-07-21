@@ -1,16 +1,16 @@
 /* HTML ===========================================================================
 
-    <ul className="pagination" onClick={selectPage}>
-        <li className="page-item page-icon">
-            <a className="page-link" href="#">
+    <ul class="pagination" onClick={selectPage}>
+        <li class="page-item page-icon">
+            <a class="page-link" href="#">
                 <span>&laquo;</span>
             </a>
         </li>
-        <li className="page-item"><a className="page-link" href="#">1</a></li>
-        <li className="page-item"><a className="page-link" href="#">2</a></li>
-        <li className="page-item"><a className="page-link" href="#">3</a></li>
-        <li className="page-item page-icon">
-            <a className="page-link" href="#">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item page-icon">
+            <a class="page-link" href="#">
                 <span>&raquo;</span>
             </a>
         </li>

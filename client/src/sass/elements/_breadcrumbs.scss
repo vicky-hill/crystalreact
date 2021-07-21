@@ -1,0 +1,38 @@
+/* HTML ===========================================================================
+
+    <ul class="breadcrumbs">
+        <li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Home</a></li>
+        <li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Media</a></li>
+        <li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Photos</a></li>
+        <li class="breadcrumbs-item active"><a href="" class="breadcrumbs-link">Nature</a></li>
+    </ul>
+
+================================================================================ */
+
+.breadcrumbs {
+    padding: 1rem;
+}
+
+.breadcrumbs-item {
+    display: inline-block;
+}
+
+.breadcrumbs-item:not(:last-of-type)::after {
+    content: '/';
+    content: '\203a';
+    margin: 0 5px;
+    color: silver;
+}
+
+.breadcrumbs-link {
+    color: silver;
+}
+
+.breadcrumbs-link:hover {
+    color: $dark;
+}
+
+.breadcrumbs-item.active .breadcrumbs-link {
+    color: $primary;
+    font-weight: 500;
+}

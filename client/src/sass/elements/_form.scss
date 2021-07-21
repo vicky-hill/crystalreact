@@ -8,9 +8,9 @@
 
 /* HTML ===========================================================================
 
-    <div className="input-container">
+    <div class="input-container">
         <label htmlFor="input">Username</label>
-        <input className="input" type="text" placeholder="Enter username" />
+        <input class="input" type="text" placeholder="Enter username" />
     </div>
 
 ================================================================================ */
@@ -54,10 +54,10 @@
 
 /* HTML =======================================================================================
 
-    <div className="input-container">
+    <div class="input-container">
         <label htmlFor="input">Password</label>
-        <input className="input valid-feedback" type="password" placeholder="Enter password" />
-        <small className="valid-feedback">Looks good</small>
+        <input class="input valid-feedback" type="password" placeholder="Enter password" />
+        <small class="valid-feedback">Looks good</small>
     </div>
 
 ============================================================================================ */
@@ -116,11 +116,11 @@ label.default-label {
 
 /* HTML ===========================================================================
     
-    <div className="input-container">
-        <label htmlFor="visual" className="radio"> 
-            <input type="radio" name="radio" id="visual" className="radio-input" />
-            <div className="radio-circle"></div>
-            <div className="radio-label">Visual Studio Code</div> 
+    <div class="input-container">
+        <label htmlFor="visual" class="radio"> 
+            <input type="radio" name="radio" id="visual" class="radio-input" />
+            <div class="radio-circle"></div>
+            <div class="radio-label">Visual Studio Code</div> 
         </label>
     </div>
 
@@ -182,11 +182,11 @@ label.default-label {
 
 /* HTML ===========================================================================
    
-    <div className="input-container">
-        <label htmlFor="mac" className="checkbox">
-            <input type="checkbox" name="mac" className="checkbox-input" id="mac"/>
-            <div className="checkbox-box"></div>
-                <div className="checkbox-label">Mac</div> 
+    <div class="input-container">
+        <label htmlFor="mac" class="checkbox">
+            <input type="checkbox" name="mac" class="checkbox-input" id="mac"/>
+            <div class="checkbox-box"></div>
+                <div class="checkbox-label">Mac</div> 
         </label>
     </div>
 
@@ -247,11 +247,11 @@ label.default-label {
 
 /* HTML ===========================================================================
 
-    <div className="input-container">
-        <label htmlFor="darkmode" className="toggle">
-            <input type="checkbox" id="darkmode" className="toggle-input" />
-            <div className="toggle-fill"></div>
-            <div className="toggle-label">Darkmode</div> 
+    <div class="input-container">
+        <label htmlFor="darkmode" class="toggle">
+            <input type="checkbox" id="darkmode" class="toggle-input" />
+            <div class="toggle-fill"></div>
+            <div class="toggle-label">Darkmode</div> 
         </label>
     </div>
 
@@ -317,15 +317,15 @@ label.default-label {
 
 /* HTML =================================================================================================
 
-    <div className="input-container radio-group">
-        <input className="radio-group-input" type="radio" value="option1" name="myRadio" id="myRadio1"/>
-        <label className="radio-group-label" htmlFor="myRadio1">10</label>
+    <div class="input-container radio-group">
+        <input class="radio-group-input" type="radio" value="option1" name="myRadio" id="myRadio1"/>
+        <label class="radio-group-label" htmlFor="myRadio1">10</label>
 
-        <input className="radio-group-input" type="radio" value="option2" name="myRadio" id="myRadio2"/>
-        <label className="radio-group-label" htmlFor="myRadio2">20</label>
+        <input class="radio-group-input" type="radio" value="option2" name="myRadio" id="myRadio2"/>
+        <label class="radio-group-label" htmlFor="myRadio2">20</label>
 
-        <input className="radio-group-input" type="radio" value="option3" name="myRadio" id="myRadio3"/>
-        <label className="radio-group-label" htmlFor="myRadio3">30</label>
+        <input class="radio-group-input" type="radio" value="option3" name="myRadio" id="myRadio3"/>
+        <label class="radio-group-label" htmlFor="myRadio3">30</label>
     </div>
 
 ====================================================================================================== */
@@ -366,10 +366,10 @@ label.default-label {
 
 /* HTML ======================================================================================
     
-    <div className="input-container">
+    <div class="input-container">
         <input type="file" name="" id="real-file" hidden="hidden" />
-        <button className="btn" type="button" id="custom-button">Browse</button>
-        <span className="file-label" id="custom-text">No file chosen</span>
+        <button class="btn" type="button" id="custom-button">Browse</button>
+        <span class="file-label" id="custom-text">No file chosen</span>
     </div>
 
 =========================================================================================== */

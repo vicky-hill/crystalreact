@@ -1,22 +1,22 @@
 /* HTML ===========================================================================
 
-    <div className="tabs" onClick={openTab}>
-        <div className="tabs-item active">Item 1</div>
-        <div className="tabs-item">Item 2</div>
-        <div className="tabs-item">Item 3</div>
+    <div class="tabs" onClick={openTab}>
+        <div class="tabs-item active">Item 1</div>
+        <div class="tabs-item">Item 2</div>
+        <div class="tabs-item">Item 3</div>
     </div>
 
-    <div className="tab-content">
-        <div className="tab-pane fade show active" id="first">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="first">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sapiente quidem quibusd</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sun.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
         </div>
-        <div className="tab-pane fade" id="second">
+        <div class="tab-pane fade" id="second">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sunt! Magnam</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
         </div>
-        <div className="tab-pane fade" id="third">
+        <div class="tab-pane fade" id="third">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sunt! Magnam</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
             <p>Consectetur ducimus dolorem vitae corporis, magnam possimus</p>

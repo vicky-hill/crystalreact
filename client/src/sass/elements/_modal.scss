@@ -4,21 +4,21 @@
         Launch demo modal
     </button>
 
-    <div className="modal" data-modal="modal1" onClick={closeModal}>
-        <div className="modal-content">
+    <div class="modal" data-modal="modal1" onClick={closeModal}>
+        <div class="modal-content">
 
-            <div className="modal-header">
-                <p className="modal-title">Title</p>
-                <span className="modal-close">&times;</span>
+            <div class="modal-header">
+                <p class="modal-title">Title</p>
+                <span class="modal-close">&times;</span>
             </div>
 
-            <div className="modal-body">
+            <div class="modal-body">
                 ...
             </div>
 
-            <div className="modal-footer">
-                <button className="btn btn-secondary modal-close" onClick={closeModal}>Close</button>
-                <button className="btn btn-primary">Save changes</button>
+            <div class="modal-footer">
+                <button class="btn btn-secondary modal-close" onClick={closeModal}>Close</button>
+                <button class="btn btn-primary">Save changes</button>
             </div>
 
         </div>
@@ -65,8 +65,8 @@
     z-index: 1700;
     left:0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, .5);
     pointer-events: none;
