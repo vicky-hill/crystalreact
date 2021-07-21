@@ -16,6 +16,7 @@ import Modal from '../elements/Modal';
 import Breadcrumbs from '../elements/Breadcrumbs';
 import Progress from '../elements/Progress';
 import Button from '../elements/Button';
+import Spinner from '../elements/Spinner';
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container">
+                <Spinner />
                 <Button />
                 <Progress />
                 <Breadcrumbs />
