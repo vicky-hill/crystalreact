@@ -3,6 +3,8 @@ import React from 'react';
 const Pagination = () => {
 
     const selectPage = (e) => {
+        e.preventDefault();
+
         const pages = document.getElementsByClassName('page-item');
         const clickedPage = e.target.parentElement;
 

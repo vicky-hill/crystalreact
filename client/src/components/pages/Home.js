@@ -20,6 +20,7 @@ import Spinner from '../elements/Spinner';
 import Sidenav from '../elements/Sidenav';
 import Sidebar from '../elements/Sidebar';
 import BottomNav from '../elements/BottomNav';
+import Table from '../elements/Table';
 
 
 
@@ -46,6 +47,7 @@ const Home = () => {
                 <Dropdown />
                 <List />
                 <Tabs />
+                <Table />
                 <Form />
                 <Tooltip />
             </div>
