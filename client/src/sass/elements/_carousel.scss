@@ -1,0 +1,201 @@
+/* HTML ===========================================================================
+
+    <div class="carousel" onLoad={setUpCarousel}>
+        <button class="carousel-btn left" onClick={prevSlide}>
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-container">
+            <ul class="carousel-track">
+                <li class="carousel-slide current">
+                    <img class="carousel-image" src={slide1} alt="" />
+                </li>
+                <li class="carousel-slide">
+                    <img class="carousel-image" src={slide2} alt="" />
+                </li>
+                <li class="carousel-slide">
+                    <img class="carousel-image" src={slide3} alt="" />
+                </li>
+            </ul>
+        </div>
+
+        <button class="carousel-btn right" onClick={nextSlide}>
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-nav" onClick={navigateToDot}>
+            <button class="carousel-indicator current"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+        </div>
+    </div>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    let track, nav, dots, slides;
+
+    const setUpCarousel = () => {
+
+        // Set up variables
+        track = document.querySelector('.carousel-track');
+        slides = Array.from(track.children);
+        nav = document.querySelector('.carousel-nav');
+        dots = Array.from(nav.children);
+
+        // Set images next to each other
+        const slideWidth = slides[0].getBoundingClientRect().width;
+
+        slides.forEach((slide, index) => {
+            slide.style.left = slideWidth * index + 'px';
+        })
+    }
+
+    // Move to the target Slide
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+        track.style.transform = `translateX(-${targetSlide.style.left})`;
+        currentSlide.classList.remove('current');
+        targetSlide.classList.add('current');
+    }
+
+    // Next slide
+    const nextSlide = () => {
+        let nextSlide, nextDot;
+        const currentSlide = track.querySelector('.current');
+        const currentDot = nav.querySelector('.current');
+        const currentIndex = dots.findIndex(dot => dot === currentDot);
+
+        // Check if last slide
+        if (currentIndex + 1 === slides.length) {
+            nextSlide = slides[0];
+            nextDot = dots[0]
+        } else {
+            nextSlide = currentSlide.nextElementSibling;
+            nextDot = currentDot.nextElementSibling;
+        }
+
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDot, nextDot);
+    }
+
+    // Previous slide
+    const prevSlide = () => {
+        let prevSlide, prevDot;
+        const currentSlide = track.querySelector('.current');
+        const currentDot = nav.querySelector('.current');
+        const currentIndex = dots.findIndex(dot => dot === currentDot);
+
+        // Check if first slide
+        if (currentIndex === 0) {
+            prevSlide = slides[2];
+            prevDot = dots[2]
+        } else {
+            prevSlide = currentSlide.previousElementSibling;
+            prevDot = currentDot.previousElementSibling;
+        }
+
+        moveToSlide(track, currentSlide, prevSlide);
+        updateDots(currentDot, prevDot);
+    }
+
+    // Navigate dot
+    const navigateToDot = (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            const currentSlide = track.querySelector('.current');
+            const currentDot = nav.querySelector('.current');
+
+            const targetDot = e.target.closest('button');
+            const targetIndex = dots.findIndex(dot => dot === targetDot);
+            const targetSlide = slides[targetIndex];
+
+            moveToSlide(track, currentSlide, targetSlide);
+            updateDots(currentDot, targetDot);
+        }
+    }
+
+    // Move dots
+    const updateDots = (currentDot, targetDot) => {
+        currentDot.classList.remove('current');
+        targetDot.classList.add('current');
+    }
+
+================================================================================ */
+
+.carousel {
+    position: relative;
+    height: 40rem;
+    width: 60%;
+    // margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// Navigation arrows
+.carousel-btn {
+    position: absolute;
+    top: 45%;
+    font-size: 2.5rem;
+    z-index: 2;
+    color: #fff;
+}
+
+.carousel-btn.left {
+    left: 5rem;
+}
+
+.carousel-btn.right {
+    right: 5rem;
+}
+
+
+// Navigation dots
+.carousel-nav {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.carousel-indicator {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin: 0 1rem;
+}
+
+.carousel-indicator.current {
+    background-color: rgba(255, 255, 255, 1);
+}

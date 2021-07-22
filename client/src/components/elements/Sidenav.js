@@ -3,11 +3,13 @@ import React from 'react';
 const Sidenav = () => {
 
     const openSidenav = () => {
-        document.getElementById('sidenav').classList.add('open')
+        document.getElementById('sidenav').classList.add('open');
+        document.querySelector('body').classList.add('no-scroll');
     }
     
     const closeSidenav = () => {
         document.getElementById('sidenav').classList.remove('open');
+        document.querySelector('body').classList.remove('no-scroll');
     }
 
     const activeTab = (e) => {

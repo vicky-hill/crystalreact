@@ -7,7 +7,6 @@ const List = () => {
                 <div className="col-6">
 
                     {/* Basic list */}
-                    <h4 className="mb-10">Basic List</h4>
                     <ul className="list-group list-group-header">
                         <li className="list-group-item">Featured</li>
                         <li className="list-group-item">Cras justo odio</li>

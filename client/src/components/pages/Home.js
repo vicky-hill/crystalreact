@@ -21,6 +21,7 @@ import Sidenav from '../elements/Sidenav';
 import Sidebar from '../elements/Sidebar';
 import BottomNav from '../elements/BottomNav';
 import Table from '../elements/Table';
+import Carousel from '../elements/Carousel';
 
 
 
@@ -46,6 +47,7 @@ const Home = () => {
                 <Accordion />
                 <Dropdown />
                 <List />
+                <Carousel />
                 <Tabs />
                 <Table />
                 <Form />

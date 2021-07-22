@@ -6,7 +6,7 @@ const Modal = () => {
     const openModal = (e) => {
         document.querySelector(`[data-modal=${e.target.id}]`).classList.add('show');
         document.querySelector(`[data-modal=${e.target.id}]`).classList.remove('fade');
-        document.getElementById('body').classList.add('modal-open');
+        document.querySelector('body').classList.add('no-scroll');
     }
 
     // Close Modal
@@ -25,7 +25,7 @@ const Modal = () => {
             if (closeModal) { modalId = e.target.parentElement.parentElement.parentElement.getAttribute('data-modal'); }
 
             document.querySelector(`[data-modal=${modalId}]`).classList.remove('show');
-            document.getElementById('body').classList.remove('modal-open');
+            document.querySelector('body').classList.remove('no-scroll');
         }
     }
 

@@ -113,7 +113,8 @@ span.modal-close  {
     transform: none;
 }
 
-.modal-open {
+// Disable body scrolling
+.no-scroll {
     overflow: hidden;
 }
 
