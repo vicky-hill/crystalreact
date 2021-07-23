@@ -1,0 +1,69 @@
+/* HTML ===========================================================================
+
+    <select id="select-theme">
+        <option value="auto">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    function applyTheme(theme) {
+        document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+        document.body.classList.add(`theme-${theme}`)
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme") || "auto";
+
+        applyTheme(savedTheme);
+
+        for (const option of document.querySelectorAll("#select-theme option")) {
+            option.selected = savedTheme === option.value;
+        }
+
+        document.querySelector("#select-theme").addEventListener("change", function() {
+            localStorage.setTheme("theme", this.value);
+            applyTheme(this.value);
+        })
+    })
+
+================================================================================ */f
+
+:root {
+    // Dark theme
+    --dark-background-color: #111111;
+    --dark-background-color-alt: #222222;
+    --dark-trim-color: #333333;
+    --dark-text-color: #eeeeee;
+}
+
+body {
+    // Light theme
+    --background-color: #ffffff;
+    --background-color-alt: #eeeeee;
+    --trim-color: #dddddd;
+    --text-color: #333333;
+
+    // Set colors
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --background-color-alt: var(--dark-background-color-alt);
+    --trim-color: var(--dark-trim-color);
+    --text-color: var(--dark-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --background-color-alt: var(--dark-background-color-alt);
+        --trim-color: var(--dark-trim-color);
+        --text-color: var(--dark-text-color);
+    }
+}
