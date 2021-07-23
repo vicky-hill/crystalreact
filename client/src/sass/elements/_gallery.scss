@@ -1,0 +1,81 @@
+/* HTML ===========================================================================
+
+    <div class="gallery-container" onLoad={loadGallery}>
+        <div class="gallery-main">
+            <img src={slide1} id="current" />
+        </div>
+        <div class="gallery-images" onClick={setImage}>
+            <img src={slide1} />
+            <img src={slide2} />
+            <img src={slide3} />
+        </div>
+    </div>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    useEffect(() => {
+        images = document.querySelectorAll('.gallery-images img');
+        images[0].style.opacity = opacity;
+    }, [])
+
+
+    let current, images;
+    const opacity = 0.2;
+
+    const loadGallery = () => {
+        current = document.querySelector('.gallery-main #current');
+        images = document.querySelectorAll('.gallery-images img');
+
+        // Set first image opacity
+        // images[0].style.opacity = opacity;
+    }
+
+    const setImage = (e) => {
+        // Reset opacity of all images
+        images.forEach(img => img.style.opacity = 1);
+
+        // Change main image src to clicked image src
+        current.src = e.target.src;
+
+        // Add fade in class
+        current.classList.add('fade-in');
+
+        // Remove fade-in class
+        setTimeout(() => {
+            current.classList.remove('fade-in');
+        }, 500);
+
+        // Change the opacity
+        e.target.style.opacity = opacity;
+    }
+
+================================================================================ */
+
+.gallery-container {
+    max-width:  70rem;
+}
+
+.gallery-main img,
+.gallery-images img {
+    width: 100%;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap:  5px; 
+}
+
+// Fade in animation
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-in 1 forwards; 
+}

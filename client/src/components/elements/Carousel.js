@@ -91,7 +91,49 @@ const Carousel = () => {
         targetDot.classList.add('current');
     }
 
+    /* ===================================
+       Carousel 2
+    =================================== */
 
+    let carouselSlide_2, carouselImages_2, carouselSize_2;
+    let counter = 1;
+
+    const setUpCarousel_2 = () => {
+        carouselSlide_2 = document.querySelector('.carousel-slide_2');
+        carouselImages_2 = document.querySelectorAll('.carousel-image_2');
+        carouselSize_2 = carouselImages_2[0].clientWidth;
+
+        carouselSlide_2.style.transform = `translateX(-${carouselSize_2 * counter}px)`;
+    }
+
+    const loopCarousel_2 = () => {
+        if(carouselImages_2[counter].id === 'last-clone_2') {
+            carouselSlide_2.style.transition = 'none';
+            counter = carouselImages_2.length - 2;
+            carouselSlide_2.style.transform = `translateX(-${carouselSize_2 * counter}px)`;
+        }
+        if(carouselImages_2[counter].id === 'first-clone_2') {
+            carouselSlide_2.style.transition = 'none';
+            counter = carouselImages_2.length - counter;
+            carouselSlide_2.style.transform = `translateX(-${carouselSize_2 * counter}px)`;
+        }
+    }
+    
+    
+    const nextSlide_2 = () => {
+        if(counter >= carouselImages_2.length - 1) return;
+        counter++;
+        carouselSlide_2.style.transition = 'transform 0.4s ease-in-out';
+        carouselSlide_2.style.transform = `translateX(-${carouselSize_2 * counter}px)`;
+    }
+
+    const prevSlide_2 = () => {
+        if(counter <= 0) return;
+        counter--;
+        carouselSlide_2.style.transition = 'transform 0.4s ease-in-out';
+        carouselSlide_2.style.transform = `translateX(-${carouselSize_2 * counter}px)`;
+    }
+    
 
 
     return (
@@ -125,6 +167,25 @@ const Carousel = () => {
                     <button className="carousel-indicator"></button>
                 </div>
             </div>
+
+
+
+            {/* Carousel 2 */}
+
+            <div className="carousel-container_2" onLoad={setUpCarousel_2}>
+                <div className="carousel-slide_2" onTransitionEnd={loopCarousel_2}>
+                    <img className="carousel-image_2" id="last-clone_2" src={slide3} alt="" />
+                    <img className="carousel-image_2" src={slide1} alt="" />
+                    <img className="carousel-image_2" src={slide2} alt="" />
+                    <img className="carousel-image_2" src={slide3} alt="" />
+                    <img className="carousel-image_2" id="first-clone_2" src={slide1} alt="" />
+                </div>
+                
+                <button class="btn btn-primary" id="prev-btn_2" onClick={prevSlide_2}>prev</button>
+                <button class="btn btn-primary" id="next-btn_2" onClick={nextSlide_2}>next</button>
+            </div>
+
+
         </div>
     )
 }
