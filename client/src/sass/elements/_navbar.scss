@@ -1,33 +1,53 @@
 /* HTML =====================================================================
     
-    <nav class="navbar">
+    <nav class="nav-container">
+        <img src="" class="nav-logo" loading="lazy"></img>
+        <a class="nav-brand" href="#">Basic Style</a>
+
+        <input type="checkbox" class="nav-toggle" name="" id="nav-toggle" onClick={mobileMenu} />
+        <input type="checkbox" class="search-toggle" name="" id="search-toggle" onClick={mobileMenu} />
         
-        <img src="" class="navbar-logo" loading="lazy"></img>
-        <a class="navbar-brand" href="#">CSS Magic</a>
-
-        <div class="navbar-nav">
-            <ul class="nav-list">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Elements</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Styles</a>
-                </li>
-
+        <div class="navbar">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Elements</a></li>
+                <li><a href="#">Styles</a></li>
             </ul>
+
             <form>
                 <input type="search" placeholder="Search" class="input" />
-                <button class="btn btn-primary ml-4" type="submit">Search</button>
+                <button class="btn btn-primary ml-2 mb-0 btn-input" type="submit">Search</button>
             </form>
         </div>
+
+        <label htmlFor="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+        <label htmlFor="search-toggle" class="search-toggle-label">
+            <span><i class="fas fa-search"></i></span>
+        </label>
     </nav>
     
 =========================================================================== */
 
-.navbar {
+/* JavaScript =====================================================================
+
+    const mobileMenu = (e) => {
+        const clicked = Array.from(e.target.classList)[0];
+        const navToggle = document.querySelector('.nav-toggle');
+        const searchToggle = document.querySelector('.search-toggle');
+
+        if (clicked === 'nav-toggle') {
+            searchToggle.checked = false;
+        } else {
+            navToggle.checked = false;
+        }
+    }
+
+================================================================================ */
+
+.nav-container {
     position: fixed;
     top: 0;
     width: 100%;
@@ -39,7 +59,7 @@
     z-index: $z-navbar;
 }
 
-.navbar-brand {
+.nav-brand {
     display: inline-block;
     padding-top: .5rem;
     padding-bottom: .5rem;
@@ -51,12 +71,13 @@
     color: rgba(58, 218, 218, 0.9);
 }
 
-.navbar-logo {
+.nav-logo {
     width: 2.5rem;
     margin-right: 1rem;
 }
 
-.navbar-nav {
+// Navbar
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,22 +85,154 @@
     padding: 0 2rem;
 }
 
-.nav-list {
+// Nav list
+.navbar ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 0;
 }
 
-.nav-link {
+// Nav links
+.navbar ul li a {
     padding: 0.4rem 0.8rem;
     color: rgba(0,0,0,.5);
 }
 
-.nav-link:hover {
+.navbar ul li a:hover {
     color: rgba(0,0,0,.7);
 }
 
-.active a {
+.navbar .active a {
     color: rgba(0,0,0, 0.9);
+}
+
+
+// Mobile menu
+.nav-toggle,
+.nav-toggle-label,
+.search-toggle,
+.search-toggle-label {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2.4rem;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+.search-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2.4rem;
+    height: 100%;
+    display: none;
+    align-items: center;
+    color: darkgrey;
+    font-size: 1.8rem;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: darkgrey;
+    width: 1.5em;
+    border-radius: 2px;
+    height: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px; 
+}
+
+.nav-toggle-label span::after {
+    top: 7px; 
+}
+
+
+
+@media only screen and (max-width : 1400px) { 
+    .nav-container {
+        display: block;
+        text-align: center; 
+    }
+
+    .nav-brand {
+        margin: 0;
+    }
+
+    // Mobile menu
+    .navbar ul {
+        margin-top: 1px;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 100%;
+        left: 0;
+        background-color: #f8f9fa;
+        width: 100%;
+        transition: all .3s ease-in-out;
+        transform-origin: top;
+        transform: scale(1, 0);
+    }
+
+    .navbar ul li {
+        margin-bottom: 1.5rem;
+        transition: opacity .1s ease-in-out;
+        opacity: 0;
+    }
+
+
+    // Search bar
+    .navbar form {
+        margin-top: 1px;
+        position: absolute;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        top: 100%;
+        right: 50%;
+        width: 100%;
+        transform: translateX(50%);
+        background-color: #f8f9fa;
+        
+        display: none;
+    }
+
+
+    // Mobile menu toggles
+    .nav-toggle-label,
+    .search-toggle-label {
+        display: flex;
+    }
+
+    // Menu toggle
+    .nav-toggle:checked ~ .navbar ul {
+        transform: scale(1, 1)
+    }
+
+    .nav-toggle:checked ~ .navbar ul li {
+        opacity: 1;
+        transition: opacity .15s ease-in-out .15s;
+    }
+
+    // Search toggle
+    .search-toggle:checked ~ .navbar form {
+        display: block;
+    }
 }

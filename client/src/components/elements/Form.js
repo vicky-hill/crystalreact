@@ -23,7 +23,6 @@ const Form = () => {
         <>
             {/* Basic Form */}
             <div className="mb-10" style={{ width: '50%' }}>
-                <h4 className="mb-5">Basic Form</h4>
                 <form>
 
                     {/* Input */}
@@ -92,7 +91,6 @@ const Form = () => {
                     </div>
 
                     {/* Radio Group */}
-
                     <div className="input-container radio-group">
                         <input className="radio-group-input" type="radio" value="option1" name="myRadio" id="myRadio1" />
                         <label className="radio-group-label" htmlFor="myRadio1"> &nbsp; 5</label>
