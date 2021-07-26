@@ -101,3 +101,13 @@
         transform: translateX(0);
     }
 }
+
+@media only screen and (max-width : 1400px) { 
+    .toast-container {
+        width: 100%;
+    }
+
+    .toast {
+        width: 100%;
+    }
+}

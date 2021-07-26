@@ -6,7 +6,7 @@ const Button = () => {
     const toggleSpinner = () => {
         document.getElementById('loading-button').classList.toggle('btn-loading');
     }
-    
+
 
     return (
         <div className="mb-10">
@@ -26,10 +26,11 @@ const Button = () => {
             <button className='btn btn-primary btn-outline-primary btn-round'>
                 Round Button
             </button>
-            
-            <button className="btn-floating">
-            <i class="fas fa-plus"></i>
-            </button>
+            <div>
+                <button className="btn-floating">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
         </div>
     )
 }

@@ -46,7 +46,7 @@ const Modal = () => {
 
                     {/* Body */}
                     <div className="modal-body">
-                        ...
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, qui.
                     </div>
 
                     {/* Footer */}
