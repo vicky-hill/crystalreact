@@ -40,7 +40,8 @@
     color: $dark;
 }
 
-.sidebar-link:hover {
+.sidebar-link:hover,
+.sidebar-link.active {
     color: $primary;
 }
 

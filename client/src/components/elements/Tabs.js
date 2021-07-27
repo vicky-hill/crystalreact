@@ -24,7 +24,7 @@ const Tabs = () => {
 
 
     return (
-        <div className="mb-10">
+        <section id="tabs" className="mb-10">
             <div className="tabs" onClick={openTab}>
                 <div className="tabs-item active">Item 1</div>
                 <div className="tabs-item">Item 2</div>
@@ -47,7 +47,7 @@ const Tabs = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eum exercitationem dolorum architecto consectetur ducimus dolorem vitae corporis, magnam possimus quo iure laudantium temporibus voluptatum nisi delectus, ipsa earum, veritatis fugiat saepe. Quae rerum delectus tempore, obcaecati illo numquam neque.</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

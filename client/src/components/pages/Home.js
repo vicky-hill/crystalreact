@@ -23,6 +23,7 @@ import BottomNav from '../elements/BottomNav';
 import Table from '../elements/Table';
 import Carousel from '../elements/Carousel';
 import Gallery from '../elements/Gallery';
+import ScrollSpy from '../elements/ScrollSpy';
 
 
 
@@ -32,6 +33,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container main">
+                <ScrollSpy />
                 <Sidebar />
                 <Sidenav />
                 <Button />

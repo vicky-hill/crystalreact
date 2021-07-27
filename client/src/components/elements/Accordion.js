@@ -26,7 +26,7 @@ const Accordion = () => {
     }
 
     return (
-        <div className="row">
+        <section id="accordion" className="row">
             <div className="col-6">
                 <div className="accordion mb-10" onClick={collapse}>
                     <div className="accordion-item">
@@ -63,7 +63,7 @@ const Accordion = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

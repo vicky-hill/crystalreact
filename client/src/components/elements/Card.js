@@ -5,7 +5,7 @@ import book from '../../assets/book.png';
 const Card = () => {
 
     return (
-        <>
+        <section id="cards">
             <div className="row">
                 <div className="col-4">
 
@@ -43,12 +43,12 @@ const Card = () => {
                 <div className="col-4">
 
                     {/* Card with image */}
-                    <div class="card">
+                    <div className="card">
                         <div className="card-image" style={{ backgroundImage: `url(${pink})` }}></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-primary">Go somewhere</a>
+                            <a href="#" className="btn btn-outline-primary">Go somewhere</a>
                         </div>
                     </div>
 
@@ -74,16 +74,16 @@ const Card = () => {
                     {/* Horizontal card with image */}
                     <div className="card card-horizontal">
                         <div className="card-image" style={{ backgroundImage: `url(${book})` }}></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn" style={{ background: '#2c3e50' }}>Go somewhere</a>
+                            <a href="#" className="btn" style={{ background: '#2c3e50' }}>Go somewhere</a>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </>
+        </section>
 
     )
 }

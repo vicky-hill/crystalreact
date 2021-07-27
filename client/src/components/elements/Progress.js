@@ -23,7 +23,7 @@ const Progress = () => {
     
 
     return (
-        <div className="mb-10">
+        <section id="progress" className="mb-10">
             <button className="btn btn-primary" onClick={addFive}>Click to progress</button>
             
             <div className="progress" id="progress1">
@@ -34,7 +34,7 @@ const Progress = () => {
             <div className="progress progress--small" id="progress2">
                 <div className="progress-fill" style={{width:progress+'%'}}></div>
             </div>
-        </div>
+        </section>
     )
 }
 

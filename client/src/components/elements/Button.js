@@ -9,7 +9,7 @@ const Button = () => {
 
 
     return (
-        <div className="mb-10">
+        <section className="mb-10" id="buttons">
 
             <button className='btn btn-primary'>
                 Button
@@ -28,10 +28,10 @@ const Button = () => {
             </button>
             <div>
                 <button className="btn-floating">
-                    <i class="fas fa-plus"></i>
+                    <i className="fas fa-plus"></i>
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 

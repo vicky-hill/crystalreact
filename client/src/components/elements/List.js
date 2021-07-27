@@ -2,7 +2,7 @@ import React from 'react';
 
 const List = () => {
     return (
-        <>
+        <section id="list">
             <div className="row">
                 <div className="col-6">
 
@@ -37,7 +37,7 @@ const List = () => {
                     </ul>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 

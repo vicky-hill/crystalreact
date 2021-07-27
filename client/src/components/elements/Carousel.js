@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import slide1 from '../../assets/slide-1.jpg';
 import slide2 from '../../assets/slide-2.jpg';
 import slide3 from '../../assets/slide-3.jpg';
@@ -22,6 +22,11 @@ const Carousel = () => {
             slide.style.left = slideWidth * index + 'px';
         })
     }
+
+    
+    useEffect(() => {
+        setUpCarousel();
+    })
 
     // Move to the target Slide
     const moveToSlide = (track, currentSlide, targetSlide) => {
@@ -137,10 +142,10 @@ const Carousel = () => {
 
 
     return (
-        <div className="mb-10">
-            <div className="carousel" onLoad={setUpCarousel}>
+        <section id="carousel" className="mb-10">
+            <div className="carousel">
                 <button className="carousel-btn left" onClick={prevSlide}>
-                    <i class="fas fa-chevron-left"></i>
+                    <i className="fas fa-chevron-left"></i>
                 </button>
 
                 <div className="carousel-container">
@@ -158,7 +163,7 @@ const Carousel = () => {
                 </div>
                 
                 <button className="carousel-btn right" onClick={nextSlide}>
-                    <i class="fas fa-chevron-right"></i>
+                    <i className="fas fa-chevron-right"></i>
                 </button>
                 
                 <div className="carousel-nav" onClick={navigateToDot}>
@@ -181,12 +186,12 @@ const Carousel = () => {
                     <img className="carousel-image_2" id="first-clone_2" src={slide1} alt="" />
                 </div>
                 
-                <button class="btn btn-primary" id="prev-btn_2" onClick={prevSlide_2}>prev</button>
-                <button class="btn btn-primary" id="next-btn_2" onClick={nextSlide_2}>next</button>
+                <button className="btn btn-primary" id="prev-btn_2" onClick={prevSlide_2}>prev</button>
+                <button className="btn btn-primary" id="next-btn_2" onClick={nextSlide_2}>next</button>
             </div>
 
 
-        </div>
+        </section>
     )
 }
 

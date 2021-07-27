@@ -7,18 +7,18 @@ const Dropdown = () => {
     }
 
     return (
-        <div className="mb-10">
-            <div class="dropdown">
-                <button class="btn btn-primary btn-dropdown" id="dropdown1" onClick={toggleDropdown}>
+        <section id="dropdown" className="mb-10">
+            <div className="dropdown">
+                <button className="btn btn-primary btn-dropdown" id="dropdown1" onClick={toggleDropdown}>
                     Dropdown button
                 </button>
-                <ul class="dropdown-menu" data-dropdown="dropdown1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul className="dropdown-menu" data-dropdown="dropdown1">
+                    <li><a className="dropdown-item" href="#">Action</a></li>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }
 

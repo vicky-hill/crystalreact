@@ -30,8 +30,8 @@ const Modal = () => {
     }
 
     return (
-        <div className="mb-10">
-            <button class="btn btn-primary" id="modal1" onClick={openModal}>
+        <section id="modal" className="mb-10">
+            <button className="btn btn-primary" id="modal1" onClick={openModal}>
                 Launch demo modal
             </button>
 
@@ -58,7 +58,7 @@ const Modal = () => {
 
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }

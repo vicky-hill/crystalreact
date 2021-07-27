@@ -5,16 +5,16 @@ import { deleteToast, addToast } from '../../actions/toasts';
 const Toast = ({ deleteToast, addToast, toasts }) => {
 
     return (
-        <>
+        <section id="toast">
             <div className="mb-3">
-                <div class="toast">
-                    <div class="toast-header">
+                <div className="toast">
+                    <div className="toast-header">
                         <div className="toast-img"></div>
                         <strong className="toast-title">Toast</strong>
                         <small>11 mins ago</small>
                         <button className="toast-close"><span>&times;</span></button>
                     </div>
-                    <div class="toast-body">
+                    <div className="toast-body">
                         Hello, world! This is a toast message.
                     </div>
                 </div>
@@ -32,21 +32,21 @@ const Toast = ({ deleteToast, addToast, toasts }) => {
             <div className="toast-container">
                 {
                     toasts.map(toast => (
-                        <div class="toast">
-                        <div class="toast-header">
+                        <div className="toast">
+                        <div className="toast-header">
                             <div className="toast-img"></div>
                             <strong className="toast-title">{ toast.title }</strong>
                             <small>11 mins ago</small>
                             <button className="toast-close" onClick={() => deleteToast(toast.id)}><span>&times;</span></button>
                         </div>
-                        <div class="toast-body">
+                        <div className="toast-body">
                             { toast.message }
                         </div>
                     </div>
                     ))
                 }
             </div>
-        </>
+        </section>
     )
 }
 

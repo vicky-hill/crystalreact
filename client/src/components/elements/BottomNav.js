@@ -29,19 +29,19 @@ const Bottomnav = () => {
     return (
         <nav className="bottom-nav" onClick={activeTab}>
             <a href="" className="bottom-nav-link">
-                <i class="fas fa-th-large"></i>
+                <i className="fas fa-th-large"></i>
                 <span className="bottom-nav-text">Dashboard</span>
             </a>
             <a href="" className="bottom-nav-link">
-                <i class="fas fa-folder"></i>
+                <i className="fas fa-folder"></i>
                 <span className="bottom-nav-text">Projects</span>
             </a>
             <a href="" className="bottom-nav-link active">
-                <i class="fas fa-lock"></i>
+                <i className="fas fa-lock"></i>
                 <span className="bottom-nav-text">Security</span>
             </a>
             <a href="" className="bottom-nav-link">
-                <i class="fas fa-user-alt"></i>
+                <i className="fas fa-user-alt"></i>
                 <span className="bottom-nav-text">Profile</span>
             </a>
         </nav>

@@ -3,7 +3,7 @@ import React from 'react';
 const Badge = () => {
 
     return (
-        <div>
+        <section id="badge">
             <div className="mb-10">
 
                 <h2>Heading <span className="badge">New</span> </h2>
@@ -28,7 +28,7 @@ const Badge = () => {
                 <h2>Heading <span className="badge badge-pill">New</span> </h2>
                 
             </div>
-        </div>
+        </section>
     )
 }
 

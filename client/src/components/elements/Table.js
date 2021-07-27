@@ -7,7 +7,7 @@ const Table = () => {
     }
     
     return (
-        <div className="mb-10 table-container">
+        <section id="table" className="mb-10 table-container">
             <table className="table sticky">
                 <thead>
                     <tr>
@@ -78,7 +78,7 @@ const Table = () => {
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </section>
     )
 }
 

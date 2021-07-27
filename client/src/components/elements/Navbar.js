@@ -31,13 +31,13 @@ const Navbar = () => {
                 </ul>
 
                 <form>
-                    <input type="search" placeholder="Search" class="input" />
+                    <input type="search" placeholder="Search" className="input" />
                     <button className="btn btn-primary ml-2 mb-0 btn-input" type="submit">Search</button>
                 </form>
             </div>
 
             <label htmlFor="nav-toggle" className="nav-toggle-label"><span></span></label>
-            <label htmlFor="search-toggle" className="search-toggle-label"><span><i class="fas fa-search"></i></span></label>
+            <label htmlFor="search-toggle" className="search-toggle-label"><span><i className="fas fa-search"></i></span></label>
         </nav>
     )
 }

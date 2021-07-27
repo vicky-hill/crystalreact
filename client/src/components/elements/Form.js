@@ -22,7 +22,7 @@ const Form = () => {
     return (
         <>
             {/* Basic Form */}
-            <div className="mb-10" style={{ width: '50%' }}>
+            <section id="form" className="mb-10" style={{ width: '50%' }}>
                 <form>
 
                     {/* Input */}
@@ -34,7 +34,7 @@ const Form = () => {
                     {/* Input Validation */}
                     <div className="input-container">
                         <label htmlFor="input">Password</label>
-                        <input className="input valid-feedback" type="password" placeholder="Enter password" value="1234567" />
+                        <input className="input valid-feedback" type="password" placeholder="Enter password" value="1234567" onChange={console.log('')} />
                         <small className="valid-feedback">Looks good</small>
                     </div>
 
@@ -110,7 +110,7 @@ const Form = () => {
                     </div>
 
                 </form>
-            </div>
+            </section>
 
         </>
     )
