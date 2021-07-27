@@ -1,53 +1,53 @@
-import React, { useEffect, useState } from 'react';
+/* eslint-disable */
+import React, { useEffect } from 'react';
 import slide1 from '../../assets/slide-1.jpg';
 import slide2 from '../../assets/slide-2.jpg';
 import slide3 from '../../assets/slide-3.jpg';
 
 const Gallery = () => {
-    const opacity = 0.2;
-    
-    const [current, setCurrent] = useState('');
-    const [images, setImages] = useState([]);
 
-    const loadGallery = () => {
-        setCurrent(document.querySelector('.gallery-main #current'));
-        setImages(document.querySelectorAll('.gallery-images img'));
-        
-        images[0].style.opacity = opacity;
+    const opacity = 0.2;
+    let current, images;
+
+    const setUpGallery = () => {
+
+        // Set up variables
+        current = document.querySelector('.gallery-main #current');
+        images = document.querySelectorAll('.gallery-images img');
 
         // Set first image opacity
-        // images[0].style.opacity = opacity;
+        images[0].style.opacity = opacity;
     }
 
+
     useEffect(() => {
-        // images = document.querySelectorAll('.gallery-images img');
-        // images[0].style.opacity = opacity;
-        loadGallery();
-        console.log('images', images);
-    }, [])
+        setUpGallery();
+    })
 
 
 
     const setImage = (e) => {
-        // Reset opacity of all images
-        images.forEach(img => img.style.opacity = 1);
+        if (e.target.tagName === 'IMG') {
+            // Reset opacity of all images
+            images.forEach(img => img.style.opacity = 1);
 
-        // Change main image src to clicked image src
-        current.src = e.target.src;
+            // Change main image src to clicked image src
+            current.src = e.target.src;
 
-        // Add fade in class
-        current.classList.add('fade-in');
+            // Add fade in class
+            current.classList.add('fade-in');
 
-        // Remove fade-in class
-        setTimeout(() => {
-            current.classList.remove('fade-in');
-        }, 500);
+            // Remove fade-in class
+            setTimeout(() => {
+                current.classList.remove('fade-in');
+            }, 500);
 
-        // Change the opacity
-        e.target.style.opacity = opacity;
+            // Change the opacity
+            e.target.style.opacity = opacity;
+        }
     }
-    
-    
+
+
 
     return (
         <section id="gallery" className="mb-10">

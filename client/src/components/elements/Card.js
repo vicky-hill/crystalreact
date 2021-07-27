@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import pink from '../../assets/pink.png';
 import book from '../../assets/book.png';

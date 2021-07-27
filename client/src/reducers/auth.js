@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
     GET_USER,
     REGISTER_SUCCESS,

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
     ADD_TOAST,
     DELETE_TOAST

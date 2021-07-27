@@ -1,4 +1,5 @@
 // npm install axios node-sass react-router-dom redux react-redux redux-devtools-extension redux-thunk axios
+/* eslint-disable */
 
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -36,8 +37,8 @@ window.onscroll = () => {
 
 function App() {
   useEffect(() => {
-    store.dispatch(loginCheck());
-    store.dispatch(getUser());
+    // store.dispatch(loginCheck());
+    // store.dispatch(getUser());
     loadScrollSpy();
   }, [])
 

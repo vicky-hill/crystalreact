@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+/* eslint-disable */
+import React from 'react';
 
 const Sidebar = () => {
 

@@ -1,6 +1,6 @@
 /* HTML ===========================================================================
 
-    <div class="carousel" onLoad={setUpCarousel}>
+    <div class="carousel">
         <button class="carousel-btn left" onClick={prevSlide}>
             <i class="fas fa-chevron-left"></i>
         </button>
@@ -51,6 +51,10 @@
             slide.style.left = slideWidth * index + 'px';
         })
     }
+
+    useEffect(() => {
+        setUpCarousel();
+    })
 
     // Move to the target Slide
     const moveToSlide = (track, currentSlide, targetSlide) => {

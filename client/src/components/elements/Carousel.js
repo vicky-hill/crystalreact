@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import slide1 from '../../assets/slide-1.jpg';
 import slide2 from '../../assets/slide-2.jpg';

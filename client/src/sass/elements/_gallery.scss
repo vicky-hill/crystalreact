@@ -1,6 +1,6 @@
 /* HTML ===========================================================================
 
-    <div class="gallery-container" onLoad={loadGallery}>
+    <div class="gallery-container">
         <div class="gallery-main">
             <img src={slide1} id="current" />
         </div>
@@ -15,40 +15,42 @@
 
 /* JavaScript =====================================================================
 
-    useEffect(() => {
-        images = document.querySelectorAll('.gallery-images img');
-        images[0].style.opacity = opacity;
-    }, [])
-
-
-    let current, images;
     const opacity = 0.2;
+    let current, images;
 
-    const loadGallery = () => {
+    const setUpGallery = () => {
+
+        // Set up variables
         current = document.querySelector('.gallery-main #current');
         images = document.querySelectorAll('.gallery-images img');
 
         // Set first image opacity
-        // images[0].style.opacity = opacity;
+        images[0].style.opacity = opacity;
     }
+    
+    useEffect(() => {
+        setUpGallery();
+    })
 
     const setImage = (e) => {
-        // Reset opacity of all images
-        images.forEach(img => img.style.opacity = 1);
+        if (e.target.tagName === 'IMG') {
+            // Reset opacity of all images
+            images.forEach(img => img.style.opacity = 1);
 
-        // Change main image src to clicked image src
-        current.src = e.target.src;
+            // Change main image src to clicked image src
+            current.src = e.target.src;
 
-        // Add fade in class
-        current.classList.add('fade-in');
+            // Add fade in class
+            current.classList.add('fade-in');
 
-        // Remove fade-in class
-        setTimeout(() => {
-            current.classList.remove('fade-in');
-        }, 500);
+            // Remove fade-in class
+            setTimeout(() => {
+                current.classList.remove('fade-in');
+            }, 500);
 
-        // Change the opacity
-        e.target.style.opacity = opacity;
+            // Change the opacity
+            e.target.style.opacity = opacity;    
+        }
     }
 
 ================================================================================ */

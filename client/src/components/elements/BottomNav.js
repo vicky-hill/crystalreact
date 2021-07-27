@@ -1,5 +1,6 @@
 import React from 'react';
 
+/* eslint-disable */
 const Bottomnav = () => {
 
     const activeTab = (e) => {

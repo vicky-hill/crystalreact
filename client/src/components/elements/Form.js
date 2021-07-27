@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 const Form = () => {
@@ -34,7 +35,7 @@ const Form = () => {
                     {/* Input Validation */}
                     <div className="input-container">
                         <label htmlFor="input">Password</label>
-                        <input className="input valid-feedback" type="password" placeholder="Enter password" value="1234567" onChange={console.log('')} />
+                        <input className="input valid-feedback" type="password" placeholder="Enter password" defaultValue="1234567" />
                         <small className="valid-feedback">Looks good</small>
                     </div>
 
@@ -92,13 +93,13 @@ const Form = () => {
 
                     {/* Radio Group */}
                     <div className="input-container radio-group">
-                        <input className="radio-group-input" type="radio" value="option1" name="myRadio" id="myRadio1" />
+                        <input className="radio-group-input" type="radio" value="option1" name="myRadio" id="myRadio1"/>
                         <label className="radio-group-label" htmlFor="myRadio1"> &nbsp; 5</label>
 
-                        <input className="radio-group-input" type="radio" value="option2" name="myRadio" id="myRadio2" />
+                        <input className="radio-group-input" type="radio" value="option2" name="myRadio" id="myRadio2" onChange={console.log()} />
                         <label className="radio-group-label" htmlFor="myRadio2">10</label>
 
-                        <input className="radio-group-input" type="radio" value="option3" name="myRadio" id="myRadio3" />
+                        <input className="radio-group-input" type="radio" value="option3" name="myRadio" id="myRadio3" onChange={console.log()} />
                         <label className="radio-group-label" htmlFor="myRadio3">15</label>
                     </div>
 
