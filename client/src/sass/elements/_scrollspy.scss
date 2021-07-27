@@ -73,12 +73,11 @@
 
 ===================================================================================== */
 
-
+// Place in reset under *, *::after, *::before
 // Set space between top and scrolled section
-:target:before {
-    content: "";
-    display: block;
-    height: 100px;
-    margin: -100px 0 0;
-}
-
+// :target:before {
+//     content: "";
+//     display: block;
+//     height: 100px;
+//     margin: -100px 0 0;
+// }

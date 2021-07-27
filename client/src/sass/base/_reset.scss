@@ -7,6 +7,14 @@
   scroll-behavior: smooth;
 }
 
+:target:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
+
+
 html {
     font-size: 62.5%;
     font-family: sans-serif;
