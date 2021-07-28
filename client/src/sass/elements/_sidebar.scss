@@ -47,13 +47,39 @@
 }
 
 
-@media only screen and (max-width : 1400px) { 
-    .main {
-        margin: 3rem auto;
-        padding: 20px;
+@media only screen and (max-width : $breakpoint-lg) { 
+    
+    // Stretch everything in main
+    .main section .row .col-1,
+    .main section .row .col-2,
+    .main section .row .col-3,
+    .main section .row .col-4,
+    .main section .row .col-5,
+    .main section .row .col-6,
+    .main section .row .col-7,
+    .main section .row .col-8,
+    .main section .row .col-9,
+    .main section .row .col-10,
+    .main section .row .col-11,
+    .main section .row .col-12 {
+        width: 100%;
     }
+}
+
+@media only screen and (max-width : $breakpoint-md) { 
+    .main {
+        margin: 0rem auto;
+        padding: 35px;
+    }
+
 
     .sidebar {
         display: none;
     }
 }
+
+ @media only screen and (max-width: $breakpoint-sm) { 
+    .main {
+        padding: 25px;
+    }
+ }

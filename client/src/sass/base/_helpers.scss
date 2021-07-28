@@ -96,12 +96,24 @@
 
 
 
-@media only screen and (min-width : 1400px) { 
+@media only screen and (min-width: $breakpoint-lg) { 
     .hide-mobile {
         display: block !important;
       }
     
     .hide-desktop {
         display: none !important;
+    }
+
+    .container {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) { 
+    .container {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }

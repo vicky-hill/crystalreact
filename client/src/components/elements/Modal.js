@@ -31,7 +31,7 @@ const Modal = () => {
     }
 
     return (
-        <section id="modal" className="mb-10">
+        <section id="modal">
             <button className="btn btn-primary" id="modal1" onClick={openModal}>
                 Launch demo modal
             </button>

@@ -50,7 +50,7 @@ const Gallery = () => {
 
 
     return (
-        <section id="gallery" className="mb-10">
+        <section id="gallery">
             <div className="gallery-container">
                 <div className="gallery-main">
                     <img src={slide1} id="current" />

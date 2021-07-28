@@ -25,7 +25,7 @@ const Tabs = () => {
 
 
     return (
-        <section id="tabs" className="mb-10">
+        <section id="tabs">
             <div className="tabs" onClick={openTab}>
                 <div className="tabs-item active">Item 1</div>
                 <div className="tabs-item">Item 2</div>

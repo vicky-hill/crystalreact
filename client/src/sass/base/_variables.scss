@@ -1,9 +1,13 @@
 $default-margin: 1.5rem;
+
+
+/* ===================================
+   Colors
+==================================== */
+
 $teal: rgba(58, 218, 218, .9);
 $teal-dark: rgba(49, 179, 179, 0.9);
-$breakpoint-sm: 37.5em;      // 600px
-$breakpoint-md: 56.25em;     // 900px
-$breakpoint-lg: 75em;        // 1200px
+
 
 $alternative-teal: #00bcd4;
 
@@ -21,6 +25,13 @@ $dark: #333B3F;
 $pink: #ED7FC4;
 $white: #fff;
 
+
+/* ===================================
+   Breakpoints
+==================================== */
+$breakpoint-sm: 37.5em;      // 600px
+$breakpoint-md: 56.25em;     // 900px
+$breakpoint-lg: 80em;        // 1200px
 
 /* ===================================
    z-index

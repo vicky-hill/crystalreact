@@ -8,7 +8,7 @@ const Dropdown = () => {
     }
 
     return (
-        <section id="dropdown" className="mb-10">
+        <section id="dropdown">
             <div className="dropdown">
                 <button className="btn btn-primary btn-dropdown" id="dropdown1" onClick={toggleDropdown}>
                     Dropdown button

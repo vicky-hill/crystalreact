@@ -165,7 +165,7 @@
 
 
 
-@media only screen and (max-width : 1400px) { 
+@media only screen and (max-width : $breakpoint-md) { 
     .nav-container {
         display: block;
         text-align: center; 

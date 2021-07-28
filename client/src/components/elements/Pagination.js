@@ -22,7 +22,7 @@ const Pagination = () => {
     }
 
     return (
-        <section id="pagination" className="mb-10">
+        <section id="pagination">
             <ul className="pagination" onClick={selectPage}>
                 <li className="page-item page-icon">
                     <a className="page-link" href="#">

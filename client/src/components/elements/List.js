@@ -28,7 +28,7 @@ const List = () => {
                 </div>
             </div>
 
-            <div className="row mb-10">
+            <div className="row">
                 <div className="col-6">
                     <ul className="list-group list-group-header">
                         <li className="list-group-item">Featured </li>

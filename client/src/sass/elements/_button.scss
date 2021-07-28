@@ -287,7 +287,7 @@ a.btn {
     background: mix(black, $primary, 10%);
 }
 
-@media only screen and (max-width : 1400px) { 
+@media only screen and (max-width : $breakpoint-lg) { 
     .btn-floating {
         right: 2rem;
         bottom: 8rem;

@@ -103,7 +103,7 @@ tr[data-href] {
 }
 
 
-@media only screen and (max-width : 1400px) { 
+@media only screen and (max-width : $breakpoint-lg) { 
     .table-container {
         max-width: 100%;
     }

@@ -10,15 +10,17 @@ const Alert = () => {
     }
 
     return (
-        <section id="alert" className="mb-10 width-50">
-
-            <div className='alert alert-primary'>
+        <section id="alert">
+            <div className="row">
+                <div className="col-6">
+                <div className='alert alert-primary'>
                 A simple alert
                 <button className="alert-close" onClick={dismissAlert}>
                     <span>&times;</span>
                 </button>
             </div>
-            
+                </div>
+            </div>        
         </section>
     )
 }

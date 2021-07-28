@@ -24,7 +24,7 @@ const Progress = () => {
     
 
     return (
-        <section id="progress" className="mb-10">
+        <section id="progress">
             <button className="btn btn-primary" onClick={addFive}>Click to progress</button>
             
             <div className="progress" id="progress1">

@@ -9,7 +9,7 @@ const Button = () => {
 
 
     return (
-        <section className="mb-10" id="buttons">
+        <section id="buttons">
 
             <button className='btn btn-primary'>
                 Button

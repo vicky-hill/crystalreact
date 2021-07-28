@@ -24,7 +24,7 @@ const Badge = () => {
 
             </div>
 
-            <div className="mb-10">
+            <div>
 
                 <h2>Heading <span className="badge badge-pill">New</span> </h2>
                 
