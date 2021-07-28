@@ -189,3 +189,31 @@
 .carousel-indicator.current {
     background-color: rgba(255, 255, 255, 1);
 }
+
+@media only screen and (max-width: $breakpoint-lg) { 
+    .carousel-btn.left {
+        left: 3rem;
+    }
+    
+    .carousel-btn.right {
+        right: 3rem;
+    }
+
+    .carousel-nav {
+        bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-sm) { 
+    .carousel-btn.left {
+        left: 2rem;
+    }
+    
+    .carousel-btn.right {
+        right: 2rem;
+    }
+
+    .carousel-nav {
+        bottom: 1rem;
+    }
+}
