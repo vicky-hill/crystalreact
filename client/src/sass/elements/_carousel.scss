@@ -169,7 +169,7 @@
 // Navigation dots
 .carousel-nav {
     position: absolute;
-    bottom: 3rem;
+    bottom: 2.5rem;
     left: 0;
     right: 0;
     display: flex;
@@ -188,20 +188,6 @@
 
 .carousel-indicator.current {
     background-color: rgba(255, 255, 255, 1);
-}
-
-@media only screen and (max-width: $breakpoint-lg) { 
-    .carousel-btn.left {
-        left: 3rem;
-    }
-    
-    .carousel-btn.right {
-        right: 3rem;
-    }
-
-    .carousel-nav {
-        bottom: 2rem;
-    }
 }
 
 @media only screen and (max-width: $breakpoint-sm) { 
