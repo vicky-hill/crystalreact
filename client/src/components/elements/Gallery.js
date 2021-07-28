@@ -51,14 +51,18 @@ const Gallery = () => {
 
     return (
         <section id="gallery">
-            <div className="gallery-container">
-                <div className="gallery-main">
-                    <img src={slide1} id="current" />
-                </div>
-                <div className="gallery-images" onClick={setImage}>
-                    <img src={slide1} />
-                    <img src={slide2} />
-                    <img src={slide3} />
+            <div className="row">
+                <div className="col-8">
+                    <div className="gallery-container">
+                        <div className="gallery-main">
+                            <img src={slide1} id="current" />
+                        </div>
+                        <div className="gallery-images" onClick={setImage}>
+                            <img src={slide1} />
+                            <img src={slide2} />
+                            <img src={slide3} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
