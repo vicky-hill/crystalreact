@@ -1,130 +1,106 @@
 /* eslint-disable */
-import React from 'react';
-import slide1 from '../../assets/slide-1.jpg';
-import slide2 from '../../assets/slide-2.jpg';
-import slide3 from '../../assets/slide-3.jpg';
+import React, { useState } from 'react';
 
-const Carousel = () => {
+/* Props
+=========================================== */
+// images: array
 
-    let counter = 1;
-    let carouselSlide,
-        carouselImages,
-        carouselSize,
-        dots,
-        nav;
 
-    // Set all variables
-    const setUpCarousel = () => {
-        carouselSlide = document.querySelector('.carousel-slide');
-        carouselImages = document.querySelectorAll('.carousel-image');
-        carouselSize = carouselImages[0].clientWidth;
-        nav = document.querySelector('.carousel-nav');
-        dots = Array.from(nav.children);
+const Carousel = ({ images }) => {
 
-        carouselSlide.style.transform = `translateX(-${carouselSize * counter}px)`;
-    }
+    // Add first and last clones
+    const lastImage = images[images.length - 1]
+    const firstImage = images[0];
+    images = [lastImage, ...images, firstImage];
+
+    // Count for current slide & dot
+    const [currentSlide, setCurrentSlide] = useState(1);
+    const [currentDot, setCurrentDot] = useState(1);
+
+    const [transition, setTransition] = useState('');
 
     // Handle first and last slide
     const loopCarousel = () => {
-        if (carouselImages[counter].id === 'last-clone') {
-            resetFirstAndLast(carouselImages.length - 2);
+        console.log(currentSlide);
+        if (currentSlide === 0) {
+            setTransition('none');
+            setCurrentSlide(images.length - 2);
         }
-        if (carouselImages[counter].id === 'first-clone') {
-            resetFirstAndLast(carouselImages.length - counter);
-        }
-    }
 
-    const resetFirstAndLast = (newCount) => {
-        carouselSlide.style.transition = 'none';
-        counter = newCount;
-        carouselSlide.style.transform = `translateX(-${carouselSize * counter}px)`;
-    }
-
-
-    // Navigation arrows
-    const nextSlide = () => {
-        if (counter >= carouselImages.length - 1) return;
-        moveToSlide(counter + 1)
-    }
-
-    const prevSlide = () => {
-        if (counter <= 0) return;
-        moveToSlide(counter - 1)
-    }
-
-    // Move to target slide
-    const moveToSlide = (target) => {
-        counter = target;
-
-        // Move Slide
-        carouselSlide.style.transition = 'transform .8s ease-in-out';
-        carouselSlide.style.transform = `translateX(-${carouselSize * counter}px)`;
-
-        // Current and target dot
-        const slideCount = carouselImages.length - 1;
-        const currentDot = nav.querySelector('.current');
-        let targetDot;
-
-        // Check for first and last dot
-        if (counter === slideCount) { targetDot = dots[0] }
-        else if (counter === 0) { targetDot = dots[slideCount - 2] }
-        else { targetDot = dots[counter - 1] }
-
-        updateDots(currentDot, targetDot)
-
-    }
-
-    // Move dots
-    const updateDots = (currentDot, targetDot) => {
-        currentDot.classList.remove('current');
-        targetDot.classList.add('current');
-    }
-
-    // Navigate to dot
-    const navigateToDot = (e) => {
-        if (e.target.tagName === 'BUTTON') {
-
-            const currentDot = nav.querySelector('.current');
-            const targetDot = e.target.closest('BUTTON');
-
-            const targetIndex = dots.findIndex(dot => dot === targetDot);
-            const targetCount = targetIndex + 1;
-
-            moveToSlide(targetCount);
-
-            updateDots(currentDot, targetDot);
+        if (currentSlide === images.length - 1) {
+            setTransition('none');
+            setCurrentSlide(1);
         }
     }
 
+    // Previous Button
+    const previous = () => {
+        if (currentDot <= 0 || currentSlide <= 0) return;
+        setTransition('transform .8s ease-in-out');
+        currentDot === 1 ? setCurrentDot(images.length - 2) : setCurrentDot(currentSlide - 1);
+        currentSlide === 0 ? setCurrentSlide(images.length - 1) : setCurrentSlide(currentSlide - 1);
+    }
 
+    // Next Button
+    const next = () => {
+        if (currentDot >= images.length - 1 || currentSlide >= images.length - 1) return;
+        setTransition('transform .8s ease-in-out');
+        currentDot === images.length - 2 ? setCurrentDot(1) : setCurrentDot(currentSlide + 1);
+        currentSlide === images.length - 1 ? setCurrentSlide(1) : setCurrentSlide(currentSlide + 1);
+    }
 
+    // Navigation Dots
+    const navigateDot = (e) => {
+        setTransition('transform .8s ease-in-out');
+        setCurrentSlide(Number(e.target.id));
+        setCurrentDot(Number(e.target.id))
+    }
 
     return (
         <section id="carousel">
             <div className="row">
                 <div className="col-8">
-                    <div className="carousel">
-                        <button className="carousel-btn left" onClick={prevSlide}>
-                            <i className="fas fa-chevron-left"></i>
-                        </button>
 
-                        <div className="carousel-container" onLoad={setUpCarousel}>
-                            <div className="carousel-slide" onTransitionEnd={loopCarousel}>
-                                <img className="carousel-image" id="last-clone" src={slide3} alt="" />
-                                <img className="carousel-image" src={slide1} alt="" />
-                                <img className="carousel-image" src={slide2} alt="" />
-                                <img className="carousel-image" src={slide3} alt="" />
-                                <img className="carousel-image" id="first-clone" src={slide1} alt="" />
-                            </div>
+                    {/* Carousel */}
+                    <div className="carousel-container">
+                        <div className="carousel">
 
-                            <div className="carousel-nav" onClick={navigateToDot}>
-                                <button id="dot1" className="carousel-indicator current"></button>
-                                <button id="dot2" className="carousel-indicator"></button>
-                                <button id="dot3" className="carousel-indicator"></button>
+                            {/* Slides */}
+                            {images.map((image, i) => (
+                                <div
+                                    key={i}
+                                    className={"carousel-slide"}
+                                    style={{ transform: `translateX(-${currentSlide * 100}%)`, transition: transition }}
+                                    onTransitionEnd={loopCarousel}
+                                    id={i}
+                                >
+                                    {/* Slide Image */}
+                                    <img src={image} alt="" />
+                                </div>
+                            ))}
+
+                            {/* Carousel Nav */}
+                            <div className="carousel-nav">
+
+                                {/* Nav Dots */}
+                                {images.map((image, i) => (
+                                    <button
+                                        key={i}
+                                        id={i}
+                                        className={`carousel-indicator ${i === 0 || i === images.length - 1 ? 'clone' : i === currentDot ? 'current' : ''}`}
+                                        onClick={navigateDot}
+                                    />
+                                ))}
                             </div>
                         </div>
 
-                        <button className="carousel-btn right" onClick={nextSlide}>
+                        {/* Previous button */}
+                        <button className="carousel-btn left" onClick={previous}>
+                            <i className="fas fa-chevron-left"></i>
+                        </button>
+
+                        {/* Next button */}
+                        <button className="carousel-btn right" onClick={next}>
                             <i className="fas fa-chevron-right"></i>
                         </button>
                     </div>
