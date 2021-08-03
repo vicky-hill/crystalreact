@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 /* Props
 =========================================== */
-// links
+// links: [name: String, icon: String]
 
 const Sidenav = ({ links }) => {
     const [sidenav, setSidenav] = useState(false);

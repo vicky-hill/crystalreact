@@ -1,11 +1,14 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useRef } from 'react';
 
 const Collapse = () => {
 
+    const content = useRef(null);
+
     function collapse() {
-        const content = document.querySelector('.collapse');
-        content.style.maxHeight ? content.style.maxHeight = null : content.style.maxHeight = content.scrollHeight + "px";
+        content.current.style.maxHeight ? 
+            content.current.style.maxHeight = null : 
+            content.current.style.maxHeight = content.current.scrollHeight + "px";
     }
 
 
@@ -16,7 +19,7 @@ const Collapse = () => {
 
                     <button className="btn btn-primary" onClick={collapse} > Open Collapse </button>
 
-                    <div className="collapse">
+                    <div className="collapse" ref={content}>
                         <div className="card">
                             <div className="card-body">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti id veritatis nemo nisi cumque, dolores dolor consequuntur nihil? Asperiores, optio adipisci beatae explicabo sequi consequuntur nostrum libero error non recusandae.

@@ -38,6 +38,13 @@ const sidenavLinks = [
     { name: 'Profile', icon: 'fa-user-alt' },
 ]
 
+// Accordion
+const content = [
+    { title: 'Item #1', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus laboriosam non exercitationem perferendis id dolorem veniam mollitia illum ratione.' },
+    { title: 'Item #2', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.' },
+    { title: 'Item #3', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus laboriosam.' },
+    { title: 'Item #4', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus laboriosam non exercitationem perferendis id dolorem.' },
+]
 
 
 const Home = () => {
@@ -53,13 +60,13 @@ const Home = () => {
                     <Breadcrumbs />
                     <Modal />
                     <Spinner />
-                    <Pagination />
+                    <Pagination pages={[1, 2, 3]} />
                     <Toast />
                     <Alert />
                     <Badge />
                     <Card />
                     <Collapse />
-                    <Accordion />
+                    <Accordion content={content} />
                     <Dropdown />
                     <List />
                     <Carousel images={slideImages} />
