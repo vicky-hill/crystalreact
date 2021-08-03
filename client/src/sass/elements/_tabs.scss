@@ -98,10 +98,14 @@
     }
 }
 
-.tab-content.fade {
-    transition: opacity .15s linear;
-  
-    &:not(.show) {
-      opacity: 0;
+.fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-in 1 forwards; 
+}
+
+// Fade in animation
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }

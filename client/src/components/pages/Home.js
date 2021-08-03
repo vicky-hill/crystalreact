@@ -39,11 +39,39 @@ const sidenavLinks = [
 ]
 
 // Accordion
-const content = [
+const contentAccordion = [
     { title: 'Item #1', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus laboriosam non exercitationem perferendis id dolorem veniam mollitia illum ratione.' },
     { title: 'Item #2', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.' },
     { title: 'Item #3', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus laboriosam.' },
     { title: 'Item #4', content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus laboriosam non exercitationem perferendis id dolorem.' },
+]
+
+// Tabs
+const tab1 = (
+    <>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sapiente quidem quibusd</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sun.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
+    </>
+)
+const tab2 = (
+    <>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sunt! Magnam</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
+    </>
+)
+const tab3 = (
+    <>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi quaerat sunt! Magnam</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla velit, hic cumque ut corrupti!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eum exercitationem dolorum architecto consectetur ducimus dolorem vitae corporis, magnam possimus quo iure laudantium temporibus voluptatum nisi delectus, ipsa earum, veritatis fugiat saepe. Quae rerum delectus tempore, obcaecati illo numquam neque.</p>
+
+    </>
+)
+const contentTabs = [
+    { title: 'Item 1', content: tab1 },
+    { title: 'Item 2', content: tab2 },
+    { title: 'Item 3', content: tab3 },
 ]
 
 
@@ -66,12 +94,12 @@ const Home = () => {
                     <Badge />
                     <Card />
                     <Collapse />
-                    <Accordion content={content} />
+                    <Accordion content={contentAccordion} />
                     <Dropdown />
                     <List />
                     <Carousel images={images} />
                     <Gallery images={images} />
-                    <Tabs />
+                    <Tabs  content={contentTabs}  />
                     <Table />
                     <Form />
                     <Tooltip />
