@@ -24,11 +24,11 @@ import Table from '../elements/Table';
 import Carousel from '../elements/Carousel';
 import Gallery from '../elements/Gallery';
 
-// ImageSlider
-import slide1 from '../../assets/slide-1.jpg';
-import slide2 from '../../assets/slide-2.jpg';
-import slide3 from '../../assets/slide-3.jpg';
-const slideImages = [slide1, slide2, slide3];
+// ImageSlider & Gallery
+import image1 from '../../assets/slide-1.jpg';
+import image2 from '../../assets/slide-2.jpg';
+import image3 from '../../assets/slide-3.jpg';
+const images = [image1, image2, image3];
 
 // Sidenav
 const sidenavLinks = [
@@ -69,8 +69,8 @@ const Home = () => {
                     <Accordion content={content} />
                     <Dropdown />
                     <List />
-                    <Carousel images={slideImages} />
-                    <Gallery />
+                    <Carousel images={images} />
+                    <Gallery images={images} />
                     <Tabs />
                     <Table />
                     <Form />

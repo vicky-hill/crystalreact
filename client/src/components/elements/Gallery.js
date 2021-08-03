@@ -1,50 +1,31 @@
 /* eslint-disable */
-import React, { useEffect } from 'react';
-import slide1 from '../../assets/slide-1.jpg';
-import slide2 from '../../assets/slide-2.jpg';
-import slide3 from '../../assets/slide-3.jpg';
+import React, { useRef, useState } from 'react';
 
-const Gallery = () => {
+/* Props
+=========================================== */
+// images: [img]
 
-    const opacity = 0.2;
-    let current, images;
+const Gallery = ({ images }) => {
 
-    const setUpGallery = () => {
+    const [current, setCurrent] = useState(0);
+    const [opacity, setOpacity] = useState(0.2);
+    
+    const main = useRef(null);
 
-        // Set up variables
-        current = document.querySelector('.gallery-main #current');
-        images = document.querySelectorAll('.gallery-images img');
-
-        // Set first image opacity
-        images[0].style.opacity = opacity;
-    }
-
-
-    useEffect(() => {
-        setUpGallery();
-    })
 
 
 
     const setImage = (e) => {
-        if (e.target.tagName === 'IMG') {
-            // Reset opacity of all images
-            images.forEach(img => img.style.opacity = 1);
 
-            // Change main image src to clicked image src
-            current.src = e.target.src;
+        setCurrent(Number(e.target.id));
 
-            // Add fade in class
-            current.classList.add('fade-in');
+        // Add fade-in class
+        main.current.classList.add('fade-in');
 
-            // Remove fade-in class
-            setTimeout(() => {
-                current.classList.remove('fade-in');
-            }, 500);
-
-            // Change the opacity
-            e.target.style.opacity = opacity;
-        }
+        // Remove fade-in class
+        setTimeout(() => {
+            main.current.classList.remove('fade-in');
+        }, 500);
     }
 
 
@@ -55,12 +36,14 @@ const Gallery = () => {
                 <div className="col-8">
                     <div className="gallery-container">
                         <div className="gallery-main">
-                            <img src={slide1} id="current" />
+                            <img src={images[current]} ref={main} />
                         </div>
-                        <div className="gallery-images" onClick={setImage}>
-                            <img src={slide1} />
-                            <img src={slide2} />
-                            <img src={slide3} />
+                        <div className="gallery-images">
+                            {
+                                images.map((image, i) => (
+                                    <img id={i} onClick={setImage} key={i} src={image} style={{ opacity: `${current === i ? opacity : 1}` }} />
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
