@@ -1,42 +1,27 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 
-const Sidenav = () => {
+/* Props
+=========================================== */
+// links
+
+const Sidenav = ({ links }) => {
+    const [sidenav, setSidenav] = useState(false);
+    const [active, setActive] = useState(0);
 
     const openSidenav = () => {
-        document.querySelector('.sidenav').classList.add('open');
+        setSidenav(true);
         document.querySelector('body').classList.add('no-scroll');
     }
-    
+
     const closeSidenav = () => {
-        document.querySelector('.sidenav').classList.remove('open');
+        setSidenav(false)
         document.querySelector('body').classList.remove('no-scroll');
     }
 
-    const activeTab = (e) => {
+    const activateTab = (e) => {
         e.preventDefault();
-
-        if(e.target.classList.contains('sidenav-link')){
-            const tabs = document.getElementsByClassName('sidenav-link');
-            let clickedTab;
-    
-            // Check for clicks on span and i
-            if (e.target.tagName === 'I') {
-                clickedTab = e.target.parentElement;
-            } else {
-                clickedTab = e.target
-            }
-    
-            // Deactivate all tabs that aren't the target
-            for (let i = 0; i < tabs.length; i++) {
-    
-                if (tabs[i] !== clickedTab) {
-                    tabs[i].classList.remove('active');
-                } else {
-                    tabs[i].classList.add('active');
-                }
-            }
-        }
+        setActive(Number(e.target.id));
     }
 
     return (
@@ -45,28 +30,18 @@ const Sidenav = () => {
                 <button className="sidenav-btn" onClick={openSidenav}><i className="fas fa-bars"></i></button>
             </header>
 
-            <nav className="sidenav" onClick={activeTab}>
-                <div className="sidenav-links" onClick={activeTab}>
-                    <a href="" className="sidenav-link">
-                        <i className="fas fa-th-large"></i>
-                        Dashboard
-                    </a>
-                    <a href="" className="sidenav-link">
-                        <i className="fas fa-folder"></i>
-                        Projects
-                    </a>
-                    <a href="" className="sidenav-link active">
-                        <i className="fas fa-lock"></i>
-                        Security
-                    </a>
-                    <a href="" className="sidenav-link">
-                        <i className="fas fa-user-alt"></i>
-                        Profile
-                    </a>
+            <nav className={`sidenav ${sidenav ? 'open' : ''}`} >
+                <div className="sidenav-links">
+                    {
+                        links.map((link, i) => (
+                            <a key={i} href="" id={i} className={`sidenav-link ${active === i ? 'active' : ''}`} onClick={activateTab}>
+                                <i className={`fas ${link.icon}`}></i>
+                                { link.name }
+                            </a>
+                        ))
+                    }
                 </div>
-                <div className="sidenav-overlay" onClick={closeSidenav}>
-
-                </div>
+                <div className="sidenav-overlay" onClick={closeSidenav}></div>
             </nav>
         </section>
     )

@@ -28,7 +28,15 @@ import Gallery from '../elements/Gallery';
 import slide1 from '../../assets/slide-1.jpg';
 import slide2 from '../../assets/slide-2.jpg';
 import slide3 from '../../assets/slide-3.jpg';
-const slideImages = [slide1, slide2, slide3]
+const slideImages = [slide1, slide2, slide3];
+
+// Sidenav
+const sidenavLinks = [
+    { name: 'Dashboard', icon: 'fa-th-large' },
+    { name: 'Projects', icon: 'fa-folder' },
+    { name: 'Security', icon: 'fa-lock' },
+    { name: 'Profile', icon: 'fa-user-alt' },
+]
 
 
 
@@ -39,7 +47,7 @@ const Home = () => {
             <Navbar />
             <div className="container main">
                     <Sidebar />
-                    <Sidenav />
+                    <Sidenav links={sidenavLinks} />
                     <Button />
                     <Progress />
                     <Breadcrumbs />
