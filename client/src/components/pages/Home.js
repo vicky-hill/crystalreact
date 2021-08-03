@@ -38,28 +38,28 @@ const Home = () => {
         <>
             <Navbar />
             <div className="container main">
-                <Sidebar />
-                <Sidenav />
-                <Button />
-                <Progress />
-                <Breadcrumbs />
-                <Modal />
-                <Spinner />
-                <Pagination />
-                <Toast />
-                <Alert />
-                <Badge />
-                <Card />
-                <Collapse />
-                <Accordion />
-                <Dropdown />
-                <List />
-                <Carousel images={slideImages}/>
-                <Gallery />
-                <Tabs />
-                <Table />
-                <Form />
-                <Tooltip />
+                    <Sidebar />
+                    <Sidenav />
+                    <Button />
+                    <Progress />
+                    <Breadcrumbs />
+                    <Modal />
+                    <Spinner />
+                    <Pagination />
+                    <Toast />
+                    <Alert />
+                    <Badge />
+                    <Card />
+                    <Collapse />
+                    <Accordion />
+                    <Dropdown />
+                    <List />
+                    <Carousel images={slideImages} />
+                    <Gallery />
+                    <Tabs />
+                    <Table />
+                    <Form />
+                    <Tooltip />
             </div>
             <BottomNav />
         </>

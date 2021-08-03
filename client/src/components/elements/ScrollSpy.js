@@ -1,13 +1,16 @@
 /* eslint-disable */
 import React from 'react'
 
-const ScrollSpy = () => {
+const Scrollspy = ({ children }) => {
+
+    console.log(children);
+
     return (
-        <div>
-            
-        </div>
+        <>
+           { children } 
+        </>
     )
 }
 
-export default ScrollSpy
+export default Scrollspy
 

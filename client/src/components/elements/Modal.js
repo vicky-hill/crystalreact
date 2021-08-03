@@ -1,42 +1,34 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 
 const Modal = () => {
 
+    const [modal, setModal] = useState(false);
+
     // Open Modal
     const openModal = (e) => {
-        document.querySelector(`[data-modal=${e.target.id}]`).classList.add('show');
-        document.querySelector(`[data-modal=${e.target.id}]`).classList.remove('fade');
+        setModal(true);
         document.querySelector('body').classList.add('no-scroll');
     }
 
     // Close Modal
     const closeModal = (e) => {
-        const modal = e.target.classList.contains('modal')
+        const modalContainer = e.target.classList.contains('modal')
         const closeModal = e.target.classList.contains('modal-close');
 
-        let modalId;
-
-        if (modal || closeModal) {
-
-            // Close the modal clicking outside of it
-            if (modal) { modalId = e.target.getAttribute('data-modal'); }
-
-            // Close the modal clicking on the close button
-            if (closeModal) { modalId = e.target.parentElement.parentElement.parentElement.getAttribute('data-modal'); }
-
-            document.querySelector(`[data-modal=${modalId}]`).classList.remove('show');
+        if (modalContainer || closeModal) {
+            setModal(false)
             document.querySelector('body').classList.remove('no-scroll');
         }
     }
 
     return (
         <section id="modal">
-            <button className="btn btn-primary" id="modal1" onClick={openModal}>
+            <button className="btn btn-primary" onClick={openModal}>
                 Launch demo modal
             </button>
 
-            <div className="modal" data-modal="modal1" onClick={closeModal}>
+            <div className={`modal ${modal ? 'show' : 'fade'}`}  onClick={closeModal}>
                 <div className="modal-content">
 
                     {/* Header */}
@@ -55,8 +47,6 @@ const Modal = () => {
                         <button className="btn btn-secondary modal-close" onClick={closeModal}>Close</button>
                         <button className="btn btn-primary">Save changes</button>
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -65,3 +55,9 @@ const Modal = () => {
 }
 
 export default Modal;
+
+
+
+
+
+
