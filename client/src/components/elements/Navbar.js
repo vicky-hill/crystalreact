@@ -1,7 +1,13 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ navLinks }) => {
+
+    const [active, setActive] = useState(0);
+
+    const activateLink = (e) => {
+        setActive(Number(e.target.id));
+    }
 
     const mobileMenu = (e) => {
         const clicked = Array.from(e.target.classList)[0];
@@ -26,9 +32,13 @@ const Navbar = () => {
             
             <div className="navbar">
                 <ul>
-                    <li className="active"><a href="#">Home</a></li>
-                    <li><a href="#">Elements</a></li>
-                    <li><a href="#">Styles</a></li>
+
+                    {
+                        navLinks.map((link, i) => (
+                            <li key={i} id={i} className={`${active === i ? 'active' : ''}`} onClick={activateLink}><a id={i} href="#">{link}</a></li>
+                        ))
+                    }
+
                 </ul>
 
                 <form>

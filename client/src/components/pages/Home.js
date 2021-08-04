@@ -30,6 +30,9 @@ import image2 from '../../assets/slide-2.jpg';
 import image3 from '../../assets/slide-3.jpg';
 const images = [image1, image2, image3];
 
+// Navbar
+const navLinks = ["Home", "Elements", "Styles"]
+
 // Sidenav
 const sidenavLinks = [
     { name: 'Dashboard', icon: 'fa-th-large' },
@@ -75,11 +78,12 @@ const contentTabs = [
 ]
 
 
+
 const Home = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar navLinks={navLinks} />
             <div className="container main">
                     <Sidebar />
                     <Sidenav links={sidenavLinks} />
