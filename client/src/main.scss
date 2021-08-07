@@ -1,5 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;900&display=swap');
+
 
 // Base
 @import "sass/base/variables";
@@ -34,3 +36,5 @@
 @import "sass/elements/table";
 @import "sass/elements/gallery";
 @import "sass/elements/theme";
+@import "sass/elements/swipe";
+@import "sass/elements/megamenu";

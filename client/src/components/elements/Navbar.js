@@ -35,7 +35,9 @@ const Navbar = ({ navLinks }) => {
 
                     {
                         navLinks.map((link, i) => (
-                            <li key={i} id={i} className={`${active === i ? 'active' : ''}`} onClick={activateLink}><a id={i} href="#">{link}</a></li>
+                            <li key={i} id={i} className={`${active === i ? 'active' : ''}`} onClick={activateLink}>
+                                <a id={i} href="#">{link}</a>
+                            </li>
                         ))
                     }
 

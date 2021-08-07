@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    --header-height: 9rem;
+    --header-height: 11rem;
     margin: var(--header-height) 0 0 0;
     font-family: -apple-system, "Lato", Arial, sans-serif;
     font-size: 1.6rem;
@@ -60,7 +60,7 @@ input {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
 }
 
 p {

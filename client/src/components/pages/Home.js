@@ -23,6 +23,7 @@ import BottomNav from '../elements/BottomNav';
 import Table from '../elements/Table';
 import Carousel from '../elements/Carousel';
 import Gallery from '../elements/Gallery';
+import MegaMenu from '../elements/MegaMenu';
 
 // ImageSlider & Gallery
 import image1 from '../../assets/slide-1.jpg';
@@ -32,6 +33,14 @@ const images = [image1, image2, image3];
 
 // Navbar
 const navLinks = ["Home", "Elements", "Styles"]
+
+// Bottomnav
+const bottomNavLinks = [
+    { icon: 'fa-th-large', text: 'Dashboard' },
+    { icon: 'fa-folder', text: 'Projects' },
+    { icon: 'fa-lock', text: 'Security' },
+    { icon: 'fa-user-alt', text: 'Profile' },
+]
 
 // Sidenav
 const sidenavLinks = [
@@ -84,31 +93,32 @@ const Home = () => {
     return (
         <>
             <Navbar navLinks={navLinks} />
+            <MegaMenu />
             <div className="container main">
-                    <Sidebar />
-                    <Sidenav links={sidenavLinks} />
-                    <Button />
-                    <Progress />
-                    <Breadcrumbs />
-                    <Modal />
-                    <Spinner />
-                    <Pagination pages={[1, 2, 3]} />
-                    <Toast />
-                    <Alert />
-                    <Badge />
-                    <Card />
-                    <Collapse />
-                    <Accordion content={contentAccordion} />
-                    <Dropdown />
-                    <List />
-                    <Carousel images={images} />
-                    <Gallery images={images} />
-                    <Tabs  content={contentTabs}  />
-                    <Table />
-                    <Form />
-                    <Tooltip />
+                <Sidebar />
+                <Sidenav links={sidenavLinks} />
+                <Button />
+                <Progress />
+                <Breadcrumbs />
+                <Modal />
+                <Spinner />
+                <Pagination pages={[1, 2, 3]} />
+                <Toast />
+                <Alert />
+                <Badge />
+                <Card />
+                <Collapse />
+                <Accordion content={contentAccordion} />
+                <Dropdown />
+                <List />
+                <Carousel images={images} />
+                <Gallery images={images} />
+                <Tabs content={contentTabs} />
+                <Table />
+                <Form />
+                <Tooltip />
             </div>
-            <BottomNav />
+            <BottomNav navLinks={bottomNavLinks} />
         </>
     )
 }
