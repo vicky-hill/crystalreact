@@ -11,23 +11,25 @@ const MegaMenu = () => {
     let submenu;
 
     const toggleMobileNav = () => {
-        const menu = document.querySelector(".menu");
-        const overlay = document.querySelector(".mobile-menu-overlay");
+        const menu = document.querySelector(".megamenu-nav");
+        const overlay = document.querySelector(".megamenu-overlay");
         menu.classList.toggle("active");
         overlay.classList.toggle("active");
     }
 
     const closeMobileNav = () => {
-        const menu = document.querySelector(".menu");
-        const overlay = document.querySelector(".mobile-menu-overlay");
+        const menu = document.querySelector(".megamenu-nav");
+        const overlay = document.querySelector(".megamenu-overlay");
         menu.classList.remove("active");
         overlay.classList.remove("active");
+
+        hideSubmenu();
     }
 
     const showSubMenu = (e) => {
         e.preventDefault();
 
-        const menu = document.querySelector(".menu");
+        const menu = document.querySelector(".megamenu-nav");
 
         if (!menu.classList.contains("active")) {
             return
@@ -41,14 +43,14 @@ const MegaMenu = () => {
 
             const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
 
-            menu.querySelector(".current-menu-title").innerHTML = menuTitle;
+            menu.querySelector(".menu-title").innerHTML = menuTitle;
             menu.querySelector(".mobile-megamenu").classList.add('active');
         }
     }
 
-    const hideSubmenu = (e) => {
+    const hideSubmenu = () => {
 
-        const menu = document.querySelector(".menu");
+        const menu = document.querySelector(".megamenu-nav");
 
         submenu.style.animation = "slideRight 0.5s ease forwards";
         setTimeout(() => {
@@ -56,42 +58,48 @@ const MegaMenu = () => {
         }, 300)
 
 
-        menu.querySelector(".current-menu-title").innerHTML = "";
+        menu.querySelector(".menu-title").innerHTML = "";
         menu.querySelector(".mobile-megamenu").classList.remove('active');
     }
 
-    window.onresize = function () {
-        if (this.innerWidth > 1400) {
-            if (menu.classList.contains("active")) {
-                toggleMobileNav();
-            }
-        }
-    }
+    // window.onresize = function () {
+    //     if (this.innerWidth > 1400) {
+    //         if (menu.classList.contains("active")) {
+    //             toggleMobileNav();
+    //         }
+    //     }
+    // }
 
     return (
         <header className="megamenu">
-                <div className="row--megamenu">
+                <div className="megamenu-container">
 
-                    {/* Logo */}
-                    <div className="megamenu-item item-left">
+                    {/* Section Left: Logo */}
+                    <div className="megamenu-section--left">
                         <div className="megamenu-logo">
                             <a href="#">Basic Style</a>
                         </div>
                     </div>
 
-                    {/* Menu */}
-                    <div className="megamenu-item item-center">
-                        <div className="mobile-menu-overlay" onClick={closeMobileNav}></div>
-                        <nav className="menu">
+                    {/* Section Center: Menu */}
+                    <div className="megamenu-section--center">
+                        <div className="megamenu-overlay" onClick={closeMobileNav}></div>
+                        
+                        <nav className="megamenu-nav">
+
+                            {/* Mobile Menu Controls */}
                             <div className="mobile-megamenu">
                                 <div className="go-back" onClick={hideSubmenu}><i className="fas fa-angle-left"></i></div>
-                                <div className="current-menu-title"></div>
-                                <div className="mobile-menu-close" onClick={closeMobileNav}>&times;</div>
+                                <div className="menu-title"></div>
+                                <div className="menu-close" onClick={closeMobileNav}>&times;</div>
                             </div>
+                            
                             <ul className="menu-main" onClick={showSubMenu}>
                                 <li>
                                     <a href="">Home</a>
                                 </li>
+
+                                {/* New */}
                                 <li className="menu-item-has-children">
                                     <a href="">New <i className="fas fa-angle-down"></i></a>
                                     <div className="sub-menu mega-menu mega-menu-column-4">
@@ -121,6 +129,8 @@ const MegaMenu = () => {
                                         </div>
                                     </div>
                                 </li>
+
+                                {/* Shop */}
                                 <li className="menu-item-has-children">
                                     <a href="">Shop <i className="fas fa-angle-down"></i></a>
                                     <div className="sub-menu mega-menu mega-menu-column-4">
@@ -172,6 +182,8 @@ const MegaMenu = () => {
                                         </div>
                                     </div>
                                 </li>
+
+                                {/* Blog */}
                                 <li className="menu-item-has-children">
                                     <a href="">Blog <i className="fas fa-angle-down"></i></a>
                                     <div className="sub-menu single-column-menu">
@@ -182,6 +194,8 @@ const MegaMenu = () => {
                                         </ul>
                                     </div>
                                 </li>
+
+                                {/* Pages */}
                                 <li className="menu-item-has-children">
                                     <a href="">Pages <i className="fas fa-angle-down"></i></a>
                                     <div className="sub-menu single-column-menu">
@@ -193,6 +207,8 @@ const MegaMenu = () => {
                                         </ul>
                                     </div>
                                 </li>
+
+                                {/* Contact */}
                                 <li>
                                     <a href="">Contact</a>
                                 </li>
@@ -201,7 +217,7 @@ const MegaMenu = () => {
                     </div>
 
                     {/* Icons */}
-                    <div className="megamenu-item item-right ">
+                    <div className="megamenu-section--right">
                         <a href=""><i className="fas fa-search"></i></a>
                         <a href=""><i className="fas fa-heart"></i></a>
                         <a href=""><i className="fas fa-shopping-cart"></i></a>

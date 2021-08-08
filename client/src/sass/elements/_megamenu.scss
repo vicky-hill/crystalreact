@@ -10,38 +10,8 @@
     background-color: #fff;
 }
 
-.mobile-megamenu {
-    display: none;
-}
-
-.megamenu-logo a {
-    font-size: 3rem;
-    font-weight: 700; 
-    color: $primary;
-}
-
-.megamenu-item.item-left {
-    flex: 0 0 17%;
-}
-
-.megamenu-item.item-center {
-    flex: 0 0 66%;
-}
-
-.megamenu-item.item-right {
-    flex: 0 0 17%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.megamenu-item.item-right a {
-    color: #555;
-    display: inline-flex;
-    margin-left: 1rem;
-    transition: color .2s ease;
-}
-
-.row--megamenu {
+// Container
+.megamenu-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -49,13 +19,50 @@
     margin: auto;
 }
 
-.megamenu .menu > ul > li {
+// Logo
+.megamenu-logo a {
+    font-size: 3rem;
+    font-weight: 700; 
+    color: $primary;
+}
+
+
+/* ===================================
+   Megamenu sections
+==================================== */
+
+.megamenu-section--left {
+    flex: 0 0 17%;
+}
+
+.megamenu-section--center {
+    flex: 0 0 66%;
+}
+
+.megamenu-section--right {
+    flex: 0 0 17%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.megamenu-section--right a {
+    color: #555;
+    display: inline-flex;
+    margin-left: 1rem;
+    transition: color .2s ease;
+}
+
+
+/* ===================================
+   Megamenu main content
+==================================== */
+.megamenu-nav > ul > li {
     display: inline-block;
     line-height: 5rem;
     margin-left: 2.5rem;
 }
 
-.megamenu .menu > ul > li > a {
+.megamenu-nav > ul > li > a {
     font-size: 1.5rem;
     font-weight: 500;
     color: $dark;
@@ -64,12 +71,16 @@
     transition: color .2s ease;
 }
 
-.megamenu .menu > ul > li > a > i {
+.megamenu-nav > ul > li > a > i {
     margin-left: .5rem;
     z-index: 500;
 }
 
-.megamenu .menu > ul  > li .sub-menu {
+
+/* ===================================
+   Submenu
+==================================== */
+.megamenu-nav > ul  > li .sub-menu {
     position: absolute;
     background-color: #fff;
     box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
@@ -80,18 +91,11 @@
     visibility: hidden;
 }
 
-.megamenu .menu > ul  > li.menu-item-has-children:hover .sub-menu {
-    margin-top: 0;
-    visibility: visible;
-    opacity: 1;
-    z-index: 1000;
-}
-
-.megamenu .menu > ul  > li .sub-menu > ul > li {
+.megamenu-nav > ul  > li .sub-menu > ul > li {
     line-height: 1;
 }
 
-.megamenu .menu > ul  > li .sub-menu > ul > li > a {
+.megamenu-nav > ul  > li .sub-menu > ul > li > a {
     display: inline-block;
     padding: 1rem 0;
     font-size: 1.5rem;
@@ -100,22 +104,33 @@
     text-transform: capitalize; 
 }
 
-.megamenu .menu > ul  > li .single-column-menu {
-    min-width: 28rem;
-    max-width: 35rem;
-} 
-
-.megamenu .menu > ul  > li .sub-menu.mega-menu {
+.megamenu-nav > ul  > li .sub-menu.mega-menu {
     left: 50%;
     transform: translateX(-50%);
 } 
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li {
+/* ===================================
+   Menu item has children
+==================================== */
+.megamenu-nav > ul  > li.menu-item-has-children:hover .sub-menu {
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+}
+
+
+
+/* ===================================
+   Submenu item
+==================================== */
+
+.megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li {
     line-height: 1;
     display: block;
 }
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > a {
+.megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > a {
     padding: 1rem 0;
     display: inline-block;
     font-size: 1.5rem;
@@ -123,7 +138,14 @@
     transition: color .2s ease;
 }
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 {
+// Single column
+.megamenu-nav > ul  > li .single-column-menu {
+    min-width: 28rem;
+    max-width: 35rem;
+} 
+
+// Four column
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 {
     max-width: 110rem;
     width: 100%;
     left: 50%;
@@ -133,12 +155,12 @@
     padding: 2rem 1.5rem;
 } 
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item {
     flex: 0 0 25%;
     padding: 0 15px;
 }
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title {
     font-size: 1.6rem;
     color: $primary;
     font-weight: 600;
@@ -147,26 +169,31 @@
     padding-top: 1rem;
 }
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item.text-center .title {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item.text-center .title {
     text-align: center;
 }
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title:not(:first-child) {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title:not(:first-child) {
     padding-top: 2.5rem;
 }
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item img {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item img {
     max-width: 100%;
     width: 100%;
     vertical-align: middle;
 }
 
-.megamenu .menu > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li:hover > a,
-.megamenu .menu > ul  > li .sub-menu > ul > li > a:hover,
-.megamenu-item.item-right a:hover,
-.megamenu .menu > ul > li:hover > a {
+
+/* ===================================
+   Hover
+==================================== */
+.megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li:hover > a,
+.megamenu-nav > ul  > li .sub-menu > ul > li > a:hover,
+.megamenu-section--right a:hover,
+.megamenu-nav > ul > li:hover > a {
     color: $primary;
 }
+
 
 .mobile-megamenu,
 .megamenu-mobile-toggle {
@@ -179,7 +206,10 @@
 ==================================== */
 
 @media only screen and (max-width : 1400px) { 
-    // Mega Menu
+
+    /* ===================================
+       Mega menu
+    ==================================== */
     .mobile-megamenu {
         display: flex;
         height: 50px;
@@ -199,8 +229,10 @@
     }
 
 
-    // Close, Go Back, Menu Title
-    .mobile-megamenu .mobile-menu-close,
+    /* ===================================
+       Mobile menu controls
+    ==================================== */
+    .mobile-megamenu .menu-close,
     .mobile-megamenu .go-back {
         height: 50px;
         width: 50px;
@@ -210,7 +242,7 @@
         color: $dark;
     }
 
-    .mobile-megamenu .mobile-menu-close {
+    .mobile-megamenu .menu-close {
         border-left: 1px solid rgba(0, 0, 0, 0.1);
         font-size: 25px;
     }
@@ -225,34 +257,38 @@
         display: block;
     }
 
-    .mobile-megamenu .current-menu-title {
+    .mobile-megamenu .menu-title {
         font-size: 15px;
         font-weight: 500;
         color: $dark;
     } 
 
 
-    // Center, Left, Right
-    .megamenu-item.item-center {
+    /* ===================================
+       Megamenu sections
+    ==================================== */
+    .megamenu-section--center {
         order: 3;
         flex: 0 0 100%;
     }
 
-    .megamenu-item.item-right,
-    .megamenu-item.item-left {
+    .megamenu-section--right,
+    .megamenu-section--left {
         flex: 0 0 auto; 
     }
 
-    .megamenu-item.item-right {
+    .megamenu-section--right {
         align-items: center;
     }
 
-    .row--megamenu {
+    .megamenu-container {
         justify-content: space-between;
     }
 
 
-    // Mobile Toggle
+    /* ===================================
+       Mobile toggle
+    ==================================== */
     .megamenu-mobile-toggle {
         display: flex;
         height: 3rem; 
@@ -289,8 +325,10 @@
         top: 6px;
     }
 
-    // Menu
-    .megamenu .menu {
+    /* ===================================
+       Megamenu main content
+    ==================================== */
+    .megamenu-nav {
         position: fixed;
         width: 32rem;
         background-color: #fff;
@@ -304,7 +342,7 @@
         box-shadow: none;
     }
 
-    .mobile-menu-overlay {
+    .megamenu-overlay {
         position: fixed;
         background-color: rgba(0, 0, 0, 0.5);
         left: 0;
@@ -318,22 +356,22 @@
         transition: all .5s ease;
     }
 
-    .mobile-menu-overlay.active {
+    .megamenu-overlay.active {
         visibility: visible;
         opacity: 1;
     }
 
-    .megamenu .menu.active {
+    .megamenu-nav.active {
         transform: translate(0%);
     }
 
-    .megamenu .menu > ul > li {
+    .megamenu-nav > ul > li {
         line-height: 1;
         margin: 0;
         display: block;
     }
 
-    .megamenu .menu > ul > li > a {
+    .megamenu-nav > ul > li > a {
         line-height: 50px;
         height: 50px;
         padding: 0 50px 0 15px;
@@ -341,7 +379,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .megamenu .menu > ul > li > a i {
+    .megamenu-nav > ul > li > a i {
         position: absolute;
         height: 50px;
         width: 50px;
@@ -353,9 +391,11 @@
     }
 
 
-    // Submenu
-    .megamenu .menu > ul > li .sub-menu.mega-menu,
-    .megamenu .menu > ul > li .sub-menu {
+    /* ===================================
+       Submenu
+    ==================================== */
+    .megamenu-nav > ul > li .sub-menu.mega-menu,
+    .megamenu-nav > ul > li .sub-menu {
         visibility: visible;
         opacity: 1;
         position: absolute;
@@ -373,7 +413,7 @@
         overflow-y: auto;
     }
 
-    .megamenu .menu > ul > li .sub-menu.active {
+    .megamenu-nav > ul > li .sub-menu.active {
         display: block;
     }
 
@@ -399,47 +439,53 @@
         }
     }
 
-    // 4 Column
-    .megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 {
-        padding: 15px;
-        padding-top: 65px;
-    }
-
-    // 4 Column Item
-    .megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item {
-        flex: 0 0 100%;
-        padding: 0;
-    }
-
-    .megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item img {
-        margin-top: 0;
-    }
-
-    .megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title {
-        margin-bottom: 20px;
-    }
-
-    .megamenu .menu > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item:last-child .title {
-        margin-bottom: 0;
-    }
-
-    // 1 Column
-    .megamenu .menu > ul  > li .single-column-menu {
+    /* ===================================
+       Single column
+    ==================================== */
+    .megamenu-nav > ul  > li .single-column-menu {
         min-width: none;
         max-width: none;
         width: 100%; 
         padding-top: 65px;
     } 
 
-    .megamenu .menu > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul {
+    /* ===================================
+       Four column
+    ==================================== */
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 {
+        padding: 15px;
+        padding-top: 65px;
+    }
+
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item {
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item img {
+        margin-top: 0;
+    }
+
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title {
+        margin-bottom: 20px;
+    }
+
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item:last-child .title {
+        margin-bottom: 0;
+    }
+
+    /* ===================================
+       Megamenu items
+    ==================================== */
+    .megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul {
         margin-bottom: 15px;
     }
 
-    .megamenu .menu > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > {
         margin-bottom: 15px;
     }
 
-    .megamenu .menu > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > a {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > a {
         display: block;
     }
 
