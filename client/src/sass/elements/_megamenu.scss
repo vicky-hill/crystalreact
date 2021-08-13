@@ -1,3 +1,233 @@
+/* HTML ===========================================================================
+
+    <header class="megamenu">
+            <div class="megamenu-container">
+
+                {/* Section Left: Logo 
+                <div class="megamenu-section--left">
+                    <div class="megamenu-logo">
+                        <a href="#">Basic Style</a>
+                    </div>
+                </div>
+
+                {/* Section Center: Menu
+                <div class="megamenu-section--center">
+                    <div class="megamenu-overlay" onClick={closeMobileNav}></div>
+                    
+                    <nav class="megamenu-nav">
+
+                        {/* Mobile Menu Controls
+                        <div class="mobile-megamenu">
+                            <div class="go-back" onClick={hideSubmenu}><i class="fas fa-angle-left"></i></div>
+                            <div class="menu-title"></div>
+                            <div class="menu-close" onClick={closeMobileNav}>&times;</div>
+                        </div>
+                        
+                        <ul class="menu-main" onClick={showSubMenu}>
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+
+                            {/* New 
+                            <li class="menu-item-has-children">
+                                <a href="">New <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4">
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping2} alt="" />
+                                            <h4 class="title">Product 1</h4>
+                                        </a>
+                                    </div>
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping3} alt="" />
+                                            <h4 class="title">Product 2</h4>
+                                        </a>
+                                    </div>
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping4} alt="" />
+                                            <h4 class="title">Product 3</h4>
+                                        </a>
+                                    </div>
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping5} alt="" />
+                                            <h4 class="title">Product 4</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            {/* Shop 
+                            <li class="menu-item-has-children">
+                                <a href="">Shop <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4">
+                                    <div class="megamenu-item">
+                                        <h4 class="title">Men's Fashion</h4>
+                                        <ul>
+                                            <li><a href="#">New Arrivals</a></li>
+                                            <li><a href="#">Tops</a></li>
+                                            <li><a href="#">Bottoms</a></li>
+                                            <li><a href="#">Lounge Wear</a></li>
+                                            <li><a href="#">Jackets</a></li>
+                                        </ul>
+
+                                        <h4 class="title">Beauty</h4>
+                                        <ul>
+                                            <li><a href="#">Skin Care</a></li>
+                                            <li><a href="#">Ulta Beauty</a></li>
+                                            <li><a href="#">Hair Care </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="megamenu-item">
+                                        <h4 class="title">Women's Fashion</h4>
+                                        <ul>
+                                            <li><a href="#">New Arrivals</a></li>
+                                            <li><a href="#">Tops</a></li>
+                                            <li><a href="#">Bottoms</a></li>
+                                            <li><a href="#">Lounge Wear</a></li>
+                                            <li><a href="#">Jackets</a></li>
+                                        </ul>
+
+                                        <h4 class="title">Furniture</h4>
+                                        <ul>
+                                            <li><a href="#">Living Room</a></li>
+                                            <li><a href="#">Home Office</a></li>
+                                            <li><a href="#">Bedroom</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="megamenu-item">
+                                        <h4 class="title">Home, Kitchen</h4>
+                                        <ul>
+                                            <li><a href="#">Dining Tables</a></li>
+                                            <li><a href="#">Bar Stools</a></li>
+                                            <li><a href="#">Appliances</a></li>
+                                            <li><a href="#">Storage</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="megamenu-item">
+                                        <img src={shopping1} alt="" />
+                                    </div>
+                                </div>
+                            </li>
+
+                            {/* Blog
+                            <li class="menu-item-has-children">
+                                <a href="">Blog <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu single-column-menu">
+                                    <ul>
+                                        <li><a href="">Standard Layout</a></li>
+                                        <li><a href="">Grid Layout</a></li>
+                                        <li><a href="">Single Layout</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            {/* Pages
+                            <li class="menu-item-has-children">
+                                <a href="">Pages <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu single-column-menu">
+                                    <ul>
+                                        <li><a href="">Login</a></li>
+                                        <li><a href="">Register</a></li>
+                                        <li><a href="">Faq</a></li>
+                                        <li><a href="">404 Page</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            {/* Contact 
+                            <li>
+                                <a href="">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                {/* Icons 
+                <div class="megamenu-section--right">
+                    <a href=""><i class="fas fa-search"></i></a>
+                    <a href=""><i class="fas fa-heart"></i></a>
+                    <a href=""><i class="fas fa-shopping-cart"></i></a>
+
+                    {/* Mobile menu trigger 
+                    <div class="megamenu-mobile-toggle" onClick={toggleMobileNav}>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    let submenu;
+
+    const toggleMobileNav = () => {
+        const menu = document.querySelector(".megamenu-nav");
+        const overlay = document.querySelector(".megamenu-overlay");
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+
+    const closeMobileNav = () => {
+        const menu = document.querySelector(".megamenu-nav");
+        const overlay = document.querySelector(".megamenu-overlay");
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+
+        hideSubmenu();
+    }
+
+    const showSubMenu = (e) => {
+        e.preventDefault();
+
+        const menu = document.querySelector(".megamenu-nav");
+
+        if (!menu.classList.contains("active")) {
+            return
+        }
+
+        if (e.target.closest(".menu-item-has-children")) {
+            const hasChildren = e.target.closest(".menu-item-has-children");
+            submenu = hasChildren.querySelector(".sub-menu");
+            submenu.classList.add("active");
+            submenu.style.animation = "slideLeft 0.5s ease forwards";
+
+            const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
+
+            menu.querySelector(".menu-title").innerHTML = menuTitle;
+            menu.querySelector(".mobile-megamenu").classList.add('active');
+        }
+    }
+
+    const hideSubmenu = () => {
+
+        const menu = document.querySelector(".megamenu-nav");
+
+        submenu.style.animation = "slideRight 0.5s ease forwards";
+        setTimeout(() => {
+            submenu.classList.remove("active");
+        }, 300)
+
+
+        menu.querySelector(".menu-title").innerHTML = "";
+        menu.querySelector(".mobile-megamenu").classList.remove('active');
+    }
+
+    window.onresize = function () {
+        if (this.innerWidth > 1400) {
+            if (menu.classList.contains("active")) {
+                toggleMobileNav();
+            }
+        }
+    }
+
+================================================================================ */
+
 .megamenu {
     width: 100%;
     position: fixed;
@@ -125,12 +355,12 @@
    Submenu item
 ==================================== */
 
-.megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li {
+.megamenu-nav > ul  > li .sub-menu.mega-menu > .megamenu-item > ul > li {
     line-height: 1;
     display: block;
 }
 
-.megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > a {
+.megamenu-nav > ul  > li .sub-menu.mega-menu > .megamenu-item > ul > li > a {
     padding: 1rem 0;
     display: inline-block;
     font-size: 1.5rem;
@@ -155,12 +385,12 @@
     padding: 2rem 1.5rem;
 } 
 
-.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item {
     flex: 0 0 25%;
     padding: 0 15px;
 }
 
-.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item .title {
     font-size: 1.6rem;
     color: $primary;
     font-weight: 600;
@@ -169,15 +399,15 @@
     padding-top: 1rem;
 }
 
-.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item.text-center .title {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item.text-center .title {
     text-align: center;
 }
 
-.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title:not(:first-child) {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item .title:not(:first-child) {
     padding-top: 2.5rem;
 }
 
-.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item img {
+.megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item img {
     max-width: 100%;
     width: 100%;
     vertical-align: middle;
@@ -187,7 +417,7 @@
 /* ===================================
    Hover
 ==================================== */
-.megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li:hover > a,
+.megamenu-nav > ul  > li .sub-menu.mega-menu > .megamenu-item > ul > li:hover > a,
 .megamenu-nav > ul  > li .sub-menu > ul > li > a:hover,
 .megamenu-section--right a:hover,
 .megamenu-nav > ul > li:hover > a {
@@ -210,6 +440,10 @@
     /* ===================================
        Mega menu
     ==================================== */
+    .megamenu-container {
+        justify-content: space-between;
+    }
+
     .mobile-megamenu {
         display: flex;
         height: 50px;
@@ -279,10 +513,6 @@
 
     .megamenu-section--right {
         align-items: center;
-    }
-
-    .megamenu-container {
-        justify-content: space-between;
     }
 
 
@@ -413,7 +643,7 @@
         overflow-y: auto;
     }
 
-    .megamenu-nav > ul > li .sub-menu.active {
+    .megamenu-nav > ul > li .sub-menu.activeSubmenu {
         display: block;
     }
 
@@ -457,35 +687,35 @@
         padding-top: 65px;
     }
 
-    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item {
         flex: 0 0 100%;
         padding: 0;
     }
 
-    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item img {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item img {
         margin-top: 0;
     }
 
-    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item .title {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item .title {
         margin-bottom: 20px;
     }
 
-    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .mega-menu-item:last-child .title {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu-column-4 .megamenu-item:last-child .title {
         margin-bottom: 0;
     }
 
     /* ===================================
        Megamenu items
     ==================================== */
-    .megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu > .megamenu-item > ul {
         margin-bottom: 15px;
     }
 
-    .megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu > .megamenu-item > ul > li > {
         margin-bottom: 15px;
     }
 
-    .megamenu-nav > ul  > li .sub-menu.mega-menu > .mega-menu-item > ul > li > a {
+    .megamenu-nav > ul  > li .sub-menu.mega-menu > .megamenu-item > ul > li > a {
         display: block;
     }
 

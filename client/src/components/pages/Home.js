@@ -1,6 +1,7 @@
 import React from 'react';
 import Alert from '../elements/Alert';
 import Navbar from '../elements/Navbar';
+import { NavItem } from '../elements/Navbar';
 import Badge from '../elements/Badge';
 import Card from '../elements/Card';
 import List from '../elements/List';
@@ -92,7 +93,12 @@ const Home = () => {
 
     return (
         <>
-            <Navbar navLinks={navLinks} />
+            <Navbar navLinks={navLinks}>
+                <NavItem item="First" />
+                <NavItem item="Second" />
+                <NavItem item="Third" />
+            </Navbar>
+
             <MegaMenu />
             <div className="container main">
                 <Sidebar />

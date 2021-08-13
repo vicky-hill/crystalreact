@@ -1,9 +1,10 @@
 /* eslint-disable */
 import React, { useState } from 'react';
 
-const Navbar = ({ navLinks }) => {
+const Navbar = ({ navLinks, children }) => {
 
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState(children[0].props.item);
+
 
     const activateLink = (e) => {
         setActive(Number(e.target.id));
@@ -20,7 +21,7 @@ const Navbar = ({ navLinks }) => {
             navToggle.checked = false;
         }
     }
-    
+
 
     return (
         <nav className="nav-container">
@@ -29,16 +30,20 @@ const Navbar = ({ navLinks }) => {
 
             <input type="checkbox" className="nav-toggle" name="" id="nav-toggle" onClick={mobileMenu} />
             <input type="checkbox" className="search-toggle" name="" id="search-toggle" onClick={mobileMenu} />
-            
+
             <div className="navbar">
                 <ul>
 
-                    {
+                    {/* {
                         navLinks.map((link, i) => (
                             <li key={i} id={i} className={`${active === i ? 'active' : ''}`} onClick={activateLink}>
                                 <a id={i} href="#">{link}</a>
                             </li>
                         ))
+                    } */}
+
+                    {
+                        children
                     }
 
                 </ul>
@@ -52,6 +57,14 @@ const Navbar = ({ navLinks }) => {
             <label htmlFor="nav-toggle" className="nav-toggle-label"><span></span></label>
             <label htmlFor="search-toggle" className="search-toggle-label"><span><i className="fas fa-search"></i></span></label>
         </nav>
+    )
+}
+
+export const NavItem = ({ item }) => {
+    return (
+        <li className={`${active === item ? 'active' : ''}`}>
+            <a href="#">{item}</a>
+        </li>
     )
 }
 

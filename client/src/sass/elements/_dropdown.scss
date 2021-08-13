@@ -1,3 +1,7 @@
+/* ================================================================================
+   Basic Dropdown
+================================================================================ */
+
 /* HTML ===========================================================================
 
     <div class="dropdown">
@@ -34,18 +38,16 @@
         }
 
         return (
-            <section id="dropdown">
-                <div className="dropdown">
-                    <button className="btn btn-primary btn-dropdown" onClick={toggleDropdown}>
-                        Dropdown button
-                    </button>
-                    <ul className={`dropdown-menu ${dropdown ? 'show' : ''}`}>
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-            </section>
+            <div className="dropdown">
+                <button className="btn btn-primary btn-dropdown" onClick={toggleDropdown}>
+                    Dropdown button
+                </button>
+                <ul className={`dropdown-menu ${dropdown ? 'show' : ''}`}>
+                    <li><a className="dropdown-item" href="#">Action</a></li>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
         )
     }
 
@@ -124,4 +126,104 @@
   color: #fff;
   text-decoration: none;
   background-color: $primary;
+}
+
+
+/* ================================================================================
+   FB Dropdown
+================================================================================ */
+
+.dropdown-btn {
+    width: 40rem;
+    background: #242526;
+    color: #b0b3b8;
+    line-height: 5rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: Poppins;
+    margin-bottom: 1rem;
+}
+
+.dropdown-btn span {
+    float: right;
+    line-height: 5rem;
+    font-size: 2.8rem;
+    cursor: pointer;
+}
+
+.dropdown-wrapper {
+    width: 40rem;
+    background: #242526;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: Poppins;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-wrapper.show {
+    display: flex;
+}
+
+.dropdown-wrapper .setting-drop, 
+.dropdown-wrapper .help-drop {
+    display: none;
+}
+
+.dropdown-wrapper ul {
+    width: 40rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-wrapper li {
+    line-height: 5.5rem;
+}
+
+.dropdown-wrapper ul li a {
+    position: relative;
+    color: #b0b3b8;
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.dropdown-wrapper ul li:hover a {
+    background: #3A3B3C;
+}
+
+.dropdown-wrapper ul li a .icon {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1.3rem;
+    background: #ffffff1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.dropdown-wrapper ul li a i {
+    position: absolute;
+    right: 1rem;
+    font-size: 2.5rem;
+    pointer-events: none;
+}
+
+.dropdown-wrapper ul .arrow {
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: #b0b3b8;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.dropdown-wrapper ul .arrow span {
+    margin-right: 1.5rem;
 }
