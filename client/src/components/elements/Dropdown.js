@@ -9,16 +9,6 @@ const Dropdown = () => {
         setDropdown(!dropdown);
     }
 
-    const drop_btn = document.querySelector(".drop-btn");
-    const menu_wrapper = document.querySelector(".dropdown-wrapper");
-    const menu_bar = document.querySelector(".dropdown-menu-bar");
-    const setting_drop = document.querySelector(".setting_drop");
-    const help_drop = document.querySelector(".help_drop");
-    const setting_item = document.querySelector(".setting_item");
-    const help_item = document.querySelector(".help_item");
-    const setting_back = document.querySelector(".back-setting-btn");
-    const help_back = document.querySelector(".back-help-btn");
-
     const showMenu = () => {
         const menu_wrapper = document.querySelector(".dropdown-wrapper");
         menu_wrapper.classList.toggle("show");
@@ -30,7 +20,7 @@ const Dropdown = () => {
         const menu_bar = document.querySelector(".dropdown-menu-bar");
         const setting_drop = document.querySelector(".setting-drop");
 
-        menu_bar.style.marginLeft = "-400px";
+        menu_bar.style.marginLeft = "-300px";
 
         setTimeout(() => {
             setting_drop.style.display = "block";
@@ -44,7 +34,7 @@ const Dropdown = () => {
         const menu_bar = document.querySelector(".dropdown-menu-bar");
         const help_drop = document.querySelector(".help-drop");
 
-        menu_bar.style.marginLeft = "-400px";
+        menu_bar.style.marginLeft = "-300px";
         setTimeout(() => {
             help_drop.style.display = "block";
         }, 100)

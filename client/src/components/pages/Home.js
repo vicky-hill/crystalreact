@@ -93,11 +93,11 @@ const Home = () => {
 
     return (
         <>
-            <Navbar navLinks={navLinks}>
+            {/* <Navbar navLinks={navLinks}>
                 <NavItem item="First" />
                 <NavItem item="Second" />
                 <NavItem item="Third" />
-            </Navbar>
+            </Navbar> */}
 
             <MegaMenu />
             <div className="container main">

@@ -134,33 +134,39 @@
 ================================================================================ */
 
 .dropdown-btn {
-    width: 40rem;
-    background: #242526;
-    color: #b0b3b8;
-    line-height: 5rem;
+    width: 30rem;
+    background: #fff;
+    color: #61676D;
+    line-height: 4.7rem;
     padding: 0 2rem;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
     font-family: Poppins;
-    margin-bottom: 1rem;
+    margin-bottom: .7rem;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .15);
+}
+
+.dropdown-btn:hover {
+    cursor: pointer;
 }
 
 .dropdown-btn span {
     float: right;
     line-height: 5rem;
-    font-size: 2.8rem;
+    font-size: 1.6rem;
     cursor: pointer;
 }
 
 .dropdown-wrapper {
-    width: 40rem;
-    background: #242526;
+    width: 30rem;
+    background: #fff;
     border-radius: 5px;
     overflow: hidden;
     font-family: Poppins;
     display: none;
     transition: all 0.3s ease;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
 
 .dropdown-wrapper.show {
@@ -184,9 +190,9 @@
 
 .dropdown-wrapper ul li a {
     position: relative;
-    color: #b0b3b8;
+    color:#61676D;
     display: flex;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
     padding: 0 10px;
     align-items: center;
@@ -194,14 +200,14 @@
 }
 
 .dropdown-wrapper ul li:hover a {
-    background: #3A3B3C;
+    background: #F2F2F2;
 }
 
 .dropdown-wrapper ul li a .icon {
     height: 4rem;
     width: 4rem;
     margin-right: 1.3rem;
-    background: #ffffff1a;
+    background: #E5E9EC;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,14 +218,14 @@
 .dropdown-wrapper ul li a i {
     position: absolute;
     right: 1rem;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     pointer-events: none;
 }
 
 .dropdown-wrapper ul .arrow {
     padding-left: 1rem;
-    font-size: 2rem;
-    color: #b0b3b8;
+    font-size: 1.6rem;
+    color: #61676D;
     font-weight: 500;
     cursor: pointer;
 }
