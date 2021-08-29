@@ -12,6 +12,8 @@
     overflow: hidden;
     padding: 3rem 0;
     background-color: var(--body-color);
+    transform: translateX(-6rem);
+    width: calc(100% + 12rem);
 }
 
 /* ===================================
@@ -165,6 +167,11 @@
 
 
 @media only screen and (max-width : $breakpoint-md) { 
+    .glass-morphism {
+        transform: translateX(-70px);
+        width: calc(100% + 140px);
+    }
+
     .glass-card__container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -181,6 +188,11 @@
 }
 
 @media only screen and (max-width : $breakpoint-sm) { 
+    .glass-morphism {
+        transform: translateX(-25px);
+        width: calc(100% + 50px);
+    }
+
     .glass-card__container {
         height: auto;
         display: grid; 
