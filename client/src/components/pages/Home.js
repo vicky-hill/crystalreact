@@ -25,6 +25,7 @@ import Table from '../elements/Table';
 import Carousel from '../elements/Carousel';
 import Gallery from '../elements/Gallery';
 import MegaMenu from '../elements/MegaMenu';
+import Glass from '../elements/Glass';
 
 // ImageSlider & Gallery
 import image1 from '../../assets/slide-1.jpg';
@@ -122,6 +123,7 @@ const Home = () => {
                 <Tabs content={contentTabs} />
                 <Table />
                 <Form />
+                <Glass />
                 <Tooltip />
             </div>
             <BottomNav navLinks={bottomNavLinks} />
