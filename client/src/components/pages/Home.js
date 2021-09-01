@@ -28,6 +28,7 @@ import Gallery from '../elements/Gallery';
 import MegaMenu from '../elements/MegaMenu';
 import Glass from '../elements/Glass';
 import DragnDrop from '../elements/DragnDrop';
+import SidebarWithSub from '../elements/SidebarWithSub';
 
 // ImageSlider & Gallery
 import image1 from '../../assets/slide-1.jpg';
@@ -111,6 +112,7 @@ const Home = () => {
             <MegaMenu />
             <div className="container main">
                 <Sidebar />
+                <SidebarWithSub />
                 <Sidenav links={sidenavLinks} />
                 <Button />
                 <Progress />

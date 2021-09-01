@@ -1,3 +1,7 @@
+/* ================================================================================
+   Scrollspy sidebar
+================================================================================ */
+
 /* HTML ===========================================================================
 
     <div className="container main">
@@ -82,4 +86,159 @@
     .main {
         padding: 25px;
     }
- }
+}
+
+/* ================================================================================
+   Sidebar with submenu
+================================================================================ */
+
+:root {
+    --first-color: #0c5df4;
+    --bg-color: #12192c;
+    --sub-color: #b6cefc;
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.5rem;
+}
+
+.sidebar-submenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 82px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color:  #fff;
+    padding: 2rem 2rem 3rem;
+    padding-bottom: 0;
+    transition: .3s; 
+    z-index: 100000;
+}
+
+.sidebar-submenu nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar-submenu__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* ===================================
+   Nav brand
+==================================== */
+.sidebar-submenu__brand {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+} 
+
+.sidebar-submenu__brand ion-icon {
+    font-size: 2.3rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.sidebar-submenu__logo {
+    color: #fff;
+    font-weight: 600;
+    font-family: Poppins;
+    padding-left: 10px;
+}
+
+
+
+
+/* ===================================
+   Nav list
+==================================== */
+.sidebar-submenu__list {
+    justify-self: self-start;
+}
+.sidebar-submenu__link {
+    color: #fff !important;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 1rem;
+    border-radius: 7px;
+    margin-bottom: 1.3rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.sidebar-submenu__link ion-icon,
+.sidebar-submenu--bottomlink ion-icon {
+    font-size: 2.3rem !important;
+}
+
+.sidebar-submenu__link:hover {
+    background-color: var(--first-color);
+}
+
+.sidebar-submenu__name {
+    font-size: var(--small-font-size);
+    padding-left: 5px;
+}
+
+.sidebar-submenu-active {
+    background-color: var(--first-color);
+}
+
+
+/* ===================================
+   Submenu
+==================================== */
+.sidebar-submenu-collapse {
+    grid-template-columns: 20px max-content 1fr;
+}
+
+.sidebar-submenu__chevron {
+    justify-self: flex-end;
+    transition: .5s;
+    font-size: 2.3rem;
+    line-height: 0;
+}
+
+.sidebar-submenu__collapse--menu {
+    display: none;
+    padding: 1rem 2.5rem;
+    flex-direction: column;
+}
+
+.sidebar-submenu_collapse--sublink {
+    color: var(--sub-color);
+    font-size: var(--small-font-size);
+}
+
+.sidebar-submenu_collapse--sublink:hover {
+    color: #fff;
+}
+
+.sidebar-submenu__show-collapse {
+    display: flex; 
+}
+
+.sidebar-submenu__rotate {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+
+/* ===================================
+   Expand menu
+==================================== */
+.expand {
+    width: 200px;
+}
+
+body.add-padding {
+    padding-left: 122px;
+}
