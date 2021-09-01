@@ -1,3 +1,4 @@
+/* eslint-disable */ 'use strict';
 import React from 'react';
 import Alert from '../elements/Alert';
 import Navbar from '../elements/Navbar';
@@ -26,6 +27,7 @@ import Carousel from '../elements/Carousel';
 import Gallery from '../elements/Gallery';
 import MegaMenu from '../elements/MegaMenu';
 import Glass from '../elements/Glass';
+import DragnDrop from '../elements/DragnDrop';
 
 // ImageSlider & Gallery
 import image1 from '../../assets/slide-1.jpg';
@@ -88,6 +90,12 @@ const contentTabs = [
     { title: 'Item 3', content: tab3 },
 ]
 
+// Drag n Drop
+const dndData = [
+    { title: 'Group 1', items: ['Item 1', 'Item 2', 'Item 3'] },
+    { title: 'Group 2', items: ['Item 4', 'Item 5'] }
+]
+
 
 
 const Home = () => {
@@ -112,6 +120,7 @@ const Home = () => {
                 <Pagination pages={[1, 2, 3]} />
                 <Toast />
                 <Alert />
+                <DragnDrop data={dndData} />
                 <Badge />
                 <Card />
                 <Collapse />
@@ -121,9 +130,9 @@ const Home = () => {
                 <Carousel images={images} />
                 <Gallery images={images} />
                 <Tabs content={contentTabs} />
+                <Glass />
                 <Table />
                 <Form />
-                <Glass />
                 <Tooltip />
             </div>
             <BottomNav navLinks={bottomNavLinks} />

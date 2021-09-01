@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable */ 'use strict';
 import React from 'react';
 
 const Alert = () => {

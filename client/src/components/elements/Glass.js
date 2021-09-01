@@ -1,3 +1,4 @@
+/* eslint-disable */ 'use strict';
 import React from 'react';
 import user1 from '../../assets/user1.png';
 import user2 from '../../assets/user2.png';
@@ -23,9 +24,9 @@ const Glass = () => {
                     <a href="" className="glass-card__button">Know More</a>
 
                     <div className="glass-card__social">
-                        <a href="" className="glass-card__link"><i class="fab fa-instagram"></i></a>
-                        <a href="" className="glass-card__link"><i class="fab fa-twitter"></i></a>
-                        <a href="" className="glass-card__link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-instagram"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-twitter"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
@@ -40,9 +41,9 @@ const Glass = () => {
                     <a href="" className="glass-card__button">Know More</a>
 
                     <div className="glass-card__social">
-                        <a href="" className="glass-card__link"><i class="fab fa-instagram"></i></a>
-                        <a href="" className="glass-card__link"><i class="fab fa-twitter"></i></a>
-                        <a href="" className="glass-card__link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-instagram"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-twitter"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
@@ -57,9 +58,9 @@ const Glass = () => {
                     <a href="" className="glass-card__button">Know More</a>
 
                     <div className="glass-card__social">
-                        <a href="" className="glass-card__link"><i class="fab fa-instagram"></i></a>
-                        <a href="" className="glass-card__link"><i class="fab fa-twitter"></i></a>
-                        <a href="" className="glass-card__link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-instagram"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-twitter"></i></a>
+                        <a href="" className="glass-card__link"><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
