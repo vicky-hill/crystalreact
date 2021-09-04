@@ -1,13 +1,17 @@
 /* eslint-disable */ 'use strict';
-import React from 'react';
+import React, { useState } from 'react';
 
-const SidebarWithSub = () => {
+const SidebarWithSub = ({ links }) => {
+
+    const [active, setActive] = useState(0);
 
     const showMenu = () => {
         const navbar = document.getElementById('sidebar-submenu');
+        const sidebar = document.querySelector('.sidebar');
         const body = document.querySelector('body');
 
         navbar.classList.toggle('expand');
+        sidebar.classList.toggle('add-padding');
         body.classList.toggle('add-padding');
     }
 
@@ -17,9 +21,22 @@ const SidebarWithSub = () => {
         const target = e.target.parentElement.nextElementSibling;
         const chevron = e.target;
 
-        console.log(chevron)
         target.classList.toggle('sidebar-submenu__show-collapse');
         chevron.classList.toggle('sidebar-submenu__rotate')
+    }
+
+    const getStyles = (link, i) => {
+        let classes = 'sidebar-submenu__link';
+        
+        if(link.sublinks) {
+            classes += ' sidebar-submenu-collapse';
+        } 
+
+        if(active === i) {
+            classes += ' sidebar-submenu-active'
+        }
+       
+        return classes;
     }
 
 
@@ -34,41 +51,39 @@ const SidebarWithSub = () => {
                 </div>
 
                 <div className="sidebar-submenu__content">
+                    
                     {/* Nav list */}
                     <div className="sidebar-submenu__list">
-                        <a href="" className="sidebar-submenu__link sidebar-submenu-active">
-                            <ion-icon name="home-outline"></ion-icon>
-                            <span className="sidebar-submenu__name">Dashboard</span>
-                        </a>
-                        <a href="" className="sidebar-submenu__link sidebar-submenu-collapse">
-                            <ion-icon name="folder-outline"></ion-icon>
-                            <span className="sidebar-submenu__name">Projects</span>
-                            <span className="sidebar-submenu__chevron">
-                                <ion-icon name="chevron-down-outline" onClick={(e) => showSubmenu(e)} />
-                            </span>
+                        {
+                            links.map((link, i) => (
+                                <a 
+                                    key={i} 
+                                    href="" 
+                                    className={getStyles(link, i)}
+                                    onClick={(e) => {e.preventDefault(); setActive(i)}}
+                                >
+                                    <ion-icon name={link.icon}></ion-icon>
+                                    <span className="sidebar-submenu__name">{ link.title }</span>
+                                    {
+                                        link.sublinks && (
+                                            <>
+                                                <span className="sidebar-submenu__chevron">
+                                                    <ion-icon name="chevron-down-outline" onClick={(e) => showSubmenu(e)} />
+                                                </span>
 
-                            <ul className="sidebar-submenu__collapse--menu sidebar-submenu_collapse--sublink">
-                                <a href="" className="sidebar-submenu_collapse--sublink">Data</a>
-                                <a href="" className="sidebar-submenu_collapse--sublink">Group</a>
-                                <a href="" className="sidebar-submenu_collapse--sublink">Members</a>
-                            </ul>
-                        </a>
-                        <a href="" className="sidebar-submenu__link">
-                            <ion-icon name="chatbubbles-outline"></ion-icon>
-                            <span className="sidebar-submenu__name">Messenger</span>
-                        </a>
-                        <a href="" className="sidebar-submenu__link">
-                            <ion-icon name="pie-chart-outline"></ion-icon>
-                            <span className="sidebar-submenu__name">Analytics</span>
-                        </a>
-                        <a href="" className="sidebar-submenu__link">
-                            <ion-icon name="people-outline"></ion-icon>
-                            <span className="sidebar-submenu__name">Team</span>
-                        </a>
-                        <a href="" className="sidebar-submenu__link">
-                            <ion-icon name="settings-outline"></ion-icon>
-                            <span className="sidebar-submenu__name">Settings</span>
-                        </a>
+                                                <ul className="sidebar-submenu__collapse--menu sidebar-submenu_collapse--sublink">
+                                                    {
+                                                        link.sublinks.map((sublink, i) => (
+                                                            <a key={i} href="" className="sidebar-submenu_collapse--sublink">{sublink}</a>
+                                                        ))
+                                                    }
+                                                </ul>
+                                            </>
+                                        )
+                                    }
+                                </a>
+                            ))
+                        }
                     </div>
 
 

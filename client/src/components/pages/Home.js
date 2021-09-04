@@ -97,6 +97,15 @@ const dndData = [
     { title: 'Group 2', items: ['Item 4', 'Item 5'] }
 ]
 
+// Sidebar with Submenu
+const submenuLinks = [
+    { title: 'Dashboard', icon: 'home-outline' },
+    { title: 'Projects', icon: 'folder-outline', sublinks: ['Data', 'Group', 'Team'] },
+    { title: 'Messenger', icon: 'chatbubbles-outline' },
+    { title: 'Analytics', icon: 'pie-chart-outline' },
+    { title: 'Team', icon: 'people-outline' },
+    { title: 'Settings', icon: 'settings-outline' }
+]
 
 
 const Home = () => {
@@ -112,7 +121,7 @@ const Home = () => {
             <MegaMenu />
             <div className="container main">
                 <Sidebar />
-                <SidebarWithSub />
+                <SidebarWithSub links={submenuLinks} />
                 <Sidenav links={sidenavLinks} />
                 <Button />
                 <Progress />

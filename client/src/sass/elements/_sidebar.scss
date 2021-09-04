@@ -93,9 +93,10 @@
 ================================================================================ */
 
 :root {
-    --first-color: #0c5df4;
+    // --first-color: #0c5df4;
+    --first-color-submenu: #18bdbd;
     --bg-color: #12192c;
-    --sub-color: #b6cefc;
+    --sub-color: #efffff;
     --normal-font-size: 1.6rem;
     --small-font-size: 1.5rem;
 }
@@ -180,7 +181,7 @@
 }
 
 .sidebar-submenu__link:hover {
-    background-color: var(--first-color);
+    background-color: var(--first-color-submenu);
 }
 
 .sidebar-submenu__name {
@@ -189,7 +190,7 @@
 }
 
 .sidebar-submenu-active {
-    background-color: var(--first-color);
+    background-color: var(--first-color-submenu);
 }
 
 
@@ -239,6 +240,31 @@
     width: 200px;
 }
 
-body.add-padding {
+body.add-padding,
+.sidebar.add-padding {
     padding-left: 122px;
+}
+
+.sidebar.add-padding {
+    width: 35rem;
+}
+
+
+/* ===================================
+   adjust regular sidebar
+==================================== */
+
+.sidebar {
+    left: 8rem;
+    transition: .3s;
+}
+
+.main {
+    transition: .3s;
+    padding-left: 9rem;
+}
+
+.glass-morphism {
+    transform: translateX(-4rem) !important;
+    width: calc(100% + 10rem) !important;
 }

@@ -57,57 +57,6 @@
 
 ================================================================================ */
 
-/* React ==========================================================================
-
-    import React, { useState } from 'react';
-
-    //@at-root Props
-    ===========================================
-    // content: [title: String, content: String]
-
-    const Accordion = ({ content }) => {
-
-        const [active, setActive] = useState(null);
-        const [height, setHeight] = useState(0);
-
-        function collapse(e) {
-
-            const content = e.target.nextElementSibling;
-            const activeId = Number(e.target.id)
-
-            active === activeId ? setActive(null) : setActive(activeId);
-            active === activeId ? setHeight(0) : setHeight(content.scrollHeight + "px");
-
-
-        }
-
-        return (
-            <section id="accordion">
-                <div className="row">
-                    <div className="col-6">
-                        <div className="accordion">
-                            {
-                                content.map((item, i) => (
-                                    <div key={i} className="accordion-item">
-                                        <p id={i} className={`accordion-header ${active === i ? 'collapsed' : ''}`} onClick={collapse}>{item.title} </p>
-                                        <div className={`accordion-body ${active === i ? 'active' : ''}`} style={{ maxHeight: `${active !== i ? 0 : height}` }}>
-                                            <div className="accordion-content">
-                                                {item.content}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </div>
-                </div>
-            </section>
-        )
-    }
-
-    export default Accordion;
-
-================================================================================ */
 
 .accordion {
     margin-bottom: 2rem;
@@ -135,8 +84,6 @@
 
 .accordion-header.collapsed::after {
     transform: rotate(-180deg);
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$teal-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-
 }
 
 .accordion-item:first-of-type .accordion-header {
