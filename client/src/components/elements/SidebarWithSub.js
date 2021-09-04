@@ -74,7 +74,7 @@ const SidebarWithSub = ({ links }) => {
                                                 <ul className="sidebar-submenu__collapse--menu sidebar-submenu_collapse--sublink">
                                                     {
                                                         link.sublinks.map((sublink, i) => (
-                                                            <a key={i} href="" className="sidebar-submenu_collapse--sublink">{sublink}</a>
+                                                            <button key={i} className="sidebar-submenu_collapse--sublink">{sublink}</button>
                                                         ))
                                                     }
                                                 </ul>

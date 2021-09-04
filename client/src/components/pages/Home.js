@@ -29,6 +29,7 @@ import MegaMenu from '../elements/MegaMenu';
 import Glass from '../elements/Glass';
 import DragnDrop from '../elements/DragnDrop';
 import SidebarWithSub from '../elements/SidebarWithSub';
+import Context from '../elements/Context';
 
 // ImageSlider & Gallery
 import image1 from '../../assets/slide-1.jpg';
@@ -134,6 +135,7 @@ const Home = () => {
                 <DragnDrop data={dndData} />
                 <Badge />
                 <Card />
+                <Context />
                 <Collapse />
                 <Accordion content={contentAccordion} />
                 <Dropdown />
