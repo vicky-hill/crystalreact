@@ -5,9 +5,9 @@ const Bottomnav = ({ navLinks }) => {
 
     const [active, setActive] = useState(0);
 
-    const activateTab = (e) => {
+    const activateTab = (e, i) => {
         e.preventDefault();
-        setActive(Number(e.target.id));
+        setActive(i);
     }
 
     return (
@@ -15,9 +15,9 @@ const Bottomnav = ({ navLinks }) => {
 
             {
                 navLinks.map((link, i) => (
-                    <a key={i} id={i} href="" className={`bottom-nav-link ${active === i ? 'active' : ''}`} onClick={activateTab}>
-                        <i id={i} className={`fas ${link.icon}`}></i>
-                        <span id={i} className="bottom-nav-text">{ link.text }</span>
+                    <a key={i} href="" className={`bottom-nav-link ${active === i ? 'active' : ''}`} onClick={(e) => activateTab(e, i)}>
+                        <i className={`fas ${link.icon}`}></i>
+                        <span className="bottom-nav-text">{ link.text }</span>
                     </a>
                 ))
             }

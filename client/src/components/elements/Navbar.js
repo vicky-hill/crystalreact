@@ -1,14 +1,9 @@
 /* eslint-disable */
 import React, { useState } from 'react';
 
-const Navbar = ({ navLinks, children }) => {
+const Navbar = ({ navLinks }) => {
 
-    const [active, setActive] = useState(children[0].props.item);
-
-
-    const activateLink = (e) => {
-        setActive(Number(e.target.id));
-    }
+    const [active, setActive] = useState(0);
 
     const mobileMenu = (e) => {
         const clicked = Array.from(e.target.classList)[0];
@@ -24,7 +19,7 @@ const Navbar = ({ navLinks, children }) => {
 
 
     return (
-        <nav className="nav-container">
+        <nav className="nav-container make-fit mb-10">
             <img src="" className="nav-logo" loading="lazy"></img>
             <a className="nav-brand" href="#">Basic Style</a>
 
@@ -34,16 +29,12 @@ const Navbar = ({ navLinks, children }) => {
             <div className="navbar">
                 <ul>
 
-                    {/* {
+                    {
                         navLinks.map((link, i) => (
-                            <li key={i} id={i} className={`${active === i ? 'active' : ''}`} onClick={activateLink}>
-                                <a id={i} href="#">{link}</a>
+                            <li key={i} className={`${active === i ? 'active' : ''}`} onClick={() => setActive(i)}>
+                                <a href="#">{link}</a>
                             </li>
                         ))
-                    } */}
-
-                    {
-                        children
                     }
 
                 </ul>
@@ -60,12 +51,5 @@ const Navbar = ({ navLinks, children }) => {
     )
 }
 
-export const NavItem = ({ item }) => {
-    return (
-        <li className={`${active === item ? 'active' : ''}`}>
-            <a href="#">{item}</a>
-        </li>
-    )
-}
 
 export default Navbar;

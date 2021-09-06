@@ -6,7 +6,6 @@ const Alert = () => {
     function dismissAlert(e) {
         const alertBox = e.target.parentElement.parentElement;
         alertBox.classList.add('alert-dismiss');
-        console.log('close alert')
     }
 
     return (
