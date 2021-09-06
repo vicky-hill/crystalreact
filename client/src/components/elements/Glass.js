@@ -6,7 +6,7 @@ import user3 from '../../assets/user3.png';
 
 const Glass = () => {
     return (
-        <div className="glass-morphism mb-10">
+        <div className="glass-morphism mb-10 make-fit">
 
             <div className="glass-morphism__circle glass-morphism__circle--1"></div>
             <div className="glass-morphism__circle glass-morphism__circle--2"></div>

@@ -7,8 +7,15 @@
     width: 85%;
     margin: 3rem auto;
     padding: 15px;
-    // max-width: 120rem;
-    // margin: auto;
+}
+
+/* ===================================
+   100% fit in padded container
+==================================== */
+
+.make-fit {
+    transform: translateX(-6rem) !important;
+    width: calc(100% + 12rem) !important;
 }
 
 .width-95 {

@@ -1,23 +1,17 @@
 /* eslint-disable */ 'use strict';
 import React, { useState } from 'react';
 
-/* Props
-=========================================== */
-// content: [title: String, content: String]
-
 const Accordion = ({ content }) => {
 
     const [active, setActive] = useState(null);
     const [height, setHeight] = useState(0);
 
-    function collapse(e) {
+    function collapse(e, index) {
 
         const content = e.target.nextElementSibling;
-        const activeId = Number(e.target.id)
 
-        active === activeId ? setActive(null) : setActive(activeId);
-        active === activeId ? setHeight(0) : setHeight(content.scrollHeight + "px");
-
+        active === index ? setActive(null) : setActive(index);
+        active === index ? setHeight(0) : setHeight(content.scrollHeight + "px");
 
     }
 
@@ -28,9 +22,9 @@ const Accordion = ({ content }) => {
                     <div className="accordion">
                         {
                             content.map((item, i) => (
-                                <div key={i} className="accordion-item">
-                                    <p id={i} className={`accordion-header ${active === i ? 'collapsed' : ''}`} onClick={collapse}>{item.title} </p>
-                                    <div className={`accordion-body ${active === i ? 'active' : ''}`} style={{ maxHeight: `${active !== i ? 0 : height}` }}>
+                                <div key={i} className="accordion-item" >
+                                    <p className={`accordion-header ${active === i ? 'collapsed' : ''}`} onClick={(e) => collapse(e, i)} > {item.title} </p>
+                                    <div className={`accordion-body ${active === i ? 'active' : ''}`} style={{ maxHeight: `${active !== i ? 0 : height}` }} >
                                         <div className="accordion-content">
                                             {item.content}
                                         </div>
@@ -44,5 +38,24 @@ const Accordion = ({ content }) => {
         </section>
     )
 }
+
+
+/* Props
+============================================================= */
+// content: [title: String, content: String]
+
+
+/* JSX =========================================================
+    <div className="accordion">
+        <div className="accordion-item">
+            <p className="accordion-header">{ item.title }</p>
+            <div className="accordion-body">
+                <div className="accordion-content">
+                    { item.content }
+                </div>
+            </div>
+        </div>
+    </div> 
+============================================================= */
 
 export default Accordion;

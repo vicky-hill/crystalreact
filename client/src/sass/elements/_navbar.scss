@@ -236,3 +236,193 @@
         display: block;
     }
 }
+
+
+/* ================================================================================
+   Nav 1
+================================================================================ */
+
+.nav1 li, 
+.nav1 a, 
+.nav1 button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #edf0f1;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 10%;
+    background-color: #24252A;
+    margin-bottom: 3rem;
+} 
+
+.nav1__logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #edf0f1;
+    text-transform: uppercase;
+}
+
+.nav1__links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+
+.nav1__links li a {
+    transition: all .3s ease 0s;
+}
+
+.nav1__links li a:hover {
+    color: $primary;
+}
+
+.nav1__button {
+    padding: 7px 25px;
+    background-color:  rgba(44, 185, 185, 1);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+
+.nav1__button:hover {
+    background-color:  rgba(44, 185, 185, .8);
+}
+
+/* ================================================================================
+   Nav 2
+================================================================================ */
+
+.nav2 li, 
+.nav2 a, 
+.nav2 button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #edf0f1;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.4rem 10%;
+    background-color: #24252A;
+    margin-bottom: 3rem;
+}
+
+.nav2__logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #edf0f1;
+    text-transform: uppercase;
+    margin-right: auto;
+}
+
+.nav2__links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+
+.nav2__links li a {
+    transition: all .3s ease 0s;
+}
+
+.nav2__links li a:hover {
+    color: $primary;
+}
+
+.nav2__button {
+    margin-left: 2rem;
+    padding: 7px 25px;
+    background-color:  rgba(44, 185, 185, 1);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+
+.nav2__button:hover {
+    background-color:  rgba(44, 185, 185, .8);
+}
+
+/* ================================================================================
+   Nav 3
+================================================================================ */
+
+.nav3 li, 
+.nav3 a, 
+.nav3 button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #edf0f1;
+}
+
+.nav3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.4rem 10%;
+    background-color: #24252A;
+    margin-bottom: 3rem;
+} 
+
+.nav3__logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #edf0f1;
+    text-transform: uppercase;
+    order: 3;
+    margin-left: auto; 
+}
+
+.nav3 nav {
+    order: 1;
+}
+
+.nav3__links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav3__links li:nth-child(1) {
+    padding: 0 20px 0 0;
+}
+
+
+.nav3__links li a {
+    transition: all .3s ease 0s;
+}
+
+.nav3__links li a:hover {
+    color: $primary;
+}
+
+.nav3__button {
+    margin-left: 2rem;
+    padding: 7px 25px;
+    background-color:  rgba(44, 185, 185, 1);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    order: 2;
+    margin-left: 2rem;
+}
+
+.nav3__button:hover {
+    background-color:  rgba(44, 185, 185, .8);
+}

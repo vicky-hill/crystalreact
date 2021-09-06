@@ -69,6 +69,7 @@ const DragnDrop = ({ data }) => {
 
     const getStyles = (params) => {
         const currentItem = dragItem.current;
+        
         if(currentItem.groupIndex === params.groupIndex && currentItem.itemIndex === params.itemIndex) {
             return 'current dnd-item'
         }
