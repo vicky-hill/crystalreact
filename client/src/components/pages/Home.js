@@ -32,6 +32,7 @@ import SidebarWithSub from '../elements/SidebarWithSub';
 import Context from '../elements/Context';
 import Nav from '../elements/Nav';
 import Footer from '../elements/Footer';
+import WestgateCard from '../elements/WestgateCard';
 
 // ImageSlider & Gallery
 import image1 from '../../assets/slide-1.jpg';
@@ -138,9 +139,12 @@ const Home = () => {
                 <Dropdown />
                 <List />
                 <Carousel images={images} />
+                <WestgateCard />
+                <WestgateCard />
+                <WestgateCard />
+                <WestgateCard />
                 <Gallery images={images} />
                 <Tabs content={contentTabs} />
-                <Glass />
                 <Table />
                 <Form />
                 <Nav />

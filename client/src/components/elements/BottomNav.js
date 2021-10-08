@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 /* eslint-disable */
-const Bottomnav = ({ navLinks }) => {
+const BottomNav = ({ navLinks }) => {
 
     const [active, setActive] = useState(0);
 
@@ -26,6 +26,6 @@ const Bottomnav = ({ navLinks }) => {
     )
 }
 
-export default Bottomnav;
+export default BottomNav;
 
 

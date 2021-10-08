@@ -87,10 +87,10 @@ const Card = () => {
 
 
             {/* Card with glowing corners */}
-            <div className="card-glowing mt-10">
+            {/* <div className="card-glowing mt-10">
                 <span></span>
                 <h2>01</h2>
-            </div>
+            </div> */}
 
 
 
