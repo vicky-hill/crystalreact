@@ -1,0 +1,209 @@
+:root {
+    --first-color: #4D49BF;
+    --second-color: #05dbf2;
+    --body-color: #dfe9f2;
+    --title-color: #1c1c22;
+    --text-color: #58576b;
+}
+
+
+.glass-morphism {
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+    background-color: var(--body-color);
+    width: 100%;
+    width: calc(100% + 7rem);
+    transform: translateX(-3.5rem);
+}
+
+/* ===================================
+   Background circles
+==================================== */
+.glass-morphism__circle {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    background: linear-gradient(130deg, 
+                rgba(77, 73, 191, .8),
+                rgba(255, 255, 255, .2));
+    border-radius: 50%;
+}
+
+.glass-morphism__circle--1 {
+    left: 3%;
+    top: -4%;
+}
+
+.glass-morphism__circle--2 {
+    right: 8%;
+    bottom: -15%;
+    background: linear-gradient(130deg, 
+                rgba(58, 218, 218, .9),
+                rgba(255, 255, 255, .2));
+}
+
+
+/* ===================================
+   Glass card container
+==================================== */
+
+.glass-card__container {
+    display: grid; 
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+}
+
+.bd-container {
+    height: 40rem;
+    max-width: 968px;
+    width: calc(100% - 4rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================================
+   Glass card
+==================================== */
+.glass-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(130deg,
+                    rgba(251, 251, 254, .6),
+                    rgba(251, 251, 254, .2));
+    box-shadow: inset 2px 2px 1px rgba(251, 251, 254, .3),
+                inset -2px -2px 1px rgba(251, 251, 254, .2);
+    border-radius: 1.5rem; 
+    margin-bottom: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+// Image
+.glass-card__img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 2px solid #f4f4fb;
+    margin-bottom: 1rem;
+}
+
+// Data
+.glass-card__data {
+    margin-bottom: 1.5rem;
+}
+
+// Title
+.glass-card__title {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+
+// Profession
+.glass-card__profession {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+// Button
+.glass-card__button {
+    display: inline-block;
+    background: linear-gradient(130deg,
+        rgba(251, 251, 254, .9),
+        rgba(251, 251, 254, .2));
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    color: var(--title-color);
+    font-weight: 500; 
+    transition: .4s;
+}
+
+.glass-card__button:hover {
+    background: linear-gradient(130deg,
+        rgba(251, 251, 254, .2),
+        rgba(251, 251, 254, .4));
+}
+
+
+/* ===================================
+   Social links
+==================================== */
+.glass-card__social {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.glass-card__link {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    margin: 1rem 0;
+    transform: translateX(-5.5rem);
+}
+
+// Slide effect
+.glass-card__link:nth-child(1) {
+    transition: .1s; 
+}
+
+.glass-card__link:nth-child(2) {
+    transition: .5s; 
+}
+
+.glass-card__link:nth-child(3) {
+    transition: .7s; 
+}
+
+.glass-card:hover .glass-card__link {
+    transform: translateX(0)
+}
+
+
+
+@media only screen and (max-width : $breakpoint-md) { 
+    // .glass-morphism {
+    //     transform: translateX(-70px);
+    //     width: calc(100% + 140px);
+    // }
+
+    .glass-card__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .glass-morphism__circle--1 {
+        top: 20%;
+        left: -20%; 
+    }
+    
+    .glass-morphism__circle--2 {
+        bottom: -5%;
+        right: -25%;
+    }
+}
+
+@media only screen and (max-width : $breakpoint-sm) { 
+    // .glass-morphism {
+    //     transform: translateX(-25px);
+    //     width: calc(100% + 50px);
+    // }
+
+    .glass-card__container {
+        height: auto;
+        display: grid; 
+        gap: 1.5rem;
+        grid-template-columns: none;
+    }
+
+    .bd-container {
+        max-width: 968px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
