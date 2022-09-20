@@ -32,12 +32,13 @@ import SidebarWithSub from '../elements/SidebarWithSub';
 import Context from '../elements/Context';
 import Nav from '../elements/Nav';
 import Footer from '../elements/Footer';
-import WestgateCard from '../elements/WestgateCard';
 
 // ImageSlider & Gallery
 import image1 from '../../assets/slide-1.jpg';
 import image2 from '../../assets/slide-2.jpg';
 import image3 from '../../assets/slide-3.jpg';
+import RoundedSearch from '../elements/RoundedSearch';
+import ImageZoom from '../elements/ImageZoom';
 const images = [image1, image2, image3];
 
 // Navbar
@@ -139,11 +140,9 @@ const Home = () => {
                 <Dropdown />
                 <List />
                 <Carousel images={images} />
-                <WestgateCard />
-                <WestgateCard />
-                <WestgateCard />
-                <WestgateCard />
                 <Gallery images={images} />
+                <RoundedSearch />
+                <ImageZoom />
                 <Tabs content={contentTabs} />
                 <Table />
                 <Form />

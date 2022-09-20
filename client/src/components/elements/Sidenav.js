@@ -31,7 +31,7 @@ const Sidenav = ({ links }) => {
             </header>
 
             <nav className={`sidenav ${sidenav ? 'open' : ''}`} >
-                <div className="sidenav-links">
+                <div className="sidenav-menu">
                     {
                         links.map((link, i) => (
                             <a key={i} href="" id={i} className={`sidenav-link ${active === i ? 'active' : ''}`} onClick={activateTab}>

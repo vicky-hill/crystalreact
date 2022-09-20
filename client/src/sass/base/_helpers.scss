@@ -64,6 +64,23 @@
 
 
 /* ===================================
+   Flex
+==================================== */
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-center {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite !important;
+}
+
+/* ===================================
    Display
 ==================================== */
 

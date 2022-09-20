@@ -76,20 +76,20 @@
     margin: 4px;
 }   
 
-.sidenav-links {
+.sidenav-menu {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: $z-sidenav;
     height: 100%;
     width: 25rem;
+    z-index: $z-sidenav;
     background: #fff;
     transform: translateX(-25rem);
     transition: transform 0.3s;
     padding-top: 10rem;
 }
 
-.sidenav.open .sidenav-links {
+.sidenav.open .sidenav-menu {
     transform: translateX(0);
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 }
@@ -128,12 +128,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2px);
     z-index: $z-sidenav-overlay;
     visibility: hidden ;
     opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
     transition: all 0.4s;
+
 }
 
 .sidenav.open .sidenav-overlay {
