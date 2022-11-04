@@ -56,7 +56,7 @@ const MegaMenu = () => {
                 {/* Section Left: Logo */}
                 <div className="megamenu-section--left">
                     <div className="megamenu-logo">
-                        <a href="#">Basic Style</a>
+                        <a href="#">Crystal</a>
                     </div>
                 </div>
 

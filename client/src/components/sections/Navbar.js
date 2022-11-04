@@ -21,7 +21,7 @@ const Navbar = ({ navLinks }) => {
     return (
         <nav className="nav-container make-fit mb-10">
             <img src="" className="nav-logo" loading="lazy"></img>
-            <a className="nav-brand" href="#">Basic Style</a>
+            <a className="nav-brand" href="#">Crystal</a>
 
             <input type="checkbox" className="nav-toggle" name="" id="nav-toggle" onClick={mobileMenu} />
             <input type="checkbox" className="search-toggle" name="" id="search-toggle" onClick={mobileMenu} />

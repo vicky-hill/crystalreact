@@ -1,40 +1,36 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
+const Button = ({ children, variant, size, outline, rounded, loading, className, ...props }) => {
 
-const Button = () => {
-
-    const toggleSpinner = () => {
-        document.getElementById('loading-button').classList.toggle('btn-loading');
-    }
-
+    let classes = ['btn', `btn-${variant}`];
+    
+    className && classes.push(className);
+    outline && classes.push(`btn-${variant}-outline`);
+    rounded && classes.push('btn-round');
+    loading && classes.push('btn-loading');
+    
+    classes = classes.join(' ')
 
     return (
-        <section id="buttons">
-
-            <button className='btn btn-primary'>
-                Button
-            </button>
-
-            <button className="btn btn-primary" id="loading-button" onClick={toggleSpinner}>
-                <span className="btn-text">Loading button</span>
-            </button>
-
-            <button className='btn btn-primary btn-outline-primary'>
-                Outline Button
-            </button>
-
-            <button className='btn btn-primary btn-outline-primary btn-round'>
-                Round Button
-            </button>
-            <div>
-                <button className="btn-floating">
-                    <i className="fas fa-plus"></i>
-                </button>
-            </div>
-        </section>
+        <button className={classes} {...props} >
+            <span className="btn-text">
+                {children}
+            </span>
+        </button>
     )
 }
 
+Button.defaultProps = {
+    variant: 'primary'
+}
 
+Button.propTypes = {
+    variant: PropTypes.oneOf(['primary', 'secondary']),
+    outline: PropTypes.bool,
+    rounded: PropTypes.bool,
+    loading: PropTypes.bool,
+    children: PropTypes.element
+}
 
 export default Button;

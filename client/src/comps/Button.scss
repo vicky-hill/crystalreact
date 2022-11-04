@@ -1,0 +1,108 @@
+@import '../sass/base/variables';
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+body {
+    font-family: 'PT Mono', monospace;
+}
+
+.btn {
+    position: relative;
+    font-family: Lato;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid transparent;
+    line-height: inherit;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+// Primary
+.btn-primary {
+    background-color: $primary;
+}
+
+.btn-primary:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
+    background-color:  mix(black, $primary, 10%);
+}
+
+.btn-primary:hover {
+    background-color: mix(black, $primary, 10%);
+}
+
+.btn-primary:disabled {
+    background-color: mix(white, $primary, 45%);
+    cursor: auto;
+} 
+
+// Secondary
+.btn-secondary {
+    background-color: $secondary;
+}
+
+.btn-secondary:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $secondary, 55%);
+    background-color:  mix(black, $secondary, 10%);
+}
+
+.btn-secondary:hover {
+    background-color: mix(black, $secondary, 10%);
+}
+
+.btn-secondary:disabled {
+    background-color: mix(white, $secondary, 45%);
+    cursor: auto;
+}
+
+
+// Pink
+.btn-pink {
+    background-color: $pink;
+}
+
+.btn-pink:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $pink, 55%);
+    background-color:  mix(black, $pink, 10%);
+}
+
+.btn-pink:hover {
+    background-color: mix(black, $pink, 10%);
+}
+
+.btn-pink:disabled {
+    background-color: mix(white, $pink, 45%);
+    cursor: auto;
+}
+
+
+/* ===================================
+   Outline
+==================================== */
+
+.btn-outline-primary {
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+}
+
+.btn-outline-primary:focus {
+    box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
+    background-color: $primary;
+    color: #fff;
+}
+
+.btn-outline-primary:hover {
+    background-color:  $primary;
+    color: #fff;
+}
+
+.btn-outline-primary:disabled {
+    background-color: mix(white, $primary, 45%);
+    cursor: auto;
+    color: #fff;
+}

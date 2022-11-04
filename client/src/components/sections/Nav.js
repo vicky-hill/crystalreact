@@ -13,7 +13,7 @@ const Nav = () => {
 
 const nav1 = (
     <div className="nav1 make-fit">
-        <div className="nav1__logo">Basic Style</div>
+        <div className="nav1__logo">Crystal</div>
         <nav>
             <ul className="nav1__links">
                 <li><a href="#">Services</a> </li>
@@ -28,7 +28,7 @@ const nav1 = (
 
 const nav2 = (
     <div className="nav2 make-fit">
-        <div className="nav2__logo">Basic Style</div>
+        <div className="nav2__logo">Crystal</div>
         <nav>
             <ul className="nav2__links">
                 <li><a href="#">Services</a> </li>
@@ -42,7 +42,7 @@ const nav2 = (
 
 const nav3 = (
     <div className="nav3 make-fit">
-        <div className="nav3__logo">Basic Style</div>
+        <div className="nav3__logo">Crystal</div>
         <nav>
             <ul className="nav3__links">
                 <li><a href="#">Services</a> </li>

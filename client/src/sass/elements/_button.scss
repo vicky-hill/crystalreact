@@ -1,27 +1,171 @@
-/* ===================================
-   Standard button
-==================================== */
-
-/* HTML ===========================================================================
-
-    <button class='btn btn-primary'>
-        Button
-    </button>
-
-================================================================================ */
+@import '../base/variables';
+// @import '../base/reset';
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900');
 
 .btn {
     position: relative;
     font-family: Lato;
     color: white;
-    margin-bottom: $default-margin;
     font-size: 1.6rem;
     padding: 6px 12px;
     border-radius: 4px;
     text-align: center;
     border: 1px solid transparent;
     line-height: inherit;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    // Rounded
+    &.btn-round {
+        border-radius: 2.8rem;
+    }
+
+    // Primary
+    &-primary {
+        background-color: $primary;
+
+        &:focus {
+            box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
+            background-color:  mix(black, $primary, 10%);
+        }
+
+        &:hover {
+            background-color: mix(black, $primary, 10%);
+        }
+
+        &:disabled {
+            background-color: mix(white, $primary, 45%);
+            cursor: auto;
+        }
+
+        // Primary Outline
+        &-outline {
+            background-color: transparent;
+            color: $primary;
+            border: 1px solid $primary;
+
+            &:focus {
+                box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
+                background-color: $primary;
+                color: #fff;
+            }
+
+            &:hover {
+                background-color:  $primary;
+                color: #fff; 
+            }
+
+            &:disabled {
+                background-color: mix(white, $primary, 45%);
+                cursor: auto;
+                color: #fff;
+            }
+        }
+    }
+
+    // Secondary
+    &-secondary {
+        background-color: $secondary;
+
+        &:focus {
+            box-shadow:  0 0 0 .3rem mix(white, $secondary, 55%);
+            background-color:  mix(black, $secondary, 10%);
+        }
+
+        &:hover {
+            background-color: mix(black, $secondary, 10%);
+        }
+
+        &:disabled {
+            background-color: mix(white, $secondary, 45%);
+            cursor: auto;
+        }
+
+        // Secondary Outline
+        &-outline {
+            background-color: transparent;
+            color: $secondary;
+            border: 1px solid $secondary;
+
+            &:focus {
+                box-shadow:  0 0 0 .3rem mix(white, $secondary, 55%);
+                background-color: $secondary;
+                color: #fff;
+            }
+
+            &:hover {
+                background-color:  $secondary;
+                color: #fff; 
+            }
+
+            &:disabled {
+                background-color: mix(white, $secondary, 45%);
+                cursor: auto;
+                color: #fff;
+            }
+        }
+    }
+
+    // Loading
+    &-loading {
+        .btn-text {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 3px solid transparent;
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: button-loading-spinner .8s ease infinite;
+        }
+
+        @keyframes button-loading-spinner {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
+        }
+    }
+
+    &-floating {
+        position: fixed;
+        right: 3rem;
+        bottom: 3rem;
+        width: 6rem;
+        height: 6rem;
+        background: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 2.5rem;
+        box-shadow: 1px 2px 7px rgba(0, 0, 0, .25);
+        transition: background .25s;
+        z-index: $z-floating-btn;
+
+        &:active, &:hover {
+            background: mix(black, $primary, 10%);
+        }
+    }
+}
+
+@media only screen and (max-width : $breakpoint-lg) { 
+    .btn-floating {
+        right: 2rem;
+        bottom: 8rem;
+    }
 }
 
 
@@ -41,151 +185,6 @@
 
 a.btn {
     padding: 7px 17px
-}
-
-
-
-/* ===================================
-   Add color
-==================================== */
-
-// Primary
-.btn-primary {
-    background-color: $primary;
-}
-
-.btn-primary:focus {
-    box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
-    background-color:  mix(black, $primary, 10%);
-}
-
-.btn-primary:hover {
-    background-color: mix(black, $primary, 10%);
-}
-
-.btn-primary:disabled {
-    background-color: mix(white, $primary, 45%);
-    cursor: auto;
-}
-
-// Pink
-.btn-pink {
-    background-color: $pink;
-}
-
-.btn-pink:focus {
-    box-shadow:  0 0 0 .3rem mix(white, $pink, 55%);
-    background-color:  mix(black, $pink, 10%);
-}
-
-.btn-pink:hover {
-    background-color: mix(black, $pink, 10%);
-}
-
-.btn-pink:disabled {
-    background-color: mix(white, $pink, 45%);
-    cursor: auto;
-}
-
-
-// Secondary
-.btn-secondary {
-    background-color: $secondary;
-}
-
-.btn-secondary:focus {
-    box-shadow:  0 0 0 .3rem mix(white, $secondary, 55%);
-    background-color:  mix(black, $secondary, 10%);
-}
-
-.btn-secondary:hover {
-    background-color: mix(black, $secondary, 10%);
-}
-
-.btn-secondary:disabled {
-    background-color: mix(white, $secondary, 45%);
-    cursor: auto;
-}
-
-
-
-/* ===================================
-   Outline button
-==================================== */
-
-/* HTML ===========================================================================
-
-    <button class='btn btn-primary btn-outline-primary'>
-        Outline Button
-    </button>
-
-================================================================================ */
-
-
-// Primary
-.btn-outline-primary {
-    background-color: transparent;
-    color: $primary;
-    border: 1px solid $primary;
-}
-
-.btn-outline-primary:focus {
-    box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
-    background-color: $primary;
-    color: #fff;
-}
-
-.btn-outline-primary:hover {
-    background-color:  $primary;
-    color: #fff;
-}
-
-.btn-outline-primary:disabled {
-    background-color: mix(white, $primary, 45%);
-    cursor: auto;
-    color: #fff;
-}
-
-
-.btn-outline-pink {
-    background-color: transparent;
-    color: $pink;
-    border: 1px solid $pink;
-}
-
-.btn-outline-pink:focus {
-    box-shadow:  0 0 0 .3rem mix(white, $pink, 55%);
-    background-color: $pink;
-    color: #fff;
-}
-
-.btn-outline-pink:hover {
-    background-color:  $pink;
-    color: #fff;
-}
-
-.btn-outline-pink:disabled {
-    background-color: mix(white, $pink, 45%);
-    cursor: auto;
-    color: #fff;
-}
-
-
-/* ===================================
-   Round button
-==================================== */
-
-/* HTML ===========================================================================
-
-    <button class='btn btn-primary btn-outline-primary btn-round'>
-        Round Button
-    </button>
-
-================================================================================ */
-
-// Round Button 
-.btn-round {
-    border-radius: 2.8rem;
 }
 
 /* ===================================
@@ -209,87 +208,3 @@ a.btn {
 }
 
 
-/* ===================================
-   Loading button
-==================================== */
-
-/* HTML ===========================================================================
-
-    <button class="btn btn-primary" id="loading-button" onClick={toggleSpinner}>
-        <span class="btn-text">Loading button</span>
-    </button>
-
-================================================================================ */
-
-/* JavaScript =====================================================================
-
-    const toggleSpinner = () => {
-        document.getElementById('loading-button').classList.toggle('btn-loading');
-    }
-
-================================================================================ */
-
-.btn-loading .btn-text {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.btn-loading::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border: 3px solid transparent;
-    border-top-color: #fff;
-    border-radius: 50%;
-    animation: button-loading-spinner .8s ease infinite;
-}
-
-@keyframes button-loading-spinner {
-    from {
-        transform: rotate(0turn);
-    }
-    to {
-        transform: rotate(1turn);
-    }
-}
-
-
-/* ================================================================================
-   Floating button
-================================================================================ */
-
-.btn-floating {
-    position: fixed;
-    right: 3rem;
-    bottom: 3rem;
-    width: 6rem;
-    height: 6rem;
-    background: $primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 2.5rem;
-    box-shadow: 1px 2px 7px rgba(0, 0, 0, .25);
-    transition: background .25s;
-    z-index: $z-floating-btn;
-}
-
-.btn-floating:active,
-.btn-floating:hover {
-    background: mix(black, $primary, 10%);
-}
-
-@media only screen and (max-width : $breakpoint-lg) { 
-    .btn-floating {
-        right: 2rem;
-        bottom: 8rem;
-    }
-}

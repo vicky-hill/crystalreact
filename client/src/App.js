@@ -1,15 +1,15 @@
-// npm install axios node-sass react-router-dom redux react-redux redux-devtools-extension redux-thunk axios
-/* eslint-disable */
-
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './main.scss';
+import './assets/prism.css'
 import { store } from './store';
 import { loginCheck, getUser } from './actions/auth';
 
 import Home from './components/pages/Home';
 import Posts from './components/pages/Posts';
 import PrivateRoute from './components/elements/PrivateRoute';
+
+import './main.scss';
+// import './main.css';
 
 let sections, navLinks;
 

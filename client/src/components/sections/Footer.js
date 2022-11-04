@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer make-fit">
             <div className="footer__text footer__container">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum similique, quibusdam corporis aperiam exercitationem soluta pariatur sapiente reiciendis iusto? Voluptas, officiis. Laudantium consequatur ipsam in.</p>
-                <p>&copy; Copyright 2021 Basic Style </p>
+                <p>&copy; Copyright 2021 Crystal</p>
                 <hr className="footer__hr" />
             </div>
             <div className="footer__sections footer__container">
