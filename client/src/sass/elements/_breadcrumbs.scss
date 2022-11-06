@@ -1,38 +1,65 @@
-/* HTML ===========================================================================
-
-    <ul class="breadcrumbs">
-        <li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Home</a></li>
-        <li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Media</a></li>
-        <li class="breadcrumbs-item"><a href="" class="breadcrumbs-link">Photos</a></li>
-        <li class="breadcrumbs-item active"><a href="" class="breadcrumbs-link">Nature</a></li>
-    </ul>
-
-================================================================================ */
-
 .breadcrumbs {
     padding: 1rem;
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-of-type)::after {
+            content: '/';
+            margin: 0 10px;
+            color: silver;
+        }
+
+        &.active {
+            .breadcrumbs__link {
+                color: $primary;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__link {
+        color: silver;
+
+        &:hover {
+            color: $dark;
+        }
+    }
+
+    // Separator variations
+    &--caret .breadcrumbs__item:not(:last-of-type)::after {
+        content: '\203a';
+    }
 }
 
-.breadcrumbs-item {
+
+/* ===================================
+   CSS Version
+==================================== */
+
+.breadcrumbs__item {
     display: inline-block;
 }
 
-.breadcrumbs-item:not(:last-of-type)::after {
+.breadcrumbs__item:not(:last-of-type)::after {
     content: '/';
+    margin: 0 10px;
+    color: silver;
+}
+
+.breadcrumbs--caret .breadcrumbs__item:not(:last-of-type)::after {
     content: '\203a';
-    margin: 0 5px;
+}
+
+.breadcrumbs__link {
     color: silver;
 }
 
-.breadcrumbs-link {
-    color: silver;
-}
-
-.breadcrumbs-link:hover {
+.breadcrumbs__link:hover {
     color: $dark;
 }
 
-.breadcrumbs-item.active .breadcrumbs-link {
+.breadcrumbs__item.active .breadcrumbs__link {
     color: $primary;
     font-weight: 500;
 }

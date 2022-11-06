@@ -1,9 +1,19 @@
 /* eslint-disable */
-import React from 'react';
-import { connect } from 'react-redux';
-import { deleteToast, addToast } from '../../actions/toasts';
+import React, { useState } from 'react';
+// import { connect } from 'react-redux';
+// import { deleteToast, addToast } from '../../actions/toasts';
 
-const Toast = ({ deleteToast, addToast, toasts }) => {
+// const ToastSection = ({ deleteToast, addToast, toasts }) => {
+const ToastSection = ({ }) => {
+    // const [toasts, setToasts] = useState([])
+    
+    // const addToast = toast => {
+    //     setToasts(toasts => [...toasts, toast])
+    // }
+
+    // const deleteToast = id => {
+    //     setToasts(toasts => toasts.filter((toast) => toast.id !== id))
+    // }
 
     return (
         <section id="toast">
@@ -22,7 +32,7 @@ const Toast = ({ deleteToast, addToast, toasts }) => {
             </div>
 
             <div className="mb-10">
-                <button className='btn btn-primary' onClick={() => addToast('My Toast', 'The message of the toast')}>
+                <button className='btn btn-primary' onClick={() => console.log('My Toast', 'Then message of the toast')}>
                     Show toast
                 </button>
             </div>
@@ -30,7 +40,7 @@ const Toast = ({ deleteToast, addToast, toasts }) => {
 
             {/* Live toast */}
 
-            <div className="toast-container">
+            {/* <div className="toast-container">
                 {
                     toasts.map(toast => (
                         <div className="toast">
@@ -46,14 +56,15 @@ const Toast = ({ deleteToast, addToast, toasts }) => {
                     </div>
                     ))
                 }
-            </div>
+            </div> */}
         </section>
     )
 }
 
-const mapStateToProps = (state) => ({
-    toasts: state.toasts
-})
+// const mapStateToProps = (state) => ({
+//     toasts: state.toasts
+// })
 
 
-export default connect(mapStateToProps, { deleteToast, addToast })(Toast);
+// export default connect(mapStateToProps, { deleteToast, addToast })(ToastSection);
+export default ToastSection

@@ -9,16 +9,16 @@ import List from '../sections/List';
 import Form from '../sections/Form';
 import Collapse from '../sections/Collapse';
 import Accordion from '../sections/Accordion';
-import Toast from '../sections/Toast';
+import Toast from '../sections/Toast.section';
 import Tabs from '../sections/Tabs';
 import Tooltip from '../sections/Tooltip';
 import Dropdown from '../sections/Dropdown';
-import Pagination from '../sections/Pagination';
-import Modal from '../sections/Modal';
-import Breadcrumbs from '../sections/Breadcrumbs';
-import Progress from '../sections/Progress';
-import Button from '../sections/ButtonSection';
-import Spinner from '../sections/Spinner';
+import Pagination from '../sections/Pagination.section';
+import Modal from '../sections/Modal.section';
+import Breadcrumbs from '../sections/Breadcrumbs.section';
+import Progress from '../sections/Progress.section';
+import Button from '../sections/Button.section';
+import Spinner from '../sections/Loader.section';
 import Sidenav from '../sections/Sidenav';
 import Sidebar from '../sections/Sidebar';
 import BottomNav from '../sections/BottomNav';
@@ -127,7 +127,7 @@ const Home = () => {
                 <Breadcrumbs />
                 <Modal />
                 <Spinner />
-                <Pagination pages={[1, 2, 3]} />
+                <Pagination />
                 <Toast />
                 <Alert />
                 <DragnDrop data={dndData} />

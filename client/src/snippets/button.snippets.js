@@ -43,9 +43,10 @@ const css =
     position: relative;
     font-family: Lato;
     color: white;
-    margin-bottom: 10px;
     font-size: 1.6rem;
-    padding: 6px 12px;
+    height: 34px;
+    padding: 0 17px;
+    margin-bottom: 10px;
     border-radius: 4px;
     text-align: center;
     border: 1px solid transparent;
@@ -97,6 +98,21 @@ const css =
     background-color: var(--primary-light);
     cursor: auto;
     color: #fff;
+}
+
+&--small {
+    height: 30px;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+&--big {
+    height: 52px;
+    padding: 0 32px;
+}
+
+&--block {
+    width: 100%;
 }
 
 /* Rounded */

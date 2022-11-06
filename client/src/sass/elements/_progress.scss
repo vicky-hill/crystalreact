@@ -1,22 +1,39 @@
-/* HTML ===========================================================================
+.progress {
+    position: relative;
+    width: 21rem;
+    height: 3rem;
+    background: mix(white, $primary, 55%);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all .2s;
+    margin-bottom: 2rem;
 
-    <div class="progress" id="progress">
-        <div class="progress-fill"></div>
-        <div class="progress-text">0 %</div>
-    </div>
-
-================================================================================ */
-
-/* JavaScript =====================================================================
-
-    const updateProgress = (progress, value ) => {
-        value = Math.round(value);
-        progress.querySelector('.progress-fill').style.width = `${value}%`;
-        progress.querySelector('.progress-text').textContent = `${value} %`;
+    &__fill {
+        width: 0%;
+        height: 100%;
+        background: $primary;
     }
 
-================================================================================ */
+    &__text {
+        position: absolute; 
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        font-weight: bold;
+        color: #fff;
+    }
 
+    &--small {
+        height: 1.6rem;
+        background: #e9ecef;
+    }
+
+}
+
+
+/* ===================================
+   CSS Version
+==================================== */
 .progress {
     position: relative;
     width: 21rem;
@@ -28,22 +45,22 @@
     margin-bottom: 2rem;
 }
 
-.progress--small {
-    height: 1.6rem;
-    background: #e9ecef;
-}
-
-.progress-fill {
+.progress__fill {
     width: 0%;
     height: 100%;
     background: $primary;
 }
 
-.progress-text {
+.progress__text {
     position: absolute; 
     top: 50%;
     right: 1rem;
     transform: translateY(-50%);
     font-weight: bold;
     color: #fff;
+}
+
+.progress--small {
+    height: 1.6rem;
+    background: #e9ecef;
 }

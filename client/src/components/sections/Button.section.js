@@ -20,7 +20,7 @@ const ButtonSection = () => {
 
     return (
         <section id="buttons">
-            <CodeBox codeTabs={buttonSnippets}>
+            {/* <CodeBox codeTabs={buttonSnippets}> */}
                 <Button>Button</Button>
 
                 <Button loading={loading} onClick={toggleLoading}>Loading Button</Button>
@@ -29,10 +29,10 @@ const ButtonSection = () => {
 
                 <Button rounded outline>Rounded Button</Button>
 
-                <button className="btn-floating">
+                <button className="btn--floating">
                     <i className="fas fa-plus"></i>
                 </button>
-            </CodeBox>
+            {/* </CodeBox> */}
         </section>
     )
 }

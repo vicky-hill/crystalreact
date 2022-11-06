@@ -1,31 +1,24 @@
-@import '../base/variables';
-// @import '../base/reset';
-// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900');
-
 .btn {
     position: relative;
     font-family: Lato;
     color: white;
     font-size: 1.6rem;
-    padding: 6px 12px;
+    height: 34px;
+    padding: 0 17px;
     border-radius: 4px;
     text-align: center;
     border: 1px solid transparent;
     line-height: inherit;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
-    // Rounded
-    &.btn-round {
-        border-radius: 2.8rem;
-    }
+    margin-bottom: 1rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
     // Primary
     &-primary {
         background-color: $primary;
 
         &:focus {
-            box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
-            background-color:  mix(black, $primary, 10%);
+            box-shadow: 0 0 0 .3rem mix(white, $primary, 55%);
+            background-color: mix(black, $primary, 10%);
         }
 
         &:hover {
@@ -44,14 +37,14 @@
             border: 1px solid $primary;
 
             &:focus {
-                box-shadow:  0 0 0 .3rem mix(white, $primary, 55%);
+                box-shadow: 0 0 0 .3rem mix(white, $primary, 55%);
                 background-color: $primary;
                 color: #fff;
             }
 
             &:hover {
-                background-color:  $primary;
-                color: #fff; 
+                background-color: $primary;
+                color: #fff;
             }
 
             &:disabled {
@@ -67,8 +60,8 @@
         background-color: $secondary;
 
         &:focus {
-            box-shadow:  0 0 0 .3rem mix(white, $secondary, 55%);
-            background-color:  mix(black, $secondary, 10%);
+            box-shadow: 0 0 0 .3rem mix(white, $secondary, 55%);
+            background-color: mix(black, $secondary, 10%);
         }
 
         &:hover {
@@ -87,14 +80,14 @@
             border: 1px solid $secondary;
 
             &:focus {
-                box-shadow:  0 0 0 .3rem mix(white, $secondary, 55%);
+                box-shadow: 0 0 0 .3rem mix(white, $secondary, 55%);
                 background-color: $secondary;
                 color: #fff;
             }
 
             &:hover {
-                background-color:  $secondary;
-                color: #fff; 
+                background-color: $secondary;
+                color: #fff;
             }
 
             &:disabled {
@@ -105,8 +98,30 @@
         }
     }
 
-    // Loading
-    &-loading {
+    &--floating {
+        position: fixed;
+        right: 3rem;
+        bottom: 3rem;
+        width: 6rem;
+        height: 6rem;
+        background: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 2.5rem;
+        box-shadow: 1px 2px 7px rgba(0, 0, 0, .25);
+        transition: background .25s;
+        z-index: $z-floating-btn;
+
+        &:active,
+        &:hover {
+            background: mix(black, $primary, 10%);
+        }
+    }
+
+    &--loading {
         .btn-text {
             visibility: hidden;
             opacity: 0;
@@ -132,36 +147,34 @@
             from {
                 transform: rotate(0turn);
             }
+
             to {
                 transform: rotate(1turn);
             }
         }
     }
 
-    &-floating {
-        position: fixed;
-        right: 3rem;
-        bottom: 3rem;
-        width: 6rem;
-        height: 6rem;
-        background: $primary;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        color: #fff;
-        font-size: 2.5rem;
-        box-shadow: 1px 2px 7px rgba(0, 0, 0, .25);
-        transition: background .25s;
-        z-index: $z-floating-btn;
+    &--small {
+        height: 30px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
 
-        &:active, &:hover {
-            background: mix(black, $primary, 10%);
-        }
+    &--big {
+        height: 52px;
+        padding: 0 32px;
+    }
+
+    &--block {
+        width: 100%;
+    }
+
+    &--round {
+        border-radius: 2.8rem;
     }
 }
 
-@media only screen and (max-width : $breakpoint-lg) { 
+@media only screen and (max-width : $breakpoint-lg) {
     .btn-floating {
         right: 2rem;
         bottom: 8rem;
@@ -206,5 +219,3 @@ a.btn {
     text-shadow: 0 1px 0 #fff;
     opacity: .5;
 }
-
-

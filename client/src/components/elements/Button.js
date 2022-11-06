@@ -1,19 +1,20 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { getClassName } from '../../utils/getClassName'
 
-const Button = ({ children, variant, size, outline, rounded, loading, className, ...props }) => {
+const Button = ({ children, variant, size, outline, rounded, loading, block, className, ...props }) => {
 
-    let classes = ['btn', `btn-${variant}`];
-    
-    className && classes.push(className);
-    outline && classes.push(`btn-${variant}-outline`);
-    rounded && classes.push('btn-round');
-    loading && classes.push('btn-loading');
-    
-    classes = classes.join(' ')
+    const variations = {
+        variant: variant && `btn-${variant}`,
+        outline: outline && `btn-${variant}-outline`,
+        loading: loading && 'btn--loading',
+        rounded: rounded && 'btn--round',
+        block: block && 'btn--block',
+        size: size && size !== 'regular' && `btn--${size}`
+    }
 
     return (
-        <button className={classes} {...props} >
+        <button className={getClassName('btn', className, variations)} {...props} >
             <span className="btn-text">
                 {children}
             </span>
@@ -22,7 +23,8 @@ const Button = ({ children, variant, size, outline, rounded, loading, className,
 }
 
 Button.defaultProps = {
-    variant: 'primary'
+    variant: 'primary',
+    size: 'regular'
 }
 
 Button.propTypes = {
@@ -30,6 +32,8 @@ Button.propTypes = {
     outline: PropTypes.bool,
     rounded: PropTypes.bool,
     loading: PropTypes.bool,
+    block: PropTypes.bool,
+    size: PropTypes.oneOf(['regular', 'small', 'big']),
     children: PropTypes.element
 }
 

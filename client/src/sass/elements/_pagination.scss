@@ -1,70 +1,85 @@
-/* HTML ===========================================================================
+.pagination {
+    display: flex;
 
-    <ul class="pagination" onClick={selectPage}>
-        <li class="page-item page-icon">
-            <a class="page-link" href="#">
-                <span>&laquo;</span>
-            </a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item page-icon">
-            <a class="page-link" href="#">
-                <span>&raquo;</span>
-            </a>
-        </li>
-    </ul>
+    // Pagination Item
+    &__item {
+        &:first-child .pagination__link {
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+        }   
+        
+        &:last-child .pagination__link {
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+        } 
 
-================================================================================ */
+        &:not(:first-child) .pagination__link {
+            margin-left: -1px;
+        }
 
-/* JavaScript =====================================================================
-
-    const selectPage = (e) => {
-        const pages = document.getElementsByClassName('page-item');
-        const clickedPage = e.target.parentElement;
-
-        // Deactivate all pages that aren't the target
-        for (let i = 0; i < pages.length; i++) {
-            if(!clickedPage.classList.contains('page-icon')) {
-                if (pages[i] !== clickedPage) {
-                    pages[i].classList.remove('active');
-                } else {
-                    pages[i].classList.add('active');
-                }
-            }
+        &.active .pagination__link {
+            z-index: $z-pagination-active;
+            color: #fff;
+            border-color: $primary;
+            background-color: $primary;
         }
     }
 
-================================================================================ */
+    // Pagination Link
+    &__link {
+        position: relative;
+        padding: 6px 12px;
+        display: block;
+        color: $dark;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        transition:  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+   
+        &:hover {
+            z-index: $z-pagination-hover;
+            background-color: #e9ecef;
+        }
 
+        &:focus {
+            z-index: $z-pagination-hover;
+            color: $primary;
+            background-color: #e9ecef;
+            box-shadow: 0 0 0 3px rgba($primary, .25);
+        }
+    }
+}
+
+
+/* ===================================
+   CSS Version
+==================================== */
 
 .pagination {
     display: flex;
 }
 
-.page-item:last-child .page-link {
+.pagination__item:last-child .pagination__link {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
 }   
 
-.page-item:first-child .page-link {
+.pagination__item:first-child .pagination__link {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
 }   
 
-.page-item:not(:first-child) .page-link {
+.pagination__item:not(:first-child) .pagination__link {
     margin-left: -1px;
 }
 
-.page-item.active .page-link {
+.pagination__item.active .pagination__link {
     z-index: $z-pagination-active;
     color: #fff;
     border-color: $primary;
     background-color: $primary;
 }
 
-.page-link {
+.pagination__link {
     position: relative;
     padding: 6px 12px;
     display: block;
@@ -74,12 +89,12 @@
     transition:  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.page-link:hover {
+.pagination__link:hover {
     z-index: $z-pagination-hover;
     background-color: #e9ecef;
 }
 
-.page-link:focus {
+.pagination__link:focus {
     z-index: $z-pagination-hover;
     color: $primary;
     background-color: #e9ecef;
