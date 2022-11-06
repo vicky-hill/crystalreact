@@ -1,70 +1,33 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-// import { connect } from 'react-redux';
-// import { deleteToast, addToast } from '../../actions/toasts';
+import toast from '../elements/Toast';
 
-// const ToastSection = ({ deleteToast, addToast, toasts }) => {
+
 const ToastSection = ({ }) => {
-    // const [toasts, setToasts] = useState([])
     
-    // const addToast = toast => {
-    //     setToasts(toasts => [...toasts, toast])
-    // }
-
-    // const deleteToast = id => {
-    //     setToasts(toasts => toasts.filter((toast) => toast.id !== id))
-    // }
-
     return (
         <section id="toast">
             <div className="mb-3">
                 <div className="toast">
-                    <div className="toast-header">
-                        <div className="toast-img"></div>
-                        <strong className="toast-title">Toast</strong>
+                    <div className="toast__header">
+                        <div className="toast__header-image"></div>
+                        <strong className="toast__header-title">Toast</strong>
                         <small>11 mins ago</small>
-                        <button className="toast-close"><span>&times;</span></button>
+                        <button className="toast__header-close"><span>&times;</span></button>
                     </div>
-                    <div className="toast-body">
+                    <div className="toast__body">
                         Hello, world! This is a toast message.
                     </div>
                 </div>
             </div>
 
             <div className="mb-10">
-                <button className='btn btn-primary' onClick={() => console.log('My Toast', 'Then message of the toast')}>
+                <button className='btn btn-primary' onClick={() => toast('Toast', 'This is a toast message', { variant: 'danger'})}>
                     Show toast
                 </button>
             </div>
-
-
-            {/* Live toast */}
-
-            {/* <div className="toast-container">
-                {
-                    toasts.map(toast => (
-                        <div className="toast">
-                        <div className="toast-header">
-                            <div className="toast-img"></div>
-                            <strong className="toast-title">{ toast.title }</strong>
-                            <small>11 mins ago</small>
-                            <button className="toast-close" onClick={() => deleteToast(toast.id)}><span>&times;</span></button>
-                        </div>
-                        <div className="toast-body">
-                            { toast.message }
-                        </div>
-                    </div>
-                    ))
-                }
-            </div> */}
         </section>
     )
 }
 
-// const mapStateToProps = (state) => ({
-//     toasts: state.toasts
-// })
-
-
-// export default connect(mapStateToProps, { deleteToast, addToast })(ToastSection);
 export default ToastSection
