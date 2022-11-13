@@ -1,68 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { getClassName } from '../../utils/getClassName';
 
-const Badge = ({ children, badgeText, type, pill }) => {
+const Badge = ({ children, badgeText, type, pill, light, round, className }) => {
 
-    const content = <>{children}<span className="badge">{badgeText}</span></>
+    const variations = {
+        header: type && type.includes('h') && 'badge--header',
+        light: light && 'badge--light',
+        pill: pill && 'badge--pill',
+        round: round && 'badge--round'
+    }
 
-    // This is now develop
+    const content = <>{children}<span className={getClassName('badge', className, variations)}>{badgeText}</span></>
 
-    // switch (type) {
-    //     case 'h1':
-    //         return <h1>{content}</h1>
+    switch (type) {
+        case 'h1':
+            return <h1>{content}</h1>
 
-    //     case 'h2':
-    //         return <h2>{content}</h2>
+        case 'h2':
+            return <h2>{content}</h2>
 
-    //     case 'h3':
-    //         return <h3>{content}</h3>
+        case 'h3':
+            return <h3>{content}</h3>
 
-    //     case 'h4':
-    //         return <h4>{content}</h4>
+        case 'h4':
+            return <h4>{content}</h4>
 
-    //     case 'h5':
-    //         return <h5>{content}</h5>
+        case 'h5':
+            return <h5>{content}</h5>
 
-    //     case 'h6':
-    //         return <h6>{content}</h6>
+        case 'h6':
+            return <h6>{content}</h6>
         
-    //     case 'button': 
-    //         return (
-    //             <button className="btn btn-secondary">
-    //                 { content }
-    //             </button>
-    //         )
+        case 'button': 
+            return (
+                <button className="btn btn-primary">
+                    { content }
+                </button>
+            )
 
-    //     default:
-    //         return null
-    // }
+        default:
+            return null
+    }
+}
 
-    // return (
-
-    //     <h2></h2>
-    // )
-
-    //                 <button className="btn btn-primary">
-    //                 Notification <span className="badge badge--light">7</span>
-    //             </button>
-    //             <button className="btn btn-primary">
-    //                 Posts <span className="badge badge-pill badge--light">45</span>
-    //             </button>
-
-    //         </div >
-
-    // <div>
-
-    //     <h2>Heading <span className="badge badge--pill">New</span> </h2>
-
-    // </div> 
-
-    return (
-        <div className='badge__container'>
-            { children }
-            <span className="badge">{badgeText}</span>
-        </div>
-    )
+Badge.defaultProp = {
+    type: 'h1'
 }
 
 Badge.propTypes = {
