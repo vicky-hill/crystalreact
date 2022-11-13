@@ -1,64 +1,57 @@
-/* ================================================================================
-   Heading Badge
-================================================================================ */
-
-/* HTML ===========================================================================
-
-    <h1>Heading<span className="badge">New</span></h1>
-
-================================================================================ */
-
 .badge {
     position: relative;
     display: inline-block;
-    top: -2px;
+    
     font-size: 70%;
     background-color: $primary;
     color: #fff;
-    padding: .5em .8em;
+    padding: .4em .8em;
     font-weight: 700;
     line-height: 17px;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 4px;
-    margin-left: 4px;
+    margin-left: .6em;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, 
         border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &--heading {
+        top: -2px;
+    }
+
+    &--light {
+        background-color: #F8F9FA;
+        color: #212629;
+    }
+
+    &--pill {
+        padding-right: .6em;
+        padding-left: .6em;
+        border-radius: 10rem;
+    }
 }
 
+.badge--heading {
+    top: -2px;
+}
 
-/* ================================================================================
-   Button Badge
-================================================================================ */
-
-/* HTML ===========================================================================
-
-    <button className="btn">
-        Notification <span className="badge badge-light">7</span>
-    </button>
-
-================================================================================ */
-
-.badge-light {
+.badge--light {
     background-color: #F8F9FA;
     color: #212629;
 }
 
-
-/* ================================================================================
-   Pill Badge
-================================================================================ */
-
-/* HTML ===========================================================================
-
-    <h2>Heading<span className="badge badge-pill">New</span></h2>
-
-================================================================================ */
-
-.badge-pill {
+.badge--pill {
     padding-right: .6em;
     padding-left: .6em;
     border-radius: 10rem;
 }
 
+.badge--round {
+    width: 2em;
+    height: 2em;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -22,7 +22,7 @@ const ToastSection = ({ }) => {
             </div>
 
             <div className="mb-10">
-                <button className='btn btn-primary' onClick={() => toast('Toast', 'This is a toast message', { variant: 'danger'})}>
+                <button className='btn btn-primary' onClick={() => toast('Toast', 'This is a toast message')}>
                     Show toast
                 </button>
             </div>

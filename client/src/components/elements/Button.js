@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { getClassName } from '../../utils/getClassName'
+import { getClassName } from '../../utils/getClassName';
 
 const Button = ({ children, variant, size, outline, rounded, loading, block, className, ...props }) => {
 

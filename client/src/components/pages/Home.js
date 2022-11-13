@@ -1,9 +1,9 @@
 /* eslint-disable */ 'use strict';
 import React from 'react';
-import Alert from '../sections/Alert';
+import Alert from '../sections/Alert.section';
 import Navbar from '../sections/Navbar';
 import { NavItem } from '../sections/Navbar';
-import Badge from '../sections/Badge';
+import Badge from '../sections/Badge.section';
 import Card from '../sections/Card';
 import List from '../sections/List';
 import Form from '../sections/Form';
