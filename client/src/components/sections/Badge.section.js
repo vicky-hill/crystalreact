@@ -8,34 +8,21 @@ const BadgeSection = () => {
     return (
         <section id="badge">
             <div className="mb-10">
-
-                {/* <Badge badgeText="2" light round>
-                      <button className='btn btn-primary'>The Sims 2</button>
-                </Badge>
-
-                <h1>Heading</h1><Badge></Badge> */}
-
-
-                <Badge type="h1" badgeText="New">The Sims 2</Badge>
-
+                <Badge type="h1" badgeText="New">Header</Badge>
+                <Badge type="h3" badgeText="New">Header</Badge>
+                <Badge type="h4" badgeText="New">Header</Badge>
+                <Badge type="h5" badgeText="New">Header</Badge>
             </div>
 
-            {/* <div className="mb-10"> */}
-
-                {/* <button className="btn btn-primary">
-                    Notification <span className="badge badge--light">7</span>
-                </button>
-                <button className="btn btn-primary">
-                    Posts <span className="badge badge-pill badge--light">45</span>
-                </button>
-
+            <div className="mb-10">
+                <Badge type="button" badgeText="45" light>Notification</Badge>
+                <Badge type="button" badgeText="45" light round>Notification</Badge>
             </div>
 
             <div>
-
-                <h2>Heading <span className="badge badge--pill">New</span> </h2>
-                
-            </div> */}
+               <Badge type="h2" badgeText="New" pill>Header</Badge>
+               <Badge type="h3" badgeText="New" pill>Header</Badge>
+            </div> 
         </section>
     )
 }

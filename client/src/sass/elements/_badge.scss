@@ -1,7 +1,6 @@
 .badge {
     position: relative;
     display: inline-block;
-    
     font-size: 70%;
     background-color: $primary;
     color: #fff;
@@ -16,7 +15,7 @@
     transition: color .15s ease-in-out, background-color .15s ease-in-out, 
         border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
-    &--heading {
+    &--header {
         top: -2px;
     }
 
@@ -26,13 +25,17 @@
     }
 
     &--pill {
-        padding-right: .6em;
-        padding-left: .6em;
+        padding-right: .8em;
+        padding-left: .8em;
         border-radius: 10rem;
     }
 }
 
-.badge--heading {
+
+/* ===================================
+   CSS Version
+==================================== */
+.badge--header {
     top: -2px;
 }
 
@@ -42,16 +45,17 @@
 }
 
 .badge--pill {
-    padding-right: .6em;
-    padding-left: .6em;
+    padding-right: .8em;
+    padding-left: .8em;
     border-radius: 10rem;
 }
 
 .badge--round {
     width: 2em;
     height: 2em;
+    // font-size: .8em;
     border-radius: 500px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
