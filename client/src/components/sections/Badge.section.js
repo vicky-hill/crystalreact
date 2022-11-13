@@ -9,11 +9,13 @@ const BadgeSection = () => {
         <section id="badge">
             <div className="mb-10">
 
-                <Badge badgeText="2" light round>
+                {/* <Badge badgeText="2" light round>
                       <button className='btn btn-primary'>The Sims 2</button>
                 </Badge>
 
-                <h1>Heading</h1><Badge></Badge>
+                <h1>Heading</h1><Badge></Badge> */}
+
+
                 <Badge type="h1" badgeText="New">The Sims 2</Badge>
 
             </div>
