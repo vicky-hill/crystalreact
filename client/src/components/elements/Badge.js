@@ -5,6 +5,8 @@ const Badge = ({ children, badgeText, type, pill }) => {
 
     const content = <>{children}<span className="badge">{badgeText}</span></>
 
+    // This is now develop
+
     // switch (type) {
     //     case 'h1':
     //         return <h1>{content}</h1>
