@@ -29,7 +29,7 @@ import MegaMenu from '../sections/MegaMenu';
 import Glass from '../sections/Glass';
 import DragnDrop from '../sections/DragnDrop';
 import SidebarWithSub from '../sections/SidebarWithSub';
-import Context from '../sections/Context';
+import Context from '../sections/Context.section';
 import Nav from '../sections/Nav';
 import Footer from '../sections/Footer';
 
