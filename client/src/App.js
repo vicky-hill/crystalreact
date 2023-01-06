@@ -5,7 +5,6 @@ import { store } from './store';
 import { loginCheck, getUser } from './actions/auth';
 
 import Basic from './pages/Basic';
-import Posts from './styles/basic/pages/Posts';
 import PrivateRoute from './styles/basic/elements/PrivateRoute';
 
 import './main.scss';
@@ -46,7 +45,6 @@ function App() {
     <Router>
         <Switch>
           <Route exact path='/' component={Basic} />
-          <PrivateRoute exact path='/' component={Posts} />
         </Switch>
     </Router>
   );
