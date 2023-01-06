@@ -1,14 +1,14 @@
-import Card from '../components/elements/Card';
+import Card from '../styles/basic/elements/Card';
 import '../main.scss';
 import pink from '../assets/pink.png';
 import book from '../assets/book.png';
 
 export default {
-    title: "Components/Card",
+    title: "Basic/Card",
     component: Card
 }
 
-const Template = ({ ...args }) => <Card {...args} />
+const Template = ({ ...args }) => <div id="style--basic"><Card {...args} /></div>
 
 export const CardWithHeader = Template.bind({})
 CardWithHeader.args = {

@@ -1,15 +1,15 @@
-import Button from '../components/elements/Button';
+import Button from '../styles/basic/elements/Button';
 import '../main.scss';
 
 export default {
-    title: "Components/Button",
+    title: "Basic/Button",
     component: Button,
     argTypes: {
         buttonLabel: { type: "string", defaultValue: 'Button' }
     }
 }
 
-const Template = ({ buttonLabel, ...args }) => <Button {...args}>{ buttonLabel }</Button>
+const Template = ({ buttonLabel, ...args }) => <div id="style--basic"><Button {...args}>{ buttonLabel }</Button></div>
 
 export const Primary = Template.bind({})
 Primary.args = {

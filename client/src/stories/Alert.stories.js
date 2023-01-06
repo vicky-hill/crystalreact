@@ -1,12 +1,12 @@
-import Alert from '../components/elements/Alert';
+import Alert from '../styles/basic/elements/Alert';
 import '../main.scss';
 
 export default {
-    title: "Components/Alert",
+    title: "Basic/Alert",
     component: Alert
 }
 
-const Template = ({ ...args }) => <Alert {...args} />
+const Template = ({ ...args }) => <div id="style--basic"><Alert {...args} /></div>
 
 
 export const Primary = Template.bind({})

@@ -1,12 +1,12 @@
-import Loader from '../components/elements/Loader';
+import Loader from '../styles/basic/elements/Loader';
 import '../main.scss';
 
 export default {
-    title: "Components/Loader",
+    title: "Basic/Loader",
     component: Loader
 }
 
-const Template = ({ ...args }) => <Loader {...args} />
+const Template = ({ ...args }) => <div id="style--basic"><Loader {...args} /></div>
 
 export const Spinner = Template.bind({})
 Spinner.args = {

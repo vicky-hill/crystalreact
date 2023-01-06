@@ -1,17 +1,17 @@
-import Pagination from '../components/elements/Pagination'
+import Pagination from '../styles/basic/elements/Pagination'
 import React, { useState } from 'react'
 import '../main.scss'
 
 
 export default {
-    title: "Components/Pagination",
+    title: "Basic/Pagination",
     component: Pagination
 }
 
 const Template = ({ ...args }) => {
     const [active, setActive] = useState(0)
 
-    return <Pagination active={active} setActive={setActive} {...args} />
+    return <div id="style--basic"><Pagination active={active} setActive={setActive} {...args} /></div>
 }
 
 export const Default = Template.bind({})

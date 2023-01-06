@@ -1,8 +1,8 @@
-import Breadcrumbs from '../components/elements/Breadcrumbs';
+import Breadcrumbs from '../styles/basic/elements/Breadcrumbs';
 import '../main.scss';
 
 export default {
-    title: "Components/Breadcrumbs",
+    title: "Basic/Breadcrumbs",
     component: Breadcrumbs,
     argTypes: {
         numberOfChildren: { type: "number", defaultValue: 3 }
@@ -10,9 +10,11 @@ export default {
 }
 
 const Template = ({ numberOfChildren, ...args }) => (
-    <Breadcrumbs {...args}>
-        {[...Array(numberOfChildren).keys()].map((child, i, a) => <Breadcrumbs.Item active={i === a.length - 1}>Link {child + 1}</Breadcrumbs.Item>)}
-    </Breadcrumbs>
+    <div id="style--basic">
+        <Breadcrumbs {...args}>
+            {[...Array(numberOfChildren).keys()].map((child, i, a) => <Breadcrumbs.Item active={i === a.length - 1}>Link {child + 1}</Breadcrumbs.Item>)}
+        </Breadcrumbs>
+    </div>
 )
 
 export const Slash = Template.bind({})

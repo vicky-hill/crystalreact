@@ -1,15 +1,15 @@
-import Badge from '../components/elements/Badge';
+import Badge from '../styles/basic/elements/Badge';
 import '../main.scss';
 
 export default {
-    title: "Components/Badge",
+    title: "Basic/Badge",
     component: Badge,
     argTypes: {
         text: { type: "string", defaultValue: 'Header' }
     }
 }
 
-const Template = ({ text, ...args }) => <Badge {...args} >{text}</ Badge>
+const Template = ({ text, ...args }) => <div id="style--basic"><Badge {...args} >{text}</ Badge></div>
 
 export const HeaderBadge = Template.bind({})
 HeaderBadge.args = {
