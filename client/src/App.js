@@ -7,6 +7,7 @@ import { loginCheck, getUser } from './actions/auth';
 import Basic from './pages/Basic';
 import PrivateRoute from './styles/basic/elements/PrivateRoute';
 import Styles from './pages/Styles';
+import Natours from './pages/Natours';
 
 import './main.scss';
 // import './main.css';
@@ -48,6 +49,7 @@ function App() {
           <Route exact path='/' component={Basic} />
           <Route exact path='/styles' component={Styles} />
           <Route exact path='/basic' component={Basic} />
+          <Route exact path='/natours' component={Natours} />
         </Switch>
     </Router>
   );

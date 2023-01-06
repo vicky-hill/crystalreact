@@ -1,0 +1,39 @@
+#style--natours {
+
+    .form-group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    .input {
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: ghostwhite;
+        border: none;
+        font-family: inherit;
+        border-bottom: 3px solid transparent;
+        width: 100%
+    }
+
+    .input:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+        border-bottom: 3px solid mediumpurple;
+    }
+
+    .label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    // Select adjacent sibling only
+    .input:placeholder-shown+.label {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+
+}
