@@ -1,0 +1,84 @@
+/* HTML ===========================================================================
+
+    <nav class="sidebar">
+        <a href="#sidenav" class="sidebar-link active">Sidenav</a>
+        <a href="#buttons" class="sidebar-link">Button</a>
+        <a href="#progress" class="sidebar-link">Progress</a>
+    </nav>
+
+    // Section shouldn't be a flex box
+    <section id="sidebar"> ... </section>
+    <section id="buttons"> ... </section>
+    <section id="progress"> ... </section>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    const = sections = document.querySelectorAll('section');
+    const = navLinks = document.querySelectorAll('.sidebar a');    
+
+
+    window.onscroll = () => {
+        sections.forEach(section => {
+            let top = window.scrollY;
+            let offset = section.offsetTop - 110;
+            let height = section.offsetHeight;
+            let id = section.getAttribute('id');
+
+
+            if (top >= offset && top < offset + height) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    document.querySelector('.sidebar a[href*="#' + id + '"]').classList.add('active');
+                })
+            }
+        })
+    }
+
+================================================================================ */
+
+/* React ==========================================================================
+
+    // App.js
+    let sections, navLinks;
+
+    const loadScrollSpy = () => {
+            sections = document.querySelectorAll('section');
+            navLinks = document.querySelectorAll('.sidebar a');    
+    }
+
+    window.onscroll = () => {
+        sections.forEach(section => {
+            let top = window.scrollY;
+            let offset = section.offsetTop - 110;
+            let height = section.offsetHeight;
+            let id = section.getAttribute('id');
+
+
+            if (top >= offset && top < offset + height) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    document.querySelector('.sidebar a[href*="#' + id + '"]').classList.add('active');
+                })
+            }
+        })
+    }
+
+    function App() {
+    useEffect(() => {
+        loadScrollSpy();
+    }, [])
+    }
+
+
+===================================================================================== */
+
+// Place in reset.scss
+// Set space between top and scrolled section
+// :target:before {
+//     content: "";
+//     display: block;
+//     height: 100px;
+//     margin: -100px 0 0;
+// }

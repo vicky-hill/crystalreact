@@ -1,12 +1,49 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
 // Base
-@import "sass/base/variables";
-@import "sass/base/reset";
-@import "sass/base/helpers";
-@import "sass/base/box";
-@import "sass/base/grid";
+@import "sass/variables";
+@import "sass/reset";
+@import "sass/helpers";
+@import "sass/box";
+@import "sass/grid";
 
-// Elements
-// @import "sass/elements/";
+// Basic Elements
+@import "styles/basic/sass/button";
+@import "styles/basic/sass/alert";
+@import "styles/basic/sass/form";
+@import "styles/basic/sass/navbar";
+@import "styles/basic/sass/badge";
+@import "styles/basic/sass/card";
+@import "styles/basic/sass/list";
+@import "styles/basic/sass/collapse";
+@import "styles/basic/sass/accordion";
+@import "styles/basic/sass/toast";
+@import "styles/basic/sass/tabs";
+@import "styles/basic/sass/tooltip";
+@import "styles/basic/sass/dropdown";
+@import "styles/basic/sass/pagination";
+@import "styles/basic/sass/modal";
+@import "styles/basic/sass/breadcrumbs";
+@import "styles/basic/sass/carousel";
+@import "styles/basic/sass/progress";
+@import "styles/basic/sass/loader";
+@import "styles/basic/sass/sidenav";
+@import "styles/basic/sass/sidebar";
+@import "styles/basic/sass/bottomnav";
+@import "styles/basic/sass/table";
+@import "styles/basic/sass/gallery";
+@import "styles/basic/sass/theme";
+@import "styles/basic/sass/swipe";
+@import "styles/basic/sass/megamenu";
+@import "styles/basic/sass/glass";
+@import "styles/basic/sass/dragndrop";
+@import "styles/basic/sass/context";
+@import "styles/basic/sass/footer";
+@import "styles/basic/sass/roundedsearch";
+@import "styles/basic/sass/westgateCard";
+@import "styles/basic/sass/imagezoom";
+@import "styles/basic/sass/code";
+

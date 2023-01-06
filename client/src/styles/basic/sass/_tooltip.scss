@@ -1,0 +1,62 @@
+/* HTML ===========================================================================
+
+    <button class="btn btn-secondary" data-tooltip="an even bigger example">
+        Tooltip on top
+    </button>
+
+================================================================================ */
+
+#style--basic {
+
+    [data-tooltip] {
+        position: relative;
+        cursor: default;
+    }
+
+    [data-tooltip]::before {
+        position: absolute;
+        text-align: center;
+        left: 0;
+        width: 20rem;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        content: attr(data-tooltip);
+        bottom: calc(100% + 10px);
+        color: $white;
+        background-color: $dark;
+        text-align: center;
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        z-index: $z-tooltip;
+        word-wrap: break-word;
+
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+
+    [data-tooltip]:hover::before,
+    [data-tooltip]:hover::after {
+        opacity: 0.9;
+        visibility: visible;
+    }
+
+    [data-tooltip]::after {
+        position: absolute;
+        // z-index: calc($z-tooltip - 1);
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        content: "";
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top-color: $dark;
+        transition: opacity .3s ease;
+    }
+
+}

@@ -1,0 +1,239 @@
+/* ================================================================================
+   Basic Dropdown
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="dropdown">
+        <button class="btn btn-primary btn-dropdown" id="dropdown1" onClick={toggleDropdown}>
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu" data-dropdown="dropdown1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    function toggleDropdown(e) {
+        document.querySelector(`[data-dropdown=${e.target.id}]`).classList.toggle('show');
+    }
+
+================================================================================ */
+
+/* React ==========================================================================
+
+    import React, { useState } from 'react';
+
+    const Dropdown = () => {
+
+        const [dropdown, setDropdown] = useState(false);
+
+        const toggleDropdown = () => {
+            setDropdown(!dropdown);
+        }
+
+        return (
+            <div className="dropdown">
+                <button className="btn btn-primary btn-dropdown" onClick={toggleDropdown}>
+                    Dropdown button
+                </button>
+                <ul className={`dropdown-menu ${dropdown ? 'show' : ''}`}>
+                    <li><a className="dropdown-item" href="#">Action</a></li>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        )
+    }
+
+    export default Dropdown;
+
+================================================================================ */
+
+#style--basic {
+
+    .dropdown {
+        position: relative;
+    }
+
+    // Dropdown button
+    .btn-dropdown {
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+
+    // Dropdown caret
+    .btn-dropdown::after {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: calc(5px * .85);
+        content: "";
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-bottom: 0;
+        border-left: 5px solid transparent;
+    }
+
+    // Dropdown menu
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: $z-dropdown-menu;
+        display: none;
+        min-width: 7rem;
+        padding: 8px 0;
+        margin: 3px 0 0;
+        color: $dark;
+        text-align: left;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 4px;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    // Dropdown item
+    .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: 4px 16px;
+        clear: both;
+        color: $dark;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+    }
+
+    // Hover and focus
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: #e9ecef;
+    }
+
+
+    // Active
+    .dropdown-item.active,
+    .dropdown-item:active {
+        color: #fff;
+        text-decoration: none;
+        background-color: $primary;
+    }
+
+
+    /* ================================================================================
+   FB Dropdown
+================================================================================ */
+
+    .dropdown-btn {
+        width: 30rem;
+        background: #fff;
+        color: #61676D;
+        line-height: 4.7rem;
+        padding: 0 2rem;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: Poppins;
+        margin-bottom: .7rem;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, .15);
+    }
+
+    .dropdown-btn:hover {
+        cursor: pointer;
+    }
+
+    .dropdown-btn span {
+        float: right;
+        line-height: 5rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+
+    .dropdown-wrapper {
+        width: 30rem;
+        background: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: Poppins;
+        display: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    }
+
+    .dropdown-wrapper.show {
+        display: flex;
+    }
+
+    .dropdown-wrapper .setting-drop,
+    .dropdown-wrapper .help-drop {
+        display: none;
+    }
+
+    .dropdown-wrapper ul {
+        width: 40rem;
+        padding: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-wrapper li {
+        line-height: 5.5rem;
+    }
+
+    .dropdown-wrapper ul li a {
+        position: relative;
+        color: #61676D;
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 0 10px;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .dropdown-wrapper ul li:hover a {
+        background: #F2F2F2;
+    }
+
+    .dropdown-wrapper ul li a .icon {
+        height: 4rem;
+        width: 4rem;
+        margin-right: 1.3rem;
+        background: #E5E9EC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .dropdown-wrapper ul li a i {
+        position: absolute;
+        right: 1rem;
+        font-size: 1.8rem;
+        pointer-events: none;
+    }
+
+    .dropdown-wrapper ul .arrow {
+        padding-left: 1rem;
+        font-size: 1.6rem;
+        color: #61676D;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .dropdown-wrapper ul .arrow span {
+        margin-right: 1.5rem;
+    }
+
+}

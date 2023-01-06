@@ -1,0 +1,420 @@
+/* HTML ===========================================================================
+
+    <div class="carousel">
+        <button class="carousel-btn left" onClick={prevSlide}>
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-container" onLoad={setUpCarousel}>
+            <div class="carousel-slide" onTransitionEnd={loopCarousel}>
+                <img class="carousel-image" id="last-clone" src={slide3} alt="" />
+                <img class="carousel-image" src={slide1} alt="" />
+                <img class="carousel-image" src={slide2} alt="" />
+                <img class="carousel-image" src={slide3} alt="" />
+                <img class="carousel-image" id="first-clone" src={slide1} alt="" />
+            </div>
+
+            <div class="carousel-nav" onClick={navigateToDot}>
+                <button id="dot1" class="carousel-indicator current"></button>
+                <button id="dot2" class="carousel-indicator"></button>
+                <button id="dot3" class="carousel-indicator"></button>
+            </div>
+        </div>
+
+        <button class="carousel-btn right" onClick={nextSlide}>
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    let counter = 1;
+    let carouselSlide,
+        carouselImages,
+        carouselSize,
+        dots,
+        nav;
+
+    // Set all variables
+    const setUpCarousel = () => {
+        carouselSlide = document.querySelector('.carousel-slide');
+        carouselImages = document.querySelectorAll('.carousel-image');
+        carouselSize = carouselImages[0].clientWidth;
+        nav = document.querySelector('.carousel-nav');
+        dots = Array.from(nav.children);
+
+        carouselSlide.style.transform = `translateX(-${carouselSize * counter}px)`;
+    }
+
+    // Handle first and last slide
+    const loopCarousel = () => {
+        if (carouselImages[counter].id === 'last-clone') {
+            resetFirstAndLast(carouselImages.length - 2);
+        }
+        if (carouselImages[counter].id === 'first-clone') {
+            resetFirstAndLast(carouselImages.length - counter);
+        }
+    }
+
+    const resetFirstAndLast = (newCount) => {
+        carouselSlide.style.transition = 'none';
+        counter = newCount;
+        carouselSlide.style.transform = `translateX(-${carouselSize * counter}px)`;
+    }
+
+
+    // Navigation arrows
+    const nextSlide = () => {
+        if (counter >= carouselImages.length - 1) return;
+        moveToSlide(counter + 1)
+    }
+
+    const prevSlide = () => {
+        if (counter <= 0) return;
+        moveToSlide(counter - 1)
+    }
+
+    // Move to target slide
+    const moveToSlide = (target) => {
+        counter = target;
+
+        // Move Slide
+        carouselSlide.style.transition = 'transform .8s ease-in-out';
+        carouselSlide.style.transform = `translateX(-${carouselSize * counter}px)`;
+
+        // Current and target dot
+        const slideCount = carouselImages.length - 1;
+        const currentDot = nav.querySelector('.current');
+        let targetDot;
+
+        // Check for first and last dot
+        if (counter === slideCount) { targetDot = dots[0] }
+        else if (counter === 0) { targetDot = dots[slideCount - 2] }
+        else { targetDot = dots[counter - 1] }
+
+        updateDots(currentDot, targetDot)
+
+    }
+
+    // Move dots
+    const updateDots = (currentDot, targetDot) => {
+        currentDot.classList.remove('current');
+        targetDot.classList.add('current');
+    }
+
+    // Navigate to dot
+    const navigateToDot = (e) => {
+        if (e.target.tagName === 'BUTTON') {
+
+            const currentDot = nav.querySelector('.current');
+            const targetDot = e.target.closest('BUTTON');
+
+            const targetIndex = dots.findIndex(dot => dot === targetDot);
+            const targetCount = targetIndex + 1;
+
+            moveToSlide(targetCount);
+
+            updateDots(currentDot, targetDot);
+        }
+    }
+
+================================================================================ */
+
+/* CSS ============================================================================
+
+    .carousel {
+        position: relative;
+        // height: 40rem;
+        width: 100%;
+    }
+
+    .carousel-container {
+        margin-top: 2rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .carousel-slide {
+        display: flex;
+        width: 100%;
+        // height: 40rem;
+        transition: transform 0.4s ease-in-out; 
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        backface-visibility: hidden;
+    }
+
+    // Navigation arrows
+    .carousel-btn {
+        position: absolute;
+        top: 45%;
+        font-size: 2.5rem;
+        z-index: 2;
+        color: #fff;
+    }
+
+    .carousel-btn.left {
+        left: 5rem;
+    }
+
+    .carousel-btn.right {
+        right: 5rem;
+    }
+
+
+    // Navigation dots
+    .carousel-nav {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .carousel-indicator {
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        background-color: rgba(255, 255, 255, 0.25);
+        margin: 0 1rem;
+    }
+
+    .carousel-indicator.current {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    @media only screen and (max-width: $breakpoint-sm) { 
+        .carousel-btn.left {
+            left: 2rem;
+        }
+        
+        .carousel-btn.right {
+            right: 2rem;
+        }
+
+        .carousel-nav {
+            bottom: 1rem;
+        }
+    }
+
+================================================================================ */
+
+/* React ==========================================================================
+
+    import React, { useState } from 'react';
+
+    // Props
+    =========================================== 
+    // images: array
+
+
+    const Carousel = ({ images }) => {
+
+        // Add first and last clones
+        const lastImage = images[images.length - 1]
+        const firstImage = images[0];
+        images = [lastImage, ...images, firstImage];
+
+        // Count for current slide & dot
+        const [currentSlide, setCurrentSlide] = useState(1);
+        const [currentDot, setCurrentDot] = useState(1);
+
+        const [transition, setTransition] = useState('');
+
+        // Handle first and last slide
+        const loopCarousel = () => {
+            console.log(currentSlide);
+            if (currentSlide === 0) {
+                setTransition('none');
+                setCurrentSlide(images.length - 2);
+            }
+
+            if (currentSlide === images.length - 1) {
+                setTransition('none');
+                setCurrentSlide(1);
+            }
+        }
+
+        // Previous Button
+        const previous = () => {
+            if (currentDot <= 0 || currentSlide <= 0) return;
+            setTransition('transform .8s ease-in-out');
+            currentDot === 1 ? setCurrentDot(images.length - 2) : setCurrentDot(currentSlide - 1);
+            currentSlide === 0 ? setCurrentSlide(images.length - 1) : setCurrentSlide(currentSlide - 1);
+        }
+
+        // Next Button
+        const next = () => {
+            if (currentDot >= images.length - 1 || currentSlide >= images.length - 1) return;
+            setTransition('transform .8s ease-in-out');
+            currentDot === images.length - 2 ? setCurrentDot(1) : setCurrentDot(currentSlide + 1);
+            currentSlide === images.length - 1 ? setCurrentSlide(1) : setCurrentSlide(currentSlide + 1);
+        }
+
+        // Navigation Dots
+        const navigateDot = (e) => {
+            setTransition('transform .8s ease-in-out');
+            setCurrentSlide(Number(e.target.id));
+            setCurrentDot(Number(e.target.id))
+        }
+
+        return (
+            <div className="row">
+                <div className="col-8">
+
+                    // Carousel 
+                    <div className="carousel-container">
+                        <div className="carousel">
+
+                            // Slides 
+                            {images.map((image, i) => (
+                                <div
+                                    key={i}
+                                    className={"carousel-slide"}
+                                    style={{ transform: `translateX(-${currentSlide * 100}%)`, transition: transition }}
+                                    onTransitionEnd={loopCarousel}
+                                    id={i}
+                                >
+                                    // Slide Image 
+                                    <img src={image} alt="" />
+                                </div>
+                            ))}
+
+                            // Carousel Nav
+                            <div className="carousel-nav">
+
+                                // Nav Dots
+                                {images.map((image, i) => (
+                                    <button
+                                        key={i}
+                                        id={i}
+                                        className={`carousel-indicator ${i === 0 || i === images.length - 1 ? 'clone' : i === currentDot ? 'current' : ''}`}
+                                        onClick={navigateDot}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        // Previous button 
+                        <button className="carousel-btn left" onClick={previous}>
+                            <i className="fas fa-chevron-left"></i>
+                        </button>
+
+                        // Next button 
+                        <button className="carousel-btn right" onClick={next}>
+                            <i className="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    export default Carousel;
+
+================================================================================ */
+
+#style--basic {
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .carousel {
+        // height: 400px;
+        margin-top: 2rem;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .carousel-slide {
+        height: 100%;
+        width: 100%;
+        flex-shrink: 0;
+        background-position: center;
+        background-size: cover;
+        backface-visibility: hidden;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        backface-visibility: hidden;
+        z-index: 100;
+    }
+
+    // Navigation arrows
+    .carousel-btn {
+        position: absolute;
+        top: 45%;
+        font-size: 2.5rem;
+        z-index: 2;
+        color: #fff;
+    }
+
+    .carousel-btn.left {
+        left: 5rem;
+    }
+
+    .carousel-btn.right {
+        right: 5rem;
+    }
+
+    // Navigation dots
+    .carousel-nav {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .carousel-indicator {
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        background-color: rgba(255, 255, 255, 0.25);
+        margin: 0 1rem;
+    }
+
+    // Hide clone indicators
+    .carousel-indicator.clone {
+        display: none;
+    }
+
+    .carousel-indicator.current {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    @media only screen and (max-width : $breakpoint-sm) {
+        .carousel-btn.left {
+            left: 2.5rem;
+        }
+
+        .carousel-btn.right {
+            right: 2.5rem;
+        }
+
+        .carousel-nav {
+            bottom: 1.5rem;
+        }
+    }
+
+}

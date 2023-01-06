@@ -1,0 +1,61 @@
+#style--basic {
+
+    .context-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        background-color: #fff;
+        border: 1px solid #cccccc;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+        padding: 10px 0;
+        width: 20rem;
+        z-index: $z-context;
+
+        &__item {
+            cursor: pointer;
+            padding: 8px 15px;
+
+            &:hover {
+                background-color: #f8f8f8;
+            }
+        }
+
+        &__divider {
+            margin: 1rem 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+    }
+
+    /* ===================================
+   CSS Version
+==================================== */
+
+    .context-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        background-color: #fff;
+        border: 1px solid #cccccc;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+        padding: 10px 0;
+        width: 20rem;
+        z-index: $z-context;
+    }
+
+    .context-menu__item {
+        cursor: pointer;
+        padding: 8px 15px;
+    }
+
+    .context-menu__item:hover {
+        background-color: #f8f8f8;
+    }
+
+    .context-menu__divider {
+        margin: 1rem 0;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+}

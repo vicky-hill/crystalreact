@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.16d6656f.chunk.css",
+    "main.js": "/static/js/main.73415930.chunk.js",
+    "main.js.map": "/static/js/main.73415930.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a06e69b5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a06e69b5.js.map",
+    "static/js/2.b9c9c030.chunk.js": "/static/js/2.b9c9c030.chunk.js",
+    "static/js/2.b9c9c030.chunk.js.map": "/static/js/2.b9c9c030.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.16d6656f.chunk.css.map": "/static/css/main.16d6656f.chunk.css.map",
+    "static/js/2.b9c9c030.chunk.js.LICENSE.txt": "/static/js/2.b9c9c030.chunk.js.LICENSE.txt",
+    "static/media/book.2cc23c00.png": "/static/media/book.2cc23c00.png",
+    "static/media/pink.d99e3058.png": "/static/media/pink.d99e3058.png",
+    "static/media/shopping-1.dfcaef33.png": "/static/media/shopping-1.dfcaef33.png",
+    "static/media/shopping-2.d0efcc84.png": "/static/media/shopping-2.d0efcc84.png",
+    "static/media/shopping-3.7721eb07.png": "/static/media/shopping-3.7721eb07.png",
+    "static/media/shopping-4.ef217e9b.png": "/static/media/shopping-4.ef217e9b.png",
+    "static/media/shopping-5.c974d728.png": "/static/media/shopping-5.c974d728.png",
+    "static/media/slide-1.ac8e6873.jpg": "/static/media/slide-1.ac8e6873.jpg",
+    "static/media/slide-2.acbcf4b9.jpg": "/static/media/slide-2.acbcf4b9.jpg",
+    "static/media/slide-3.2bec4333.jpg": "/static/media/slide-3.2bec4333.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a06e69b5.js",
+    "static/js/2.b9c9c030.chunk.js",
+    "static/css/main.16d6656f.chunk.css",
+    "static/js/main.73415930.chunk.js"
+  ]
+}
