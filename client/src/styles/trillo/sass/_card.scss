@@ -1,0 +1,207 @@
+/* ================================================================================
+   Main Card
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="card-main">
+        <p class="card-main-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
+        <p class="card-main-text">
+            Lorem ipsum dolor sit amet consectetur.
+        </p>
+
+        <ul class="card-main-list">
+                <li class="list-item">Close to the beach</li>
+                <li class="list-item">Breakfast included</li>
+                <li class="list-item">Free airport shuttle</li>
+                <li class="list-item">Free wifi</li>
+                <li class="list-item">Air conditioning</li>
+                <li class="list-item">Pets allowed</li>
+                <li class="list-item">We speak all languages</li>
+                <li class="list-item">Perfect for families</li>
+        </ul>
+
+        <div class="card-main-footer">
+            <p class="card-main-count">Lucy and 3 others recommend this hotel</p>
+            <div class="card-main-images">
+                <img src={user3} alt="" class="card-main-photo"/>
+                <img src={user4} alt="" class="card-main-photo"/>
+                <img src={user5} alt="" class="card-main-photo"/>
+                <img src={user6} alt="" class="card-main-photo"/>
+            </div>
+        </div>
+    </div>
+
+================================================================================ */
+
+#style--trillo {
+
+    // Main card placed in flex box
+    .card-main {
+        flex: 0 0 60%;
+        background-color: #fff;
+        padding: 3rem;
+        margin-right: 4.5rem;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, .06);
+        font-size: 1.4rem;
+    }
+
+    .card-main-text:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+
+
+    // Card list
+    .card-main-list {
+        margin: 3rem 0;
+        padding: 3rem 0;
+        border-top: 1px solid #f4f2f2;
+        border-bottom: 1px solid #f4f2f2;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+
+
+    .list-item::before {
+        content: '';
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: 7px;
+
+        // Older browsers
+        // background-image: url(../../../assets/chevron-thin-right.svg);
+        // background-size: cover;
+
+        // Newer browsers
+        background-color: #eb2f64;
+        -webkit-mask-image: url(../../../assets/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../../../assets/chevron-thin-right.svg);
+        mask-size: cover;
+    }
+
+
+    .card-main-footer {
+        font-size: 1.3rem;
+        color: #999;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-main-count {
+        margin-right: auto;
+    }
+
+    .card-main-photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
+
+    .card-main-photo:not(:last-of-type) {
+        margin-right: -1.5rem;
+    }
+
+
+    /* ================================================================================
+   Review Card
+================================================================================ */
+
+    /* HTML ===========================================================================
+
+    <figure classs="card">
+        <blockquote classs="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </blockquote>
+        <figcaption classs="card-footer">
+            <img src="" alt="" classs="card-footer-img" />
+            <div classs="card-footer-info">
+                <p classs="card-footer-name">Nick Smith</p>
+                <p classs="card-footer-date">Feb 23, 2021</p>
+            </div>
+            <div classs="card-footer-rating">7.8</div>
+        </figcaption>
+    </figure>
+
+================================================================================ */
+
+    .card {
+        background-color: #fff;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, .06);
+        padding: 3rem;
+        margin-bottom: 3.5rem;
+        font-size: 1.4rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    // Quotes in top corner
+    .card::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: #f4f2f2;
+        font-family: sans-serif;
+        z-index: 1;
+    }
+
+    // Card body
+    .card-text {
+        margin-bottom: 2rem;
+        z-index: 100;
+        position: relative;
+    }
+
+    // Card footer
+    .card-footer {
+        display: flex;
+        align-items: center;
+    }
+
+    // Card footer image
+    .card-footer-img {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    // Card footer info
+    .card-footer-info {
+        margin-right: auto;
+    }
+
+    .card-footer-name {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 0.4rem;
+    }
+
+    .card-footer-date {
+        margin: 0;
+        font-size: 1rem;
+        color: #999;
+    }
+
+    .card-footer-rating {
+        color: #eb2f64;
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+}

@@ -1,0 +1,115 @@
+/* ================================================================================
+   Inline btn
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <button class="btn-inline">
+        Show all
+        <span>&rarr;</span>
+    </button>
+
+================================================================================ */
+
+#style--trillo {
+
+    .btn-inline {
+        color: #eb2f64;
+        font-size: inherit;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 2px;
+        display: inline-block;
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    // Optional arrow
+    .btn-inline span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
+    .btn-inline:hover {
+        color: #333;
+    }
+
+    .btn-inline:hover span {
+        margin-left: 8px;
+    }
+
+    .btn-inline:active {
+        animation: trillo_hover 1s;
+    }
+
+    @keyframes trillo_hover {
+        0% {
+            transform: scale(1);
+            box-shadow: none;
+        }
+
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 1rem 4rem rgba(0, 0, 0, .25);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: none;
+        }
+    }
+
+    /* ================================================================================
+   Round button
+================================================================================ */
+
+    /* HTML ===========================================================================
+
+    <button className="btn-round">
+        <span className="btn-round-invisible">Only 4 rooms left</span>
+        <span className="btn-round-visible">Book now</span>
+    </button>
+
+================================================================================ */
+
+    .btn-round {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-radius: 100px;
+        background-image: linear-gradient(to right, #ff3366, #ba265d);
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-round>* {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    .btn-round-visible {
+        padding: 2rem 7.5rem;
+    }
+
+    .btn-round-invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+    }
+
+    .btn-round:hover {
+        background-image: linear-gradient(to left, #ff3366, #ba265d);
+    }
+
+    .btn-round:hover .btn-round-visible {
+        transform: translateY(100%);
+    }
+
+    .btn-round:hover .btn-round-invisible {
+        top: 0;
+    }
+
+}
