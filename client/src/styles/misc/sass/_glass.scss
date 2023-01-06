@@ -13,7 +13,7 @@
         position: relative;
         overflow: hidden;
         padding: 3rem 0;
-        background-color: var(--body-color);
+        background-color: #dfe9f2;
         width: 100%;
         width: calc(100% + 7rem);
         transform: translateX(-3.5rem);
@@ -100,7 +100,7 @@
     // Title
     .glass-card__title {
         font-size: 2rem;
-        color: var(--title-color);
+        color: #1c1c22;
         font-weight: 600;
         margin-bottom: .25rem;
     }
@@ -108,7 +108,7 @@
     // Profession
     .glass-card__profession {
         font-size: 1.6rem;
-        color: var(--text-color);
+        color: #58576b;
         font-weight: 500;
         backdrop-filter: blur(10px);
     }
@@ -121,7 +121,7 @@
                 rgba(251, 251, 254, .2));
         padding: 1rem 1.75rem;
         border-radius: .5rem;
-        color: var(--title-color);
+        color: #1c1c22;
         font-weight: 500;
         transition: .4s;
     }
@@ -145,7 +145,7 @@
     .glass-card__link {
         display: block;
         font-size: 1.5rem;
-        color: var(--title-color);
+        color: #1c1c22;
         margin: 1rem 0;
         transform: translateX(-5.5rem);
     }

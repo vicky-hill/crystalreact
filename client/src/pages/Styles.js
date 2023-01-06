@@ -9,6 +9,7 @@ const Styles = ({ }) => {
             <Link to={`/basic`}>Basic</Link> <br />
             <Link to={`/natours`}>Natours</Link> <br />
             <Link to={`/trillo`}>Trillo</Link> <br />
+            <Link to={`/misc`}>Misc</Link> <br />
         </div>
     )
 }
