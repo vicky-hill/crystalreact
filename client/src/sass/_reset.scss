@@ -3,10 +3,10 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -16,7 +16,8 @@ html {
 }
 
 body {
-    --header-height: 11rem;
+    // --header-height: 11rem;
+    --header-height: 0;
     margin: var(--header-height) 0 0 0;
     font-family: -apple-system, "Lato", Arial, sans-serif;
     font-size: 1.6rem;
@@ -36,7 +37,7 @@ a {
 }
 
 li {
-    list-style-type:none;
+    list-style-type: none;
 }
 
 button {
@@ -52,7 +53,7 @@ button:hover {
     outline: none;
 }
 
-button:active, 
+button:active,
 button:focus {
     outline: none;
 }
@@ -62,7 +63,12 @@ input {
     color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1.5rem;
 }
 
@@ -80,4 +86,10 @@ section:target:before {
 
 section {
     margin-bottom: 5rem;
+}
+
+@media only screen and (max-width : 1400px) {
+    body {
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+    }
 }
