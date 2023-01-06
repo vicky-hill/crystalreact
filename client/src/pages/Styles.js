@@ -8,6 +8,7 @@ const Styles = ({ }) => {
         <div className='m-10'>
             <Link to={`/basic`}>Basic</Link> <br />
             <Link to={`/natours`}>Natours</Link> <br />
+            <Link to={`/trillo`}>Trillo</Link> <br />
         </div>
     )
 }

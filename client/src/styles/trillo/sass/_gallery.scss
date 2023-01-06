@@ -1,0 +1,28 @@
+/* HTML ===========================================================================
+
+    <div class="gallery">
+        <figure class="gallery-item">
+            <img src="" alt="" class="gallery-photo"/>
+        </figure>
+        <figure class="gallery-item">
+            <img src="" alt="" class="gallery-photo"/>
+        </figure>
+        <figure class="gallery-item">
+            <img src="" alt="" class="gallery-photo"/>
+        </figure>
+    </div>
+
+================================================================================ */
+
+#style--trillo {
+
+    .gallery {
+        display: flex;
+    }
+
+    .gallery-photo {
+        width: 100%;
+        display: block;
+    }
+
+}
