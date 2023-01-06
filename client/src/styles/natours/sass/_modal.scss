@@ -1,0 +1,134 @@
+// Natours
+
+/* ================================================================================
+   Natours
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    function toggleModal() {
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        modal.classList.toggle('show');
+        modalContent.classList.toggle('show');
+    } 
+
+    function outsideClick(e) {
+        if(e.target.id === 'modal') {
+            toggleModal();
+        }
+    }
+
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <div class="modal" id="modal" onClick={outsideClick}>
+        <div class="modal-content" id="modal-content">
+            <div class="modal-left">
+                <img src={nat8} alt="" class="modal-img"/>
+                <img src={nat9} alt=""  class="modal-img"/>
+            </div>
+            <div class="modal-right">
+                <button class="modal-close" onClick={toggleModal}>&times;</button>
+                <h2 class="modal-title heading-gradient">Start booking now</h2>
+                <h3 class="modal-subtitle">Import &ndash; Check before booking</h3>
+                <p class="modal-text">Lorem, ipsum dolor sit amet consectetur.</p>
+            
+                <a href="" class="btn btn-purple">Book now</a>
+            </div>
+        </div>
+    </div>
+
+================================================================================ */
+#style--natours {
+
+    .modal {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 3000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+        backdrop-filter: blur(5px);
+    }
+
+    .modal.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-content.show {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.4);
+        width: 75%;
+        background-color: #fff;
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, .8);
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transition: all .3s .1s;
+    }
+
+    .modal-left {
+        width: 33.3333333%;
+        display: table-cell;
+    }
+
+    .modal-right {
+        width: 66.6666666%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 1rem 8rem;
+    }
+
+    .modal-img {
+        display: block;
+        width: 110%
+    }
+
+    .modal-text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid gainsboro;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid gainsboro;
+
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto
+    }
+
+    .modal-close {
+        background-color: transparent;
+        border: none;
+        color: gainsboro;
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        font-size: 3rem;
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .modal-close:hover {
+        color: gold;
+    }
+
+}

@@ -1,0 +1,242 @@
+#style--natours {
+
+    /* ===================================
+   Pop-out navigation
+==================================== */
+
+    .navigation {
+        border-top: 1px solid silver;
+        display: inline-block;
+        padding-top: 2rem;
+    }
+
+
+    .navigation-item {
+        display: inline-block;
+    }
+
+    .navigation-item:not(:last-child) {
+        margin-right: 5rem;
+    }
+
+    .navigation-link:link,
+    .navigation-link:visited {
+        // text-transform: uppercase;
+        color: slategray;
+        display: inline-block;
+        transition: all 0.2s;
+        background-color: #fff;
+    }
+
+    .navigation-link:hover,
+    .navigation-link:active {
+        color: mediumpurple;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+        transform: rotate(5deg) scale(1.2);
+    }
+
+    @media only screen and (max-width: $breakpoint-md) {
+        .navigation {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+    /* ================================================================================
+   Burger navigation
+================================================================================ */
+
+    /* HTML ===========================================================================
+
+    <div class="burger-navigation">
+        <input type="checkbox" id="burger-navigation-toggle" class="burger-navigation-checkbox"/>
+        <label htmlFor="burger-navigation-toggle" class="burger-navigation-btn">
+            <span class="burger-navigation-icon"></span>
+        </label>
+        <div class="burger-navigation-background"></div>
+
+        <nav class="burger-navigation-nav">
+            <ul class="burger-navigation-list">
+                <li class="burger-navigation-item"><a href="" class="burger-navigation-link">Home</a></li>
+                <li class="burger-navigation-item"><a href="" class="burger-navigation-link">Products</a></li>
+                <li class="burger-navigation-item"><a href="" class="burger-navigation-link">About</a></li>
+                <li class="burger-navigation-item"><a href="" class="burger-navigation-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+================================================================================ */
+
+    // Invisible checkbox
+    .burger-navigation-checkbox {
+        display: none;
+    }
+
+    // Label displayed as white button
+    .burger-navigation-btn {
+        background-color: #fff;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    // Navigation burger icon
+    .burger-navigation-icon {
+        position: relative;
+        margin-top: 3.5rem;
+    }
+
+    .burger-navigation-icon,
+    .burger-navigation-icon::before,
+    .burger-navigation-icon::after {
+        width: 3rem;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+    }
+
+
+    // Burger icon ::before & ::after
+    .burger-navigation-icon::before,
+    .burger-navigation-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+    }
+
+    .burger-navigation-icon::before {
+        top: -.8rem;
+    }
+
+    .burger-navigation-icon::after {
+        top: .8rem;
+    }
+
+
+    // Move burger navigation bars on hover
+    .burger-navigation-btn:hover .burger-navigation-icon::before {
+        top: -1rem;
+    }
+
+    .burger-navigation-btn:hover .burger-navigation-icon::after {
+        top: 1rem;
+    }
+
+
+    // Expanding navigation background
+    .burger-navigation-background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient(#fcdb71, #f8c212);
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    // Navigation list
+    .burger-navigation-nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0%;
+        z-index: 1500;
+
+        visibility: hidden;
+        opacity: 0;
+        transition: all .8s;
+    }
+
+    .burger-navigation-list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+
+    .burger-navigation-item {
+        margin: 1rem;
+    }
+
+
+    // Navigation links
+    .burger-navigation-link:link,
+    .burger-navigation-link:visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: #fff;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg, transparent 5%, transparent 50%, #fff 50%);
+        background-size: 230%;
+        transition: all .4s;
+        text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    // Navigation links hover
+    .burger-navigation-link:hover,
+    .burger-navigation-link:active {
+        background-position: 100%;
+        color: #f8c212;
+        transform: translateX(-1rem);
+        text-shadow: none;
+    }
+
+    // Expand navigation background when checked
+    .burger-navigation-checkbox:checked~.burger-navigation-background {
+        transform: scale(80);
+    }
+
+    // Show navigation list when checked
+    .burger-navigation-checkbox:checked~.burger-navigation-nav {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    // Transform burger icon into x
+    // When checked, select the sibling "btn" and then its child "icon"
+    .burger-navigation-checkbox:checked+.burger-navigation-btn .burger-navigation-icon {
+        background-color: transparent;
+    }
+
+    // Transform ::before burger icon
+    .burger-navigation-checkbox:checked+.burger-navigation-btn .burger-navigation-icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    // Transform ::after burger icon
+    .burger-navigation-checkbox:checked+.burger-navigation-btn .burger-navigation-icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    // Media query phone
+    @media only screen and (max-width: $breakpoint-md) {
+        .burger-navigation-btn {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        .burger-navigation-background {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+    }
+
+}

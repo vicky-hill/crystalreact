@@ -1,0 +1,128 @@
+/* ================================================================================
+   Gradient Header
+================================================================================ */
+
+/* HTML ===========================================================================
+
+    <header class="header">
+        <div class="header-logo">
+            <img src="img/logo-white.png" alt="Logo" class="logo" />
+        </div>
+
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">Outdoor</span>
+                <span class="heading-primary-sub">is where life happens</span>
+            </h1>
+        </div>
+    </header>
+
+================================================================================ */
+#style--natours {
+
+    .header {
+        position: relative;
+        height: 95vh;
+        background-image: linear-gradient(to right bottom,
+                rgba(255, 222, 113, 0.7), rgba(248, 202, 52, 0.7)),
+            // rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), 
+            // url(../../components/elements/natours/img/hero.jpg);
+            url(../../../assets/pineapple-on-beach.png);
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    }
+
+    .header-logo {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    .logo {
+        height: 3.5rem;
+    }
+
+    .text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .heading-primary {
+        color: #fff;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 6rem;
+    }
+
+    .heading-primary-main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation: moveInLeft 1s ease-out;
+    }
+
+    .heading-primary-sub {
+        display: block;
+        font-size: 2rem;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+
+    // Animation for headlines
+    @keyframes moveInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-10rem);
+        }
+
+        80% {
+            transform: translate(1rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+
+    @keyframes moveInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+
+        80% {
+            transform: translate(-1rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+
+    // @phone
+    @media only screen and (max-width: $breakpoint-sm) {
+        .heading-primary-main {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+
+        .heading-primary-sub {
+            letter-spacing: .5rem;
+        }
+
+        .header {
+            height: 75vh;
+            clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+        }
+    }
+
+}
