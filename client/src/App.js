@@ -6,6 +6,7 @@ import { loginCheck, getUser } from './actions/auth';
 
 import Basic from './pages/Basic';
 import PrivateRoute from './styles/basic/elements/PrivateRoute';
+import Styles from './pages/Styles';
 
 import './main.scss';
 // import './main.css';
@@ -45,6 +46,8 @@ function App() {
     <Router>
         <Switch>
           <Route exact path='/' component={Basic} />
+          <Route exact path='/styles' component={Styles} />
+          <Route exact path='/basic' component={Basic} />
         </Switch>
     </Router>
   );
