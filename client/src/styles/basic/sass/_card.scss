@@ -1,0 +1,277 @@
+#style--basic {
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+        margin-bottom: 2rem;
+
+        &__header {
+            padding: 12px 20px;
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+
+        &__title {
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        &__body {
+            flex: 1 1 auto;
+            min-height: 1px;
+            padding: 20px;
+        }
+
+        // Add margin to card text, if elements follow after it
+        &__text {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__link {
+            color: $primary;
+            text-decoration: none;
+            background-color: transparent;
+
+            &:hover {
+                color: mix(black, $primary, 20%);
+            }
+
+            &+& {
+                margin-left: 2rem;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            height: 17rem;
+            background-size: cover;
+            background-position: top;
+        }
+
+        &--border-shade {
+            border-color: #2c3e50;
+        }
+
+        &--horizontal {
+            .card__image {
+                height: 100%;
+                width: 40rem;
+                background-position: right;
+            }
+        }
+
+        &--glowing {
+            position: relative;
+            width: 30rem;
+            height: 40rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Poppins;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                right: -4px;
+                bottom: -4px;
+                background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+                transform: skewX(2deg) skewY(4deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                right: -4px;
+                bottom: -4px;
+                transform: skewX(2deg) skewY(4deg);
+                background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+                filter: blur(10px);
+            }
+
+            & span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #0e1538;
+                z-index: 10;
+            }
+
+            & h2 {
+                position: relative;
+                z-index: 11;
+                color: #fff;
+                font-size: 10em;
+            }
+        }
+    }
+
+
+    /* ================================================================================
+   CSS Version
+================================================================================ */
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        // border: 1px solid rgba(0, 0, 0, 0.125);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+        margin-bottom: 2rem;
+    }
+
+    // Card border
+    .card--border-shade {
+        border-color: #2c3e50;
+    }
+
+    // Card header
+    .card__header {
+        padding: 12px 20px;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    // Card body
+    .card__body {
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 20px;
+    }
+
+    // Card title
+    .card__title {
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    // Add margin to card text, if it elements follow after it
+    .card-text:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+
+    .card__link {
+        color: $primary;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    .card-_link+.card__link {
+        margin-left: 2rem;
+    }
+
+    .card__link:hover {
+        color: mix(black, $primary, 20%);
+    }
+
+
+    /* ================================================================================
+   Card with Image
+================================================================================ */
+
+    .card__image {
+        width: 100%;
+        height: 17rem;
+        background-size: cover;
+        background-position: top;
+    }
+
+
+
+    /* ================================================================================
+   Horizontal Card with Image
+================================================================================ */
+
+    .card--horizontal {
+        flex-direction: row;
+        height: 23rem;
+    }
+
+    .card--horizontal .card__image {
+        height: 100%;
+        width: 40rem;
+        background-position: right;
+    }
+
+
+    /* ===================================
+   Glowing corrners
+==================================== */
+
+    .card--glowing {
+        position: relative;
+        width: 30rem;
+        height: 40rem;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Poppins;
+    }
+
+    .card--glowing::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+        transform: skewX(2deg) skewY(4deg);
+    }
+
+    .card--glowing::after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        transform: skewX(2deg) skewY(4deg);
+        background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+        filter: blur(10px);
+    }
+
+    .card--glowing span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0e1538;
+        z-index: 10;
+    }
+
+    .card--glowing h2 {
+        position: relative;
+        z-index: 11;
+        color: #fff;
+        font-size: 10em;
+    }
+
+}

@@ -1,0 +1,726 @@
+/* HTML ===========================================================================
+
+    <header class="megamenu">
+            <div class="megamenu-container">
+
+                {/* Section Left: Logo 
+                <div class="megamenu-section--left">
+                    <div class="megamenu-logo">
+                        <a href="#">Basic Style</a>
+                    </div>
+                </div>
+
+                {/* Section Center: Menu
+                <div class="megamenu-section--center">
+                    <div class="megamenu-overlay" onClick={closeMobileNav}></div>
+                    
+                    <nav class="megamenu-nav">
+
+                        {/* Mobile Menu Controls
+                        <div class="mobile-megamenu">
+                            <div class="go-back" onClick={hideSubmenu}><i class="fas fa-angle-left"></i></div>
+                            <div class="menu-title"></div>
+                            <div class="menu-close" onClick={closeMobileNav}>&times;</div>
+                        </div>
+                        
+                        <ul class="menu-main" onClick={showSubMenu}>
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+
+                            {/* New 
+                            <li class="menu-item-has-children">
+                                <a href="">New <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4">
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping2} alt="" />
+                                            <h4 class="title">Product 1</h4>
+                                        </a>
+                                    </div>
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping3} alt="" />
+                                            <h4 class="title">Product 2</h4>
+                                        </a>
+                                    </div>
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping4} alt="" />
+                                            <h4 class="title">Product 3</h4>
+                                        </a>
+                                    </div>
+                                    <div class="megamenu-item text-center">
+                                        <a href="">
+                                            <img src={shopping5} alt="" />
+                                            <h4 class="title">Product 4</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            {/* Shop 
+                            <li class="menu-item-has-children">
+                                <a href="">Shop <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4">
+                                    <div class="megamenu-item">
+                                        <h4 class="title">Men's Fashion</h4>
+                                        <ul>
+                                            <li><a href="#">New Arrivals</a></li>
+                                            <li><a href="#">Tops</a></li>
+                                            <li><a href="#">Bottoms</a></li>
+                                            <li><a href="#">Lounge Wear</a></li>
+                                            <li><a href="#">Jackets</a></li>
+                                        </ul>
+
+                                        <h4 class="title">Beauty</h4>
+                                        <ul>
+                                            <li><a href="#">Skin Care</a></li>
+                                            <li><a href="#">Ulta Beauty</a></li>
+                                            <li><a href="#">Hair Care </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="megamenu-item">
+                                        <h4 class="title">Women's Fashion</h4>
+                                        <ul>
+                                            <li><a href="#">New Arrivals</a></li>
+                                            <li><a href="#">Tops</a></li>
+                                            <li><a href="#">Bottoms</a></li>
+                                            <li><a href="#">Lounge Wear</a></li>
+                                            <li><a href="#">Jackets</a></li>
+                                        </ul>
+
+                                        <h4 class="title">Furniture</h4>
+                                        <ul>
+                                            <li><a href="#">Living Room</a></li>
+                                            <li><a href="#">Home Office</a></li>
+                                            <li><a href="#">Bedroom</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="megamenu-item">
+                                        <h4 class="title">Home, Kitchen</h4>
+                                        <ul>
+                                            <li><a href="#">Dining Tables</a></li>
+                                            <li><a href="#">Bar Stools</a></li>
+                                            <li><a href="#">Appliances</a></li>
+                                            <li><a href="#">Storage</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="megamenu-item">
+                                        <img src={shopping1} alt="" />
+                                    </div>
+                                </div>
+                            </li>
+
+                            {/* Blog
+                            <li class="menu-item-has-children">
+                                <a href="">Blog <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu single-column-menu">
+                                    <ul>
+                                        <li><a href="">Standard Layout</a></li>
+                                        <li><a href="">Grid Layout</a></li>
+                                        <li><a href="">Single Layout</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            {/* Pages
+                            <li class="menu-item-has-children">
+                                <a href="">Pages <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu single-column-menu">
+                                    <ul>
+                                        <li><a href="">Login</a></li>
+                                        <li><a href="">Register</a></li>
+                                        <li><a href="">Faq</a></li>
+                                        <li><a href="">404 Page</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            {/* Contact 
+                            <li>
+                                <a href="">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                {/* Icons 
+                <div class="megamenu-section--right">
+                    <a href=""><i class="fas fa-search"></i></a>
+                    <a href=""><i class="fas fa-heart"></i></a>
+                    <a href=""><i class="fas fa-shopping-cart"></i></a>
+
+                    {/* Mobile menu trigger 
+                    <div class="megamenu-mobile-toggle" onClick={toggleMobileNav}>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    let submenu;
+
+    const toggleMobileNav = () => {
+        const menu = document.querySelector(".megamenu-nav");
+        const overlay = document.querySelector(".megamenu-overlay");
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+
+    const closeMobileNav = () => {
+        const menu = document.querySelector(".megamenu-nav");
+        const overlay = document.querySelector(".megamenu-overlay");
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+
+        hideSubmenu();
+    }
+
+    const showSubMenu = (e) => {
+        e.preventDefault();
+
+        const menu = document.querySelector(".megamenu-nav");
+
+        if (!menu.classList.contains("active")) {
+            return
+        }
+
+        if (e.target.closest(".menu-item-has-children")) {
+            const hasChildren = e.target.closest(".menu-item-has-children");
+            submenu = hasChildren.querySelector(".sub-menu");
+            submenu.classList.add("active");
+            submenu.style.animation = "slideLeft 0.5s ease forwards";
+
+            const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
+
+            menu.querySelector(".menu-title").innerHTML = menuTitle;
+            menu.querySelector(".mobile-megamenu").classList.add('active');
+        }
+    }
+
+    const hideSubmenu = () => {
+
+        const menu = document.querySelector(".megamenu-nav");
+
+        submenu.style.animation = "slideRight 0.5s ease forwards";
+        setTimeout(() => {
+            submenu.classList.remove("active");
+        }, 300)
+
+
+        menu.querySelector(".menu-title").innerHTML = "";
+        menu.querySelector(".mobile-megamenu").classList.remove('active');
+    }
+
+    window.onresize = function () {
+        if (this.innerWidth > 1400) {
+            if (menu.classList.contains("active")) {
+                toggleMobileNav();
+            }
+        }
+    }
+
+================================================================================ */
+#style--basic {
+
+    .megamenu {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: $z-megamenu;
+        padding: 1.5rem;
+        font-family: Poppins;
+        font-weight: 400;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+        background-color: #fff;
+    }
+
+    // Container
+    .megamenu-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 120rem;
+        margin: auto;
+    }
+
+    // Logo
+    .megamenu-logo a {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $primary;
+    }
+
+
+    /* ===================================
+   Megamenu sections
+==================================== */
+
+    .megamenu-section--left {
+        flex: 0 0 17%;
+    }
+
+    .megamenu-section--center {
+        flex: 0 0 66%;
+    }
+
+    .megamenu-section--right {
+        flex: 0 0 17%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .megamenu-section--right a {
+        color: #555;
+        display: inline-flex;
+        margin-left: 1rem;
+        transition: color .2s ease;
+    }
+
+
+    /* ===================================
+   Megamenu main content
+==================================== */
+    .megamenu-nav>ul>li {
+        display: inline-block;
+        line-height: 5rem;
+        margin-left: 2.5rem;
+    }
+
+    .megamenu-nav>ul>li>a {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $dark;
+        position: relative;
+        text-transform: capitalize;
+        transition: color .2s ease;
+    }
+
+    .megamenu-nav>ul>li>a>i {
+        margin-left: .5rem;
+        z-index: 500;
+    }
+
+
+    /* ===================================
+   Submenu
+==================================== */
+    .megamenu-nav>ul>li .sub-menu {
+        position: absolute;
+        background-color: #fff;
+        box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
+        padding: 2rem 3rem;
+        transition: all 0.4s ease;
+        margin-top: 1.5rem;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .megamenu-nav>ul>li .sub-menu>ul>li {
+        line-height: 1;
+    }
+
+    .megamenu-nav>ul>li .sub-menu>ul>li>a {
+        display: inline-block;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        color: #555;
+        transition: color .2s ease;
+        text-transform: capitalize;
+    }
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* ===================================
+   Menu item has children
+==================================== */
+    .megamenu-nav>ul>li.menu-item-has-children:hover .sub-menu {
+        margin-top: 0;
+        visibility: visible;
+        opacity: 1;
+        z-index: 1000;
+    }
+
+
+
+    /* ===================================
+   Submenu item
+==================================== */
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu>.megamenu-item>ul>li {
+        line-height: 1;
+        display: block;
+    }
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu>.megamenu-item>ul>li>a {
+        padding: 1rem 0;
+        display: inline-block;
+        font-size: 1.5rem;
+        color: #555;
+        transition: color .2s ease;
+    }
+
+    // Single column
+    .megamenu-nav>ul>li .single-column-menu {
+        min-width: 28rem;
+        max-width: 35rem;
+    }
+
+    // Four column
+    .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 {
+        max-width: 110rem;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem 1.5rem;
+    }
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item {
+        flex: 0 0 25%;
+        padding: 0 15px;
+    }
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item .title {
+        font-size: 1.6rem;
+        color: $primary;
+        font-weight: 600;
+        line-height: 1;
+        padding-bottom: .5rem;
+        padding-top: 1rem;
+    }
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item.text-center .title {
+        text-align: center;
+    }
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item .title:not(:first-child) {
+        padding-top: 2.5rem;
+    }
+
+    .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item img {
+        max-width: 100%;
+        width: 100%;
+        vertical-align: middle;
+    }
+
+
+    /* ===================================
+   Hover
+==================================== */
+    .megamenu-nav>ul>li .sub-menu.mega-menu>.megamenu-item>ul>li:hover>a,
+    .megamenu-nav>ul>li .sub-menu>ul>li>a:hover,
+    .megamenu-section--right a:hover,
+    .megamenu-nav>ul>li:hover>a {
+        color: $primary;
+    }
+
+
+    .mobile-megamenu,
+    .megamenu-mobile-toggle {
+        display: none;
+    }
+
+
+    /* ===================================
+   Media Queries
+==================================== */
+
+    @media only screen and (max-width : 1400px) {
+
+        /* ===================================
+       Mega menu
+    ==================================== */
+        .megamenu-container {
+            justify-content: space-between;
+        }
+
+        .mobile-megamenu {
+            display: flex;
+            height: 50px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            z-index: 1100;
+            background-color: #fff;
+            top: 0;
+        }
+
+        .megamenu .menu-main {
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* ===================================
+       Mobile menu controls
+    ==================================== */
+        .mobile-megamenu .menu-close,
+        .mobile-megamenu .go-back {
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            line-height: 50px;
+            text-align: center;
+            color: $dark;
+        }
+
+        .mobile-megamenu .menu-close {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 25px;
+        }
+
+        .mobile-megamenu .go-back {
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            display: none;
+        }
+
+        .mobile-megamenu.active .go-back {
+            display: block;
+        }
+
+        .mobile-megamenu .menu-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: $dark;
+        }
+
+
+        /* ===================================
+       Megamenu sections
+    ==================================== */
+        .megamenu-section--center {
+            order: 3;
+            flex: 0 0 100%;
+        }
+
+        .megamenu-section--right,
+        .megamenu-section--left {
+            flex: 0 0 auto;
+        }
+
+        .megamenu-section--right {
+            align-items: center;
+        }
+
+
+        /* ===================================
+       Mobile toggle
+    ==================================== */
+        .megamenu-mobile-toggle {
+            display: flex;
+            height: 3rem;
+            width: 3rem;
+            margin-left: 1.5rem;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .megamenu-mobile-toggle span {
+            display: block;
+            height: 2px;
+            background-color: #333;
+            width: 24px;
+            position: relative;
+        }
+
+        .megamenu-mobile-toggle span:before,
+        .megamenu-mobile-toggle span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+        }
+
+        .megamenu-mobile-toggle span:before {
+            top: -6px;
+        }
+
+        .megamenu-mobile-toggle span:after {
+            top: 6px;
+        }
+
+        /* ===================================
+       Megamenu main content
+    ==================================== */
+        .megamenu-nav {
+            position: fixed;
+            width: 32rem;
+            background-color: #fff;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            transform: translate(-100%);
+            transition: all .5s ease;
+            z-index: 1200;
+            box-shadow: none;
+        }
+
+        .megamenu-overlay {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.5);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 499;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s ease;
+        }
+
+        .megamenu-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .megamenu-nav.active {
+            transform: translate(0%);
+        }
+
+        .megamenu-nav>ul>li {
+            line-height: 1;
+            margin: 0;
+            display: block;
+        }
+
+        .megamenu-nav>ul>li>a {
+            line-height: 50px;
+            height: 50px;
+            padding: 0 50px 0 15px;
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .megamenu-nav>ul>li>a i {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 0;
+            right: 0;
+            text-align: center;
+            line-height: 50px;
+            transform: rotate(-90deg);
+        }
+
+
+        /* ===================================
+       Submenu
+    ==================================== */
+        .megamenu-nav>ul>li .sub-menu.mega-menu,
+        .megamenu-nav>ul>li .sub-menu {
+            visibility: visible;
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            box-shadow: none;
+            margin: 0;
+            max-width: none;
+            min-width: auto;
+            display: none;
+            transform: translateX(0%);
+            overflow-y: auto;
+        }
+
+        .megamenu-nav>ul>li .sub-menu.activeSubmenu {
+            display: block;
+        }
+
+        @keyframes slideLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+
+        /* ===================================
+       Single column
+    ==================================== */
+        .megamenu-nav>ul>li .single-column-menu {
+            min-width: none;
+            max-width: none;
+            width: 100%;
+            padding-top: 65px;
+        }
+
+        /* ===================================
+       Four column
+    ==================================== */
+        .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 {
+            padding: 15px;
+            padding-top: 65px;
+        }
+
+        .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item {
+            flex: 0 0 100%;
+            padding: 0;
+        }
+
+        .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item img {
+            margin-top: 0;
+        }
+
+        .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item .title {
+            margin-bottom: 20px;
+        }
+
+        .megamenu-nav>ul>li .sub-menu.mega-menu-column-4 .megamenu-item:last-child .title {
+            margin-bottom: 0;
+        }
+
+        /* ===================================
+       Megamenu items
+    ==================================== */
+        .megamenu-nav>ul>li .sub-menu.mega-menu>.megamenu-item>ul {
+            margin-bottom: 15px;
+        }
+
+        .megamenu-nav>ul>li .sub-menu.mega-menu>.megamenu-item>ul>li> {
+            margin-bottom: 15px;
+        }
+
+        .megamenu-nav>ul>li .sub-menu.mega-menu>.megamenu-item>ul>li>a {
+            display: block;
+        }
+
+    }
+
+}

@@ -1,0 +1,31 @@
+/* HTML ===========================================================================
+
+    <button class="btn btn-primary" onClick={collapse} > Open </button>
+    
+    <div class="collapse" id="collapse">
+        <div class="card">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    function collapse() {
+        const content = document.getElementById('collapse');
+        content.style.maxHeight ? content.style.maxHeight = null : 
+            content.style.maxHeight = content.scrollHeight + "px";
+    }
+
+================================================================================ */
+#style--basic {
+
+    .collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease-in-out;
+    }
+
+}

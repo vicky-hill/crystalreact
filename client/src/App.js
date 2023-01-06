@@ -4,9 +4,9 @@ import './assets/prism.css'
 import { store } from './store';
 import { loginCheck, getUser } from './actions/auth';
 
-import Home from './components/pages/Home';
-import Posts from './components/pages/Posts';
-import PrivateRoute from './components/elements/PrivateRoute';
+import Basic from './pages/Basic';
+import Posts from './styles/basic/pages/Posts';
+import PrivateRoute from './styles/basic/elements/PrivateRoute';
 
 import './main.scss';
 // import './main.css';
@@ -45,7 +45,7 @@ function App() {
   return (
     <Router>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={Basic} />
           <PrivateRoute exact path='/' component={Posts} />
         </Switch>
     </Router>
