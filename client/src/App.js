@@ -9,6 +9,7 @@ import PrivateRoute from './styles/basic/elements/PrivateRoute';
 import Styles from './pages/Styles';
 import Natours from './pages/Natours';
 import Trillo from './pages/Trillo';
+import Misc from './pages/Misc';
 
 import './main.scss';
 // import './main.css';
@@ -52,6 +53,7 @@ function App() {
           <Route exact path='/basic' component={Basic} />
           <Route exact path='/natours' component={Natours} />
           <Route exact path='/trillo' component={Trillo} />
+          <Route exact path='/misc' component={Misc} />
         </Switch>
     </Router>
   );
