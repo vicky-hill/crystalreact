@@ -6,17 +6,14 @@ const Tabs = ({ children, className }) => {
 
     const [active, setActive] = useState(0);
 
-    const getTabItemClasses = index => {
-        return classNames('tabs__item', {
-            'active': active === index
-        });
-    }
+    const getTabItemClasses = index => classNames('tabs__item', {
+        'active': active === index
+    });
 
-    const getTabContentClasses = index => {
-        return classNames('tab-pane fade-in', {
-            'show active': active === index
-        })
-    }
+    const getTabContentClasses = index => classNames('tab-pane fade-in', {
+        'show active': active === index
+    })
+
 
     const openTab = (e) => {
         setActive(Number(e.target.id));

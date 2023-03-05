@@ -1,7 +1,13 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
+import classNames from 'classnames'
 
 const Pagination = ({ active, setActive, pages }) => {
+    
+    const getClasses = index => classNames('pagination__item', {
+        'active': active === index
+    })
+
     const activatePage = (e) => {
         e.preventDefault();
         setActive(Number(e.target.id));
@@ -29,7 +35,7 @@ const Pagination = ({ active, setActive, pages }) => {
 
             {
                 [...Array(pages).keys()].map((page, i) => (
-                    <li key={i} id={i} className={`pagination__item ${active === i ? 'active' : ''}`} onClick={activatePage}>
+                    <li key={i} id={i} className={getClasses(i)} onClick={activatePage}>
                         <a id={i} className="pagination__link" href="#">{page}</a>
                     </li>
                 ))
