@@ -1,3 +1,70 @@
+#style--basic {
+
+    .tabs {
+        &__header {
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        &__item {
+            background-color: pink;
+            margin-bottom: -1px;
+            background: 0 0;
+            border: 1px solid transparent;
+            border-top-left-radius: .4rem;
+            border-top-right-radius: .4rem;
+            display: block;
+            padding: .8rem 1.6rem;
+            color: mix(black, $primary, 10%);
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        
+            &.active {
+                color: #495057;
+                background-color: #fff;
+                border-color: #dee2e6 #dee2e6 #fff;
+            }
+
+            &:not(.active):hover {
+                cursor: pointer;
+                border-color: #e9ecef #e9ecef #dee2e6;
+                isolation: isolate;
+            }
+        }
+
+        &__content {
+            >.tab-pane {
+                display: none;
+            }
+    
+            >.active {
+                display: block;
+            }
+
+            .tab-pane {
+                padding: 2rem;
+            }
+
+            .fade-in {
+                opacity: 0;
+                animation: fadeIn .5s ease-in 1 forwards;
+            }
+        
+            // Fade in animation
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
+
+
+
 /* HTML ===========================================================================
 
     <div class="tabs" onClick={openTab}>
@@ -47,65 +114,3 @@
 
 
 ================================================================================ */
-
-#style--basic {
-
-    .tabs {
-        border-bottom: 1px solid #dee2e6;
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-
-    .tabs-item.active {
-        color: #495057;
-        background-color: #fff;
-        border-color: #dee2e6 #dee2e6 #fff;
-    }
-
-    .tabs-item {
-        margin-bottom: -1px;
-        background: 0 0;
-        border: 1px solid transparent;
-        border-top-left-radius: .4rem;
-        border-top-right-radius: .4rem;
-        display: block;
-        padding: .8rem 1.6rem;
-        color: mix(black, $primary, 10%);
-        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
-    }
-
-    .tabs-item:not(.active):hover {
-        cursor: pointer;
-        border-color: #e9ecef #e9ecef #dee2e6;
-        isolation: isolate;
-    }
-
-    .tab-pane {
-        padding: 2rem;
-    }
-
-    .tab-content {
-        >.tab-pane {
-            display: none;
-        }
-
-        >.active {
-            display: block;
-        }
-    }
-
-    .fade-in {
-        opacity: 0;
-        animation: fadeIn .5s ease-in 1 forwards;
-    }
-
-    // Fade in animation
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-        }
-    }
-
-}

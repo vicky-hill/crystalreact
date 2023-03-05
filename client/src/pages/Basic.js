@@ -10,7 +10,7 @@ import Form from '../styles/basic/sections/Form';
 import Collapse from '../styles/basic/sections/Collapse';
 import Accordion from '../styles/basic/sections/Accordion';
 import Toast from '../styles/basic/sections/Toast.section';
-import Tabs from '../styles/basic/sections/Tabs';
+import Tabs from '../styles/basic/sections/Tabs.section';
 import Tooltip from '../styles/basic/sections/Tooltip';
 import Dropdown from '../styles/basic/sections/Dropdown';
 import Pagination from '../styles/basic/sections/Pagination.section';

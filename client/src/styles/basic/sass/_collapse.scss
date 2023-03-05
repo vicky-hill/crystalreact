@@ -1,3 +1,15 @@
+#style--basic {
+
+    .collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease-in-out;
+    }
+
+}
+
+
+
 /* HTML ===========================================================================
 
     <button class="btn btn-primary" onClick={collapse} > Open </button>
@@ -20,12 +32,3 @@
     }
 
 ================================================================================ */
-#style--basic {
-
-    .collapse {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .35s ease-in-out;
-    }
-
-}

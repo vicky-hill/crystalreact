@@ -1,52 +1,3 @@
-/* HTML ===========================================================================
-
-    <nav class="bottom-nav" onClick={activeTab}>
-        <a href="" class="bottom-nav-link">
-            <i class="fas fa-th-large"></i>
-            <span class="bottom-nav-text">Dashboard</span>
-        </a>
-        <a href="" class="bottom-nav-link">
-            <i class="fas fa-folder"></i>
-            <span class="bottom-nav-text">Projects</span>
-        </a>
-        <a href="" class="bottom-nav-link active">
-            <i class="fas fa-lock"></i>
-            <span class="bottom-nav-text">Security</span>
-        </a>
-        <a href="" class="bottom-nav-link">
-            <i class="fas fa-user-alt"></i>
-            <span class="bottom-nav-text">Profile</span>
-        </a>
-    </nav>
-
-================================================================================ */
-
-/* JavaScript =====================================================================
-
-    const activeTab = (e) => {
-        const tabs = document.getElementsByClassName('bottom-nav-link');
-        let clickedTab;
-
-        // Check for clicks on span and i
-        if (e.target.tagName === 'SPAN' || e.target.tagName === 'I') {
-            clickedTab = e.target.parentElement;
-        } else {
-            clickedTab = e.target
-        }
-
-        // Deactivate all tabs that aren't the target
-        for (let i = 0; i < tabs.length; i++) {
-
-            if (tabs[i] !== clickedTab) {
-                tabs[i].classList.remove('active');
-            } else {
-                tabs[i].classList.add('active');
-            }
-        }
-    }
-
-================================================================================ */
-
 #style--basic {
 
     .bottom-nav {
@@ -98,4 +49,56 @@
         }
     }
 
+    
 }
+
+
+
+/* HTML ===========================================================================
+
+    <nav class="bottom-nav" onClick={activeTab}>
+        <a href="" class="bottom-nav-link">
+            <i class="fas fa-th-large"></i>
+            <span class="bottom-nav-text">Dashboard</span>
+        </a>
+        <a href="" class="bottom-nav-link">
+            <i class="fas fa-folder"></i>
+            <span class="bottom-nav-text">Projects</span>
+        </a>
+        <a href="" class="bottom-nav-link active">
+            <i class="fas fa-lock"></i>
+            <span class="bottom-nav-text">Security</span>
+        </a>
+        <a href="" class="bottom-nav-link">
+            <i class="fas fa-user-alt"></i>
+            <span class="bottom-nav-text">Profile</span>
+        </a>
+    </nav>
+
+================================================================================ */
+
+/* JavaScript =====================================================================
+
+    const activeTab = (e) => {
+        const tabs = document.getElementsByClassName('bottom-nav-link');
+        let clickedTab;
+
+        // Check for clicks on span and i
+        if (e.target.tagName === 'SPAN' || e.target.tagName === 'I') {
+            clickedTab = e.target.parentElement;
+        } else {
+            clickedTab = e.target
+        }
+
+        // Deactivate all tabs that aren't the target
+        for (let i = 0; i < tabs.length; i++) {
+
+            if (tabs[i] !== clickedTab) {
+                tabs[i].classList.remove('active');
+            } else {
+                tabs[i].classList.add('active');
+            }
+        }
+    }
+
+================================================================================ */

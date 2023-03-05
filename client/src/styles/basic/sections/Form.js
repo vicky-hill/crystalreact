@@ -5,7 +5,7 @@ const Form = () => {
 
     // File upload
     function realFileClick() {
-        const realFileBtn = document.getElementById('real-file');
+        const realFileBtn = document.getElementById('real-file'); // change to useref
         realFileBtn.click();
     }
 
