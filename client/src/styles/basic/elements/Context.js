@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef } from 'react'
+import PropTypes from 'prop-types'
 
 const Context = ({ children }) => {
     const [x, setX] = useState(0);
@@ -12,8 +12,6 @@ const Context = ({ children }) => {
         e.preventDefault();
 
         show ? setDisplay('block') : setDisplay('none');
-
-        console.log(window.pageYOffset)
 
         const updateX = e.nativeEvent.x + contextMenu.current.offsetWidth > window.innerWidth ? window.innerWidth - contextMenu.current.offsetWidth : e.nativeEvent.x + window.pageXOffset;
         const updateY = e.nativeEvent.y + contextMenu.current.offsetHeight > window.innerHeight ? window.innerHeight - contextMenu.current.offsetHeight : e.nativeEvent.y + window.pageYOffset;

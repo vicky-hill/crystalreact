@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react'
 import { PropTypes } from 'prop-types'
+import classNames from 'classnames'
 
 const Modal = ({ open, close, title, shouldCloseOnOutsideClick, children }) => {
+
+    const classes = classNames('modal', {
+       'open': open
+    });
+
     useEffect(() => {
-        const body = document.querySelector('body').classList
-        open ? body.add('no-scroll') : body.remove('no-scroll')
+        const body = document.querySelector('body').classList;
+        open ? body.add('no-scroll') : body.remove('no-scroll');
     }, [open])
 
     const closeOnOutsideClick = (e) => {
@@ -14,7 +20,7 @@ const Modal = ({ open, close, title, shouldCloseOnOutsideClick, children }) => {
     }
 
     return (
-        <div className={`modal ${open ? 'open' : ''}`} onClick={(e) => closeOnOutsideClick(e)}>
+        <div className={classes} onClick={(e) => closeOnOutsideClick(e)}>
             <div className="modal__content">
 
                 {/* Header */}
