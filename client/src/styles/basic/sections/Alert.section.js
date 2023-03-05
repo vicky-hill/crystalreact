@@ -1,7 +1,7 @@
-/* eslint-disable */ 'use strict';
-import React, { useState } from 'react';
-import Alert from '../elements/Alert';
-import Button from '../elements/Button';
+/* eslint-disable */ 'use strict'
+import React, { useState } from 'react'
+import Alert from '../elements/Alert'
+import Button from '../elements/Button'
 
 const AlertSection = () => {
 

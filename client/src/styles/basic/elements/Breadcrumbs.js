@@ -1,26 +1,32 @@
 import React from 'react'
-import { getClassName } from '../../../utils/getClassName'
-import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types'
+import classNames from 'classnames'
 
 const Breadcrumbs = ({ children, className, separator, ...props }) => {
-    const variations = {
-        separator: separator && `breadcrumbs--${separator}`
-    }
+
+    const classes = classNames('breadcrumbs', {
+        [className]: true,
+        [`breadcrumbs--${separator}`]: separator
+    });
 
     return (
-        <ul className={getClassName('breadcrumbs', className, variations)}>
+        <ul className={classes}>
             { children }
         </ul>
     )
 }
 
 const Item = ({ children, link, active, separator, className, ...props }) => {
-    const variations = {
-        active: active && 'active'
-    }
+
+    const classes = classNames('breadcrumbs__item', {
+        [className]: true,
+        'active': active
+    });
 
     return (
-        <li className={getClassName('breadcrumbs__item', className, variations)}><a href={link} className="breadcrumbs__link">{children}</a></li>
+        <li className={classes} {...props}>
+            <a href={link} className="breadcrumbs__link">{children}</a>
+        </li>
     )
 } 
 

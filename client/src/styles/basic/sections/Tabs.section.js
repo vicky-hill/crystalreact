@@ -1,8 +1,8 @@
 /* eslint-disable */
-import React, { useState } from 'react';
-import Tabs, { Tab } from '../elements/Tabs';
+import React, { useState } from 'react'
+import Tabs, { Tab } from '../elements/Tabs'
 
-const TabsSection = ({ content }) => {
+const TabsSection = ({  }) => {
 
     const [active, setActive] = useState(0);
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
-import React from 'react';
-import Breadcrumbs from '../elements/Breadcrumbs';
+import React from 'react'
+import Breadcrumbs from '../elements/Breadcrumbs'
 
 const BreadcrumbsSection = () => {
     return (
