@@ -14,7 +14,6 @@ const Tabs = ({ children, className }) => {
         'show active': active === index
     })
 
-
     const openTab = (e) => {
         setActive(Number(e.target.id));
     }

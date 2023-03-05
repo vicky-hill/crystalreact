@@ -4,6 +4,9 @@ import classNames from 'classnames'
 
 const Accordion = ({ content }) => {
 
+    const [active, setActive] = useState(null);
+    const [height, setHeight] = useState(0);
+
     const getHeaderClassees = index => classNames('accordion-header', {
       'collapsed': active === index
     });
@@ -11,9 +14,6 @@ const Accordion = ({ content }) => {
     const getBodyClassees = index => classNames('accordion-body', {
       'active': active === index
     });
-
-    const [active, setActive] = useState(null);
-    const [height, setHeight] = useState(0);
 
     function collapse(e, index) {
 

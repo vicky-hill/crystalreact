@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 
 /* eslint-disable */
-const BottomNav = ({ navLinks }) => {
+const BottomNav = ({ navLinks, className }) => {
 
     const [active, setActive] = useState(0);
+
+    const getClasses = index => classNames('bottom-nav-link', {
+      [className]: className, 
+      'active': active === index
+    });
+
 
     const activateTab = (e, i) => {
         e.preventDefault();
@@ -15,7 +22,7 @@ const BottomNav = ({ navLinks }) => {
 
             {
                 navLinks.map((link, i) => (
-                    <a key={i} href="" className={`bottom-nav-link ${active === i ? 'active' : ''}`} onClick={(e) => activateTab(e, i)}>
+                    <a key={i} href="" className={getClasses(i)} onClick={(e) => activateTab(e, i)}>
                         <i className={`fas ${link.icon}`}></i>
                         <span className="bottom-nav-text">{ link.text }</span>
                     </a>
