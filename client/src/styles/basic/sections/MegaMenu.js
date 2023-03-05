@@ -1,10 +1,10 @@
 /* eslint-disable */
 import React, { useState } from 'react'
-import shopping1 from '../../../assets/shopping-1.png';
-import shopping2 from '../../../assets/shopping-2.png';
-import shopping3 from '../../../assets/shopping-3.png';
-import shopping4 from '../../../assets/shopping-4.png';
-import shopping5 from '../../../assets/shopping-5.png';
+import shopping1 from '../../../assets/shopping-1.png'
+import shopping2 from '../../../assets/shopping-2.png'
+import shopping3 from '../../../assets/shopping-3.png'
+import shopping4 from '../../../assets/shopping-4.png'
+import shopping5 from '../../../assets/shopping-5.png'
 
 const MegaMenu = () => {
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
-import React, { useState } from 'react';
-import Modal from '../elements/Modal';
+import React, { useState } from 'react'
+import Modal from '../elements/Modal'
 
 const ModalSection = () => {
     const [modal, setModal] = useState(false);

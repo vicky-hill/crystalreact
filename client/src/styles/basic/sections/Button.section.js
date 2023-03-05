@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import Prism from "prismjs";
+import React, { useEffect, useState } from 'react'
+import Prism from "prismjs"
 // import buttonSnippets from '../../../snippets/button.snippets';
-import CodeBox from '../elements/CodeBox';
-import Button from '../elements/Button';
+import CodeBox from '../elements/CodeBox'
+import Button from '../elements/Button'
 
 
 const ButtonSection = () => {

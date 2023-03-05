@@ -1,13 +1,19 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import classNames from 'classnames'
 
 /* Props
 =========================================== */
 // links: [name: String, icon: String]
 
-const Sidenav = ({ links }) => {
+const Sidenav = ({ links, className }) => {
     const [sidenav, setSidenav] = useState(false);
     const [active, setActive] = useState(0);
+
+    const getClasses = index => classNames('sidenav-link', {
+      [className]: className, 
+      'active': active === index
+    });
 
     const openSidenav = () => {
         setSidenav(true);
@@ -34,7 +40,7 @@ const Sidenav = ({ links }) => {
                 <div className="sidenav-menu">
                     {
                         links.map((link, i) => (
-                            <a key={i} href="" id={i} className={`sidenav-link ${active === i ? 'active' : ''}`} onClick={activateTab}>
+                            <a key={i} href="" id={i} className={getClasses(i)} onClick={activateTab}>
                                 <i className={`fas ${link.icon}`}></i>
                                 { link.name }
                             </a>

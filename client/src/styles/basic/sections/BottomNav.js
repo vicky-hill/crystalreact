@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
+import React, { useState } from 'react'
+import classNames from 'classnames'
 
 /* eslint-disable */
 const BottomNav = ({ navLinks, className }) => {

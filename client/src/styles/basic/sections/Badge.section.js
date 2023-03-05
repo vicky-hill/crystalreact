@@ -1,7 +1,6 @@
-/* eslint-disable */ 'use strict';
-import React from 'react';
-import Badge from '../elements/Badge';
-import Button from '../elements/Button';
+/* eslint-disable */ 'use strict'
+import React from 'react'
+import Badge from '../elements/Badge'
 
 const BadgeSection = () => {
 

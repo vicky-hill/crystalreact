@@ -1,5 +1,5 @@
-/* eslint-disable */ 'use strict';
-import React, { useState } from 'react';
+/* eslint-disable */ 'use strict'
+import React, { useState } from 'react'
 
 const SidebarWithSub = ({ links }) => {
 

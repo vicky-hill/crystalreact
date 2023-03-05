@@ -1,6 +1,6 @@
 /* eslint-disable */
-import React, { useState } from 'react';
-import Pagination from '../elements/Pagination';
+import React, { useState } from 'react'
+import Pagination from '../elements/Pagination'
 
 const PaginationSection = ({ }) => {
 

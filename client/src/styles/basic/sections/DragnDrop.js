@@ -1,5 +1,5 @@
-/* eslint-disable */ 'use strict';
-import React, { useState, useRef } from 'react';
+/* eslint-disable */ 'use strict'
+import React, { useState, useRef } from 'react'
 
 const DragnDrop = ({ data }) => {
     const [list, setList] = useState(data);

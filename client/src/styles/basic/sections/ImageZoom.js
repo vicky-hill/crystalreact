@@ -1,5 +1,5 @@
-import React from 'react';
-import image1 from '../../../assets/slide-1.jpg';
+import React from 'react'
+import image1 from '../../../assets/slide-1.jpg'
 
 const ImageZoom = ({ }) => {
 

@@ -1,6 +1,6 @@
-/* eslint-disable */ 'use strict';
-import React, { useState, useRef } from 'react';
-import Context from '../elements/Context';
+/* eslint-disable */ 'use strict'
+import React, { useState, useRef } from 'react'
+import Context from '../elements/Context'
 
 const ContextSection = () => {
     return (

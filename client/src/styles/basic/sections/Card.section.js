@@ -1,8 +1,8 @@
 /* eslint-disable */
-import React from 'react';
-import pink from '../../../assets/pink.png';
-import book from '../../../assets/book.png';
-import Card from '../elements/Card';
+import React from 'react'
+import pink from '../../../assets/pink.png'
+import book from '../../../assets/book.png'
+import Card from '../elements/Card'
 
 const CardSection = () => {
 

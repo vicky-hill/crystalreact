@@ -1,6 +1,6 @@
 /* eslint-disable */
-import React from 'react';
-import Loader from '../elements/Loader';
+import React from 'react'
+import Loader from '../elements/Loader'
 
 const LoaderSection = () => {
     return (
