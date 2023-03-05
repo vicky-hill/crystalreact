@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { getClassName } from '../../../utils/getClassName';
+import classNames from 'classnames';
 
-const Tabs = ({ children, className, ...props }) => {
+const Tabs = ({ children, className }) => {
 
     const [active, setActive] = useState(0);
 
-    const variations = {
+    const getTabItemClasses = index => {
+        return classNames('tabs__item', {
+            'active': active === index
+        });
+    }
 
+    const getTabContentClasses = index => {
+        return classNames('tab-pane fade-in', {
+            'show active': active === index
+        })
     }
 
     const openTab = (e) => {
@@ -17,19 +25,19 @@ const Tabs = ({ children, className, ...props }) => {
     return (
         <div className="tabs">
             <div className="tabs__header" onClick={openTab}>
-                <div id={0} className={`tabs__item ${active === 0 ? 'active' : ''}`}>Tab 1</div>
-                <div id={1} className={`tabs__item ${active === 1 ? 'active' : ''}`}>Tab 2</div>
-                <div id={2} className={`tabs__item ${active === 2 ? 'active' : ''}`}>Tab 3</div>
+                <div id={0} className={getTabItemClasses(0)}>Tab 1</div>
+                <div id={1} className={getTabItemClasses(1)}>Tab 2</div>
+                <div id={2} className={getTabItemClasses(2)}>Tab 3</div>
             </div>
 
             <div className="tabs__content">
-                <div id="tab-0" className={`tab-pane fade-in ${active === 0 ? 'show active' : ''}`}>
+                <div className={getTabContentClasses(0)}>
                     Content of Tab 1
                 </div>
-                <div id="tab-1" className={`tab-pane fade-in ${active === 1 ? 'show active' : ''}`}>
+                <div className={getTabContentClasses(1)}>
                     Content of Tab 2
                 </div>
-                <div id="tab-2" className={`tab-pane fade-in ${active === 2 ? 'show active' : ''}`}>
+                <div className={getTabContentClasses(2)}>
                     Content of Tab 3
                 </div>
             </div>

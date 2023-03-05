@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getClassName } from '../../../utils/getClassName';
+import classNames from 'classnames';
 
 const Alert = ({ message, variant, closeAlert, className, ...props }) => {
 
-    const variations = {
-        variant: variant && `alert-${variant}`
-    }
+    const classes = classNames('alert', {
+        [className]: true,
+        [`alert-${variant}`]: variant
+    });
 
     return (
         message ? (
-            <div className={getClassName('alert', className, variations)} {...props}>
+            <div className={classes} {...props}>
                 {message}
                 <button className='alert__close' onClick={closeAlert}>
                     <span>&times;</span>
