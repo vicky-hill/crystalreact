@@ -1,17 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getClassName } from '../../../utils/getClassName';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 const Badge = ({ children, badgeText, type, pill, light, round, className }) => {
+    
+    const classes = classNames('badge', {
+        [className]: true,
+        'badge--header': type && type.includes('h'),
+        'badge--light': light,
+        'badge--pill': pill,
+        'badge--round': round
+    });
 
-    const variations = {
-        header: type && type.includes('h') && 'badge--header',
-        light: light && 'badge--light',
-        pill: pill && 'badge--pill',
-        round: round && 'badge--round'
-    }
-
-    const content = <>{children}<span className={getClassName('badge', className, variations)}>{badgeText}</span></>
+    const content = <>{children}<span className={classes}>{badgeText}</span></>
 
     switch (type) {
         case 'h1':
@@ -56,26 +57,3 @@ Badge.propTypes = {
 }
 
 export default Badge;
-
-
-
-// if(typeof children.type === 'function') {
-//     console.error('Badge children cannot be React Components');   
-//     return null
-// }
-
-// if(children.length > 1) {
-//    console.error('Badge can only have 1 child');   
-//    return null
-// }
-
-// const variations = {
-//    heading: children.type.includes('h') && 'badge--heading',
-//    pill: pill && 'badge--pill',
-//    light: light && 'badge--light',
-//    round: round && 'badge--round'
-// }
-
-// const content = <>{children.props.children}<span className={getClassName('badge', className, variations)}>{badgeText}</span></>
-
-// return React.createElement(children.type, {className: children.props.className ? children.props.className : ''}, content);
