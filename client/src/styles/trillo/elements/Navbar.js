@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from '../../../assets/logo.png';
-import userPhoto from '../../../assets/user.jpg';
-import Searchbar from './SearchBar';
+import React from 'react'
+import logo from '../../../assets/logo.png'
+import userPhoto from '../../../assets/user.jpg'
+import Searchbar from './SearchBar'
 
 
 const Navbar = () => {

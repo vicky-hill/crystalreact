@@ -1,6 +1,6 @@
 /* eslint-disable */
-import React from 'react';
-import toast from '../elements/Toast';
+import React from 'react'
+import toast from '../elements/Toast'
 
 
 const ToastSection = ({ }) => {

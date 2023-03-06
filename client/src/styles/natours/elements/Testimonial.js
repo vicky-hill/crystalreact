@@ -1,5 +1,5 @@
-import React from 'react';
-import nat8 from '../../../assets/nat-8.jpg';
+import React from 'react'
+import nat8 from '../../../assets/nat-8.jpg'
 
 const Testimonial = () => {
     return (

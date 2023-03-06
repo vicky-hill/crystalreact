@@ -1,6 +1,6 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { deleteToast } from '../../../actions/toasts';
+import React from 'react'
+import { connect } from 'react-redux'
+import { deleteToast } from '../../../actions/toasts'
 
 
 const Toast = ({ toasts, position, deleteToast }) => {

@@ -1,7 +1,7 @@
-import React from 'react';
-import hotel1 from '../../../assets/hotel-1.jpg';
-import hotel2 from '../../../assets/hotel-2.jpg';
-import hotel3 from '../../../assets/hotel-3.jpg';
+import React from 'react'
+import hotel1 from '../../../assets/hotel-1.jpg'
+import hotel2 from '../../../assets/hotel-2.jpg'
+import hotel3 from '../../../assets/hotel-3.jpg'
 
 const Gallery = () => {
     return (

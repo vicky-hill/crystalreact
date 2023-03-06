@@ -1,7 +1,7 @@
-import React from 'react';
-import beach1 from '../../../assets/beach-1.jpg';
-import beach2 from '../../../assets/beach-2.jpg';
-import beach3 from '../../../assets/beach-3.jpg';
+import React from 'react'
+import beach1 from '../../../assets/beach-1.jpg'
+import beach2 from '../../../assets/beach-2.jpg'
+import beach3 from '../../../assets/beach-3.jpg'
 
 const Photos = () => {
     return (

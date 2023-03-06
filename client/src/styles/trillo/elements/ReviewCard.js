@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import user1 from '../../../assets/user-1.jpg'
 import user2 from '../../../assets/user-2.jpg'
-import MainCard from './MainCard';
+import MainCard from './MainCard'
 
 const ReviewCard = () => {
     return (

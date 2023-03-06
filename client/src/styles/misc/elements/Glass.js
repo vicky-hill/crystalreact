@@ -1,8 +1,8 @@
-/* eslint-disable */ 'use strict';
-import React from 'react';
-import user1 from '../../../assets/user1.png';
-import user2 from '../../../assets/user2.png';
-import user3 from '../../../assets/user3.png';
+/* eslint-disable */ 'use strict'
+import React from 'react'
+import user1 from '../../../assets/user1.png'
+import user2 from '../../../assets/user2.png'
+import user3 from '../../../assets/user3.png'
 
 const Glass = () => {
     return (

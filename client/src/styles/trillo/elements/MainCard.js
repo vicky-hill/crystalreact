@@ -1,8 +1,8 @@
-import React from 'react';
-import user3 from '../../../assets/user-3.jpg';
-import user4 from '../../../assets/user-4.jpg';
-import user5 from '../../../assets/user-5.jpg';
-import user6 from '../../../assets/user-6.jpg';
+import React from 'react'
+import user3 from '../../../assets/user-3.jpg'
+import user4 from '../../../assets/user-4.jpg'
+import user5 from '../../../assets/user-5.jpg'
+import user6 from '../../../assets/user-6.jpg'
 
 const MainCard = () => {
     return (

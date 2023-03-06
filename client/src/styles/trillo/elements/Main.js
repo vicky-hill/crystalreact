@@ -1,9 +1,9 @@
-import React from 'react';
-import Gallery from './Gallery';
-import Overview from './Overview';
-import MainCard from './MainCard';
-import ReviewCard from './ReviewCard';
-import Button from './Button';
+import React from 'react'
+import Gallery from './Gallery'
+import Overview from './Overview'
+import MainCard from './MainCard'
+import ReviewCard from './ReviewCard'
+import Button from './Button'
 
 const Main = () => {
     return (

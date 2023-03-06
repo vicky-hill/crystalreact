@@ -1,6 +1,6 @@
-import React from 'react';
-import nat8 from '../../../assets/nat-8.jpg';
-import nat9 from '../../../assets/nat-9.jpg';
+import React from 'react'
+import nat8 from '../../../assets/nat-8.jpg'
+import nat9 from '../../../assets/nat-9.jpg'
 
 function Modal() {
 
